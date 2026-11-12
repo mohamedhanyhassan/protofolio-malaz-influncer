@@ -30,7 +30,6 @@ window.PORTFOLIO = {
         { "title": "تطبيقات التوصيل والفرع في كل تغطية", "body": "كل صناع المحتوى ذكروا الطلب عبر ذا شيفز وهنقرستيشن وكيتا ووجّهوا لفرع النهضة. إضافة رابط الطلب والموقع في الكابشن تحوّل 5,039 حفظًا إلى زيارات وطلبات." },
         { "title": "المحتوى يتخطّى حجم الحساب", "body": "ghados95 وfn_95_ (نحو 31 ألف متابع لكل منهما) تخطّوا 100 ألف مشاهدة. تعزيز هذه التغطيات ومعها om.saaaad وabod.158k بإعلانات Spark يوسّع وصولها بأقل تكلفة." }
       ],
-      "totals": { "creators": 50, "views": 2221578, "followers": 7100000, "likes": 20226, "comments": 1493, "saves": 5751 },
       "coverages": [
         { "no": 37, "creator": "r.co2020", "url": "", "video": "", "platforms": ["TikTok"], "formats": ["Video"], "kind": "Visit", "location": "Riyadh", "followers": 68671, "views": 11300, "likes": 72, "comments": 65, "saves": 69, "note": "عرّف بحلاي كرانشي كمنتج جديد، ووجّه الجمهور لفرع حي النهضة." },
         { "no": 38, "creator": "ta_7202", "url": "", "video": "", "platforms": ["TikTok"], "formats": ["Video"], "kind": "Visit", "location": "Riyadh", "followers": 62688, "views": 10700, "likes": 135, "comments": 31, "saves": 320, "note": "وجّه الجمهور لفرع حي النهضة." },
@@ -48,7 +47,6 @@ window.PORTFOLIO = {
       "city": "الرياض · جدة · خميس مشيط · جازان",
       "date": "",
       "description": "زيارات مؤثرين لفروع بن رشد للبصريات في 4 مدن.",
-      "totals": null,
       "coverages": [
         { "creator": "reema_elharbi", "url": "", "platforms": ["Instagram"], "formats": ["Post","Stories"], "kind": "Visit", "location": "Riyadh", "followers": null, "views": 23250, "likes": 1330, "comments": 403, "saves": null, "note": "" },
         { "creator": "vibes_with_anam", "url": "", "platforms": ["Instagram","TikTok"], "formats": ["Reel","Stories"], "kind": "Visit", "location": "Riyadh", "followers": null, "views": null, "likes": null, "comments": null, "saves": null, "note": "" },
@@ -76,7 +74,6 @@ window.PORTFOLIO = {
       "city": "",
       "date": "",
       "description": "",
-      "totals": null,
       "coverages": [
         { "url": "https://www.instagram.com/reel/DfNcf8PtTMq/" },
         { "url": "https://www.tiktok.com/@sh.h.a92/video/7701692996437200134" },
@@ -94,7 +91,6 @@ window.PORTFOLIO = {
       "city": "",
       "date": "",
       "description": "",
-      "totals": null,
       "coverages": [
         { "url": "https://www.instagram.com/reel/DeWpHY_N_-r/" },
         { "url": "https://www.instagram.com/p/DeJajn6q1PK/" },
@@ -113,7 +109,6 @@ window.PORTFOLIO = {
       "city": "",
       "date": "",
       "description": "",
-      "totals": null,
       "coverages": [
         { "url": "https://www.instagram.com/p/DZUuzhbtKoa/" },
         { "url": "https://www.instagram.com/p/DZSmSaoI_9F/" },
@@ -133,7 +128,6 @@ window.PORTFOLIO = {
       "city": "",
       "date": "",
       "description": "",
-      "totals": null,
       "coverages": [
         { "url": "https://www.instagram.com/p/DcbHLc1OOVP/" },
         { "url": "https://www.tiktok.com/@blog.jojoo/video/7668297176598039828" }

@@ -61,12 +61,22 @@ textarea.i{min-height:80px;resize:vertical}
 .dlg.open{display:flex}
 .dlg .box{background:#fff;border-radius:18px;padding:22px;width:min(720px,100%);max-height:90vh;overflow:auto}
 .dlg h3{margin-bottom:8px}
+.sumg{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px}
+.sb{background:var(--bg);border-radius:12px;padding:12px 14px}
+.sb b{display:block;font-family:"Alexandria";font-size:20px;font-weight:800;direction:ltr;text-align:right}
+.sb span{font-size:12px;color:var(--muted)}
+.sb.dk{background:var(--black);color:#fff}.sb.dk b{color:var(--gold)}.sb.dk span{color:#bdb6aa}
+.sb.gd{background:var(--gold)}
+.ls{display:inline-block;font-size:11.5px;font-weight:600;padding:3px 8px;border-radius:99px;white-space:nowrap}
+.ls.ok{background:var(--green-l);color:var(--green-d)}
+.ls.warn{background:#f3efe6;color:#6b665e}
+.ls.bad{background:#fde8e8;color:#c62828}
 @media(max-width:900px){.lay{grid-template-columns:1fr}.side{position:static;max-height:none}}
 </style>
 </head>
 <body>
 <div class="abar"><div class="wrap">
-  <div class="logo">مَلاذ<i>.</i><small>لوحة تحكم البورتفوليو</small></div>
+  <div class="logo" style="display:flex;align-items:center"><img src="assets/malaz-white.png" alt="ملاذ" style="height:30px"><small>لوحة تحكم البورتفوليو</small></div>
   <span class="save" id="saved"></span>
   <a class="btn" href="index.html" target="_blank">معاينة الموقع ↗</a>
   <button class="btn" id="imp">استيراد ملف</button>
@@ -102,6 +112,7 @@ const M = MZ, E = M.esc;
 let { data } = M.loadData();
 data = JSON.parse(JSON.stringify(data));
 data.agency = data.agency || {}; data.campaigns = data.campaigns || [];
+data.campaigns.forEach(c => delete c.totals);
 let sel = data.campaigns.length ? 0 : -1;   // -1 = agency settings
 const $ = s => document.querySelector(s);
 
@@ -151,15 +162,51 @@ function resizeImage(file){
   });
 }
 
+/* ---------- links ---------- */
+function cleanUrl(u){
+  u = (u||"").trim(); if(!u) return u;
+  try{ const x = new URL(u); if(/instagram\.com$/.test(x.hostname.replace(/^www\./,""))) { x.search=""; } if(/tiktok\.com$/.test(x.hostname.replace(/^www\./,"")) && /\/video\/|\/photo\//.test(x.pathname)) x.search=""; u = x.toString().replace(/\/{2,}$/,"/"); }catch(e){}
+  return u;
+}
+function fillFromLink(v){
+  const L = M.parseLink(v.url);
+  if(L.creator && !v.creator) v.creator = L.creator;
+  if(L.platform && L.platform!=="Link" && !(v.platforms||[]).length) v.platforms = [L.platform];
+}
+const isShortTT = u => { const L = M.parseLink(u); return L.platform==="TikTok" && !L.id; };
+async function resolveShort(v){
+  if(!isShortTT(v.url)) return false;
+  try{
+    const r = await fetch("https://www.tiktok.com/oembed?url="+encodeURIComponent(v.url));
+    const j = await r.json();
+    if(j && j.embed_product_id){
+      const user = j.author_unique_id || (j.author_url||"").split("@")[1] || "";
+      v.url = "https://www.tiktok.com/@"+user+"/video/"+j.embed_product_id;
+      if(!v.creator && user) v.creator = user;
+      return true;
+    }
+  }catch(e){}
+  return false;
+}
+function linkStatus(v){
+  if(v.video) return '<span class="ls ok">▶ MP4</span>';
+  if(!v.url) return "";
+  const L = M.parseLink(v.url);
+  if((L.platform==="TikTok"||L.platform==="Instagram"||L.platform==="YouTube") && L.id) return '<span class="ls ok" title="الفيديو هيشتغل جوه الموقع">▶ جوه الموقع</span>';
+  if(L.platform==="TikTok") return '<span class="ls bad" title="لينك مختصر: افتحه في المتصفح وانسخ اللينك الكامل اللي فيه /video/">⚠ لينك مختصر</span>';
+  if(L.platform==="Instagram" && L.kind==="story") return '<span class="ls warn" title="الستوري مالهاش تضمين — هتفتح في إنستغرام">↗ ستوري</span>';
+  return '<span class="ls warn" title="مش هيتعرض جوه الموقع — هيفتح في صفحة المنصة">↗ برا الموقع</span>';
+}
+
 /* ---------- sidebar ---------- */
 function renderSide(){
-  $("#clist").innerHTML = data.campaigns.map((c,i)=>`<div class="citem ${i===sel?"on":""} ${c.hidden?"hid":""}" data-i="${i}">${logoHTML(c)}<div><b>${E(c.title||c.brand||"بدون اسم")}</b><small>${E(c.brand||"")} · ${(c.coverages||[]).length} تغطية${c.hidden?" · مخفية":""}</small></div></div>`).join("") || '<p class="hint" style="padding:8px">لا توجد حملات</p>';
+  $("#clist").innerHTML = data.campaigns.map((c,i)=>`<div class="citem ${i===sel?"on":""} ${c.hidden?"hid":""}" data-i="${i}">${logoHTML(c)}<div><b>${E((c.title||c.brand||"بدون اسم").replace(/\*/g,""))}</b><small>${E(c.brand||"")} · ${(c.coverages||[]).length} تغطية${c.hidden?" · مخفية":""}</small></div></div>`).join("") || '<p class="hint" style="padding:8px">لا توجد حملات</p>';
   document.querySelectorAll("#clist .citem").forEach(el=>el.onclick=()=>{ sel = +el.dataset.i; render(); });
   $("#agencyItem").classList.toggle("on", sel===-1);
 }
 $("#agencyItem").onclick = () => { sel = -1; render(); };
 $("#add").onclick = () => {
-  const c = { id: uniqId("campaign"), brand:"", title:"حملة جديدة", type:"حملة مشاهير", logo:"", brandUrl:"", city:"", date:"", description:"", totals:null, coverages:[] };
+  const c = { id: uniqId("campaign"), brand:"", title:"حملة جديدة", type:"حملة مشاهير", logo:"", brandUrl:"", city:"", date:"", description:"", coverages:[] };
   data.campaigns.unshift(c); sel = 0; save(); render();
   setTimeout(()=>{ const b = document.querySelector('[data-k="brand"]'); if(b) b.focus(); }, 50);
 };
@@ -180,12 +227,11 @@ function renderAgency(){
 function renderCampaign(){
   const c = data.campaigns[sel]; if(!c){ $("#ed").innerHTML = '<div class="empty">اختار حملة أو أضف واحدة جديدة.</div>'; return; }
   c.coverages = c.coverages || [];
-  const t = c.totals || {};
   const dups = allUrls();
   const nd = c.coverages.filter(v=>{ const k=normUrl(v.url); return k && dups[k] && dups[k].length>1; }).length;
   $("#ed").innerHTML = `
   <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:16px">
-    <h2 style="font-size:24px">${E(c.title||c.brand||"حملة")}</h2>
+    <h2 style="font-size:24px">${E((c.title||c.brand||"حملة").replace(/\*/g,""))}</h2>
     <div class="row-acts" style="margin:0">
       <a class="btn" href="index.html#c-${E(c.id)}" target="_blank">فتح صفحة الحملة ↗</a>
       <button class="btn" id="up">↑</button><button class="btn" id="dn">↓</button>
@@ -217,15 +263,16 @@ function renderCampaign(){
   <fieldset><legend>ما تعلمناه للحملات القادمة <span class="hint" style="font-family:var(--fb);font-weight:400">(اختياري — لو فاضي الموقع بيطلّع ملاحظات تلقائية من الأرقام)</span></legend>
     <div class="fg">${[0,1,2].map(i=>{ const x=(c.insights||[])[i]||{}; return `<div style="display:flex;flex-direction:column;gap:6px"><input class="i" data-ins="${i}" data-f="title" value="${E(x.title||"")}" placeholder="عنوان الملاحظة ${i+1}"><textarea class="i" data-ins="${i}" data-f="body" placeholder="التفاصيل">${E(x.body||"")}</textarea></div>`; }).join("")}</div>
   </fieldset>
-  <fieldset><legend>الأرقام الإجمالية <span class="hint" style="font-family:var(--fb);font-weight:400">(اختياري — لو سبتها فاضية بتتحسب من التغطيات)</span></legend>
-    <div class="fg">${[["creators","عدد المؤثرين"],["views","المشاهدات"],["followers","المتابعين"],["likes","الإعجابات"],["comments","التعليقات"],["saves","الحفظ والمشاركة"]].map(([k,l])=>`<label class="f">${l}<input class="i ltr-i" data-t="${k}" inputmode="numeric" value="${t[k]??""}"></label>`).join("")}</div>
+  <fieldset><legend>إجماليات الحملة <span class="hint" style="font-family:var(--fb);font-weight:400">(بتتحسب تلقائيًا من أرقام التغطيات تحت)</span></legend>
+    <div class="sumg" id="sum"></div>
   </fieldset>
   <fieldset><legend>التغطيات (${c.coverages.length})</legend>
     ${nd?`<div class="warn">فيه ${nd} لينك متكرر في حملة تانية أو في نفس الحملة (متعلّم باللون البرتقالي) — راجعه.</div>`:""}
-    <div class="ctab"><table><thead><tr><th>#</th><th>لينك التغطية</th><th>اليوزر</th><th>المنصات</th><th>التغطية</th><th>النوع</th><th>الموقع</th><th>متابعين</th><th>مشاهدات</th><th>لايكات</th><th>كومنتات</th><th>حفظ</th><th>فيديو MP4</th><th>ملاحظة</th><th></th></tr></thead>
+    <div class="ctab"><table><thead><tr><th>#</th><th>لينك التغطية</th><th>الفيديو</th><th>اليوزر</th><th>المنصات</th><th>التغطية</th><th>النوع</th><th>الموقع</th><th>متابعين</th><th>مشاهدات</th><th>لايكات</th><th>كومنتات</th><th>حفظ</th><th>فيديو MP4</th><th>ملاحظة</th><th></th></tr></thead>
     <tbody>${c.coverages.map((v,i)=>{ const k=normUrl(v.url); const d = k && dups[k] && dups[k].length>1; return `<tr data-i="${i}" class="${d?"dup":""}" title="${d?"متكرر في: "+E(dups[k].join("، ")):""}">
       <td class="num">${i+1}</td>
       <td><input class="url" data-c="url" value="${E(v.url||"")}" placeholder="https://www.tiktok.com/@user/video/…"></td>
+      <td class="stc">${linkStatus(v)}</td>
       <td><input class="u" data-c="creator" value="${E(v.creator||"")}"></td>
       <td><input class="u" data-c="platforms" value="${E((v.platforms||[]).join(", "))}" placeholder="TikTok, Instagram"></td>
       <td><input class="u" data-c="formats" value="${E((v.formats||[]).join(", "))}" placeholder="Reel, Stories"></td>
@@ -251,11 +298,12 @@ function renderCampaign(){
     c.insights = c.insights || []; const i = +inp.dataset.ins; c.insights[i] = c.insights[i] || {title:"",body:""}; c.insights[i][inp.dataset.f] = inp.value;
     c.insights = c.insights.map(x=>x||{title:"",body:""}); if(c.insights.every(x=>!x.title&&!x.body)) delete c.insights; save();
   });
-  ed.querySelectorAll("[data-t]").forEach(inp=>inp.oninput=()=>{
-    const v = inp.value.replace(/[,\s]/g,""); c.totals = c.totals || {};
-    if(v==="" || isNaN(+v)) delete c.totals[inp.dataset.t]; else c.totals[inp.dataset.t] = +v;
-    if(!Object.keys(c.totals).length) c.totals = null; save();
-  });
+  const updSum = () => {
+    const { s:st } = M.campStats(c);
+    const box = (v,l,cls="") => `<div class="sb ${cls}"><b class="num">${v}</b><span>${l}</span></div>`;
+    $("#sum").innerHTML = box(M.fmt(st.creators),"مؤثر") + box(M.fmt(st.views),"مشاهدة","dk") + box(M.fmt(st.followers),"متابع مجتمعين") + box(M.fmt(st.likes),"إعجاب") + box(M.fmt(st.comments),"تعليق") + box(M.fmt(st.saves),"حفظ ومشاركة") + box(M.pct(st.er),"نسبة التفاعل","gd");
+  };
+  updSum();
   $("#logoF").onchange = async e => { const f = e.target.files[0]; if(!f) return; try{ c.logo = await resizeImage(f); save(); render(); }catch(_){ alert("تعذّر قراءة الصورة"); } };
   $("#logoP").oninput = e => { c.logo = e.target.value.trim(); save(); renderSide(); };
   if($("#logoX")) $("#logoX").onclick = () => { c.logo = ""; save(); render(); };
@@ -272,12 +320,12 @@ function renderCampaign(){
         if(["followers","views","likes","comments","saves"].includes(k)){ const n = val.replace(/[,\s]/g,""); v[k] = n===""||isNaN(+n) ? null : +n; }
         else if(k==="platforms"||k==="formats") v[k] = val.split(/[,،]/).map(s=>s.trim()).filter(Boolean);
         else v[k] = val.trim();
-        save();
+        save(); if(["followers","views","likes","comments","saves","creator"].includes(k)) updSum();
       };
-      if(inp.dataset.c==="url") inp.onchange = () => {
-        const L = M.parseLink(v.url);
-        if(L.creator && !v.creator) v.creator = L.creator;
-        if(L.platform && L.platform!=="Link" && !(v.platforms||[]).length) v.platforms = [L.platform];
+      if(inp.dataset.c==="url") inp.onchange = async () => {
+        v.url = cleanUrl(v.url);
+        await resolveShort(v);
+        fillFromLink(v);
         save(); render();
       };
     });
@@ -288,7 +336,7 @@ function renderCampaign(){
   $("#bulkBtn").onclick = () => { $("#bulkT").value=""; $("#bulk").classList.add("open"); $("#bulkT").focus(); };
 }
 $("#bulkNo").onclick = () => $("#bulk").classList.remove("open");
-$("#bulkOk").onclick = () => {
+$("#bulkOk").onclick = async () => {
   const c = data.campaigns[sel]; if(!c) return;
   const txt = $("#bulkT").value, num = s => { const n=(s||"").replace(/[,\s]/g,""); return n===""||isNaN(+n)?null:+n; };
   let added = 0;
@@ -305,8 +353,13 @@ $("#bulkOk").onclick = () => {
       (line.match(/https?:\/\/[^\s,]+/g)||[]).forEach(u=>{ u = u.replace(/\/{2,}$/,"/"); const L = M.parseLink(u); c.coverages.push({url:u, creator:L.creator||"", platforms:L.platform&&L.platform!=="Link"?[L.platform]:[]}); added++; });
     }
   });
-  $("#bulk").classList.remove("open"); save(); render();
-  $("#saved").textContent = "✓ اتضاف " + added + " تغطية";
+  $("#bulk").classList.remove("open");
+  c.coverages.forEach(v=>{ v.url = cleanUrl(v.url); });
+  const shorts = c.coverages.filter(v=>isShortTT(v.url));
+  let fixed = 0; for(const v of shorts){ if(await resolveShort(v)) fixed++; fillFromLink(v); }
+  save(); render();
+  const left = shorts.length - fixed;
+  setTimeout(()=>{ $("#saved").textContent = "✓ اتضاف " + added + " تغطية" + (left?` — ${left} لينك مختصر محتاج تنسخ لينكه الكامل`:""); }, 400);
 };
 
 function render(){ renderSide(); if(sel===-1) renderAgency(); else renderCampaign(); }

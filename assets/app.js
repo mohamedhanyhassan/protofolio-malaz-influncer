@@ -291,7 +291,8 @@
     const year = (c.date || "").slice(0, 4) || new Date().getFullYear();
     const dataDate = c.dataDate ? new Date(c.dataDate).toLocaleDateString("ar-SA-u-ca-gregory-nu-latn", { day: "numeric", month: "long", year: "numeric" }) : "";
     const startDate = c.date ? new Date(c.date).toLocaleDateString("ar-SA-u-ca-gregory-nu-latn", { day: "numeric", month: "long", year: "numeric" }) : "";
-    const avg = s.views && s.coverages ? s.views / (c.totals && c.totals.creators ? c.totals.creators : s.coverages) : null;
+    const withViews = covs.filter(v => v.views !== null).length;
+    const avg = s.views && withViews ? s.views / withViews : null;
     const plat = s.platforms.map(p => p.toUpperCase()).join(" + ");
 
     /* marquee items */
@@ -328,7 +329,7 @@
       <div class="rmeta"><a href="#home">→ كل الحملات</a><span class="dots">• • •</span><span>${E((agency.nameEn || "MALAZ").toUpperCase())} / INFLUENCER MARKETING</span></div>
       <div class="rgrid">
         <div>
-          <div class="rlogos rv"><span class="logo">${E(agency.name)}<i style="color:#fff">.</i></span><span class="x">×</span>${brandMark(c, "bl")}</div>
+          <div class="rlogos rv"><img class="mlg" src="assets/malaz-gold.png" alt="${E(agency.name)}"><span class="x">×</span>${brandMark(c, "bl")}</div>
           <div class="rkicker rv d1"><span class="num">01</span> / ${E((c.brand || "").toUpperCase())}${c.type ? " · " + E(c.type) : ""}</div>
           <h1 class="rtitle rv d2">${hl(c.title || c.brand)}</h1>
           ${c.description ? `<p class="rdesc rv d3">${E(c.description)}</p>` : ""}
@@ -358,7 +359,7 @@
 
     <div class="wrap">
       <div class="rkpis">
-        <div class="rk dark rv"><div class="v" ${s.views ? `data-count="${s.views}"` : ""}>${s.views ? 0 : "—"}</div><div class="l">${s.views ? `مشاهدة من ${M.fmt(c.totals && c.totals.creators ? c.totals.creators : s.coverages)} تغطية${avg ? `، بمتوسط ${M.compact(avg)} للتغطية` : ""}${s.followers ? ` · ${M.compact(s.followers)} متابع مجتمعين` : ""}` : "المشاهدات تُضاف قريبًا"}</div></div>
+        <div class="rk dark rv"><div class="v" ${s.views ? `data-count="${s.views}"` : ""}>${s.views ? 0 : "—"}</div><div class="l">${s.views ? `مشاهدة من ${M.fmt(withViews)} تغطية${avg ? `، بمتوسط ${M.compact(avg)} للتغطية` : ""}${s.followers ? ` · ${M.compact(s.followers)} متابع مجتمعين` : ""}` : "المشاهدات تُضاف قريبًا"}</div></div>
         <div class="rk rv d1"><div class="v" ${s.likes !== null ? `data-count="${s.likes}"` : ""}>${s.likes !== null ? 0 : "—"}</div><div class="l">إعجاب</div></div>
         <div class="rk rv d2"><div class="v" ${s.saves !== null ? `data-count="${s.saves}"` : ""}>${s.saves !== null ? 0 : "—"}</div><div class="l">حفظ ومشاركة</div></div>
         <div class="rk rv d3"><div class="v" ${s.comments !== null ? `data-count="${s.comments}"` : ""}>${s.comments !== null ? 0 : "—"}</div><div class="l">تعليق</div></div>
@@ -386,7 +387,6 @@
         <span class="rlabel rv">${sn()} / COVERAGE</span>
         <h2 class="rh2 rv"><span class="num">${M.fmt(covs.length)}</span> ${covs.length > 1 ? "تغطية" : "تغطية"} <em>وكل فيديو يشتغل هنا مباشرة</em></h2>
         <p class="rsub rv">مقطع من كل تغطية يعمل تلقائيًا بدون صوت — اضغط زر الصوت لتسمعه، أو كبّر الفيديو، أو افتحه كاملًا على المنصة.</p>
-        ${c.totals && c.totals.creators && c.totals.creators > covs.length ? `<p class="rsub" style="font-size:13px">الأرقام الإجمالية أعلاه للحملة كاملة (${M.fmt(c.totals.creators)} مؤثر)، والبطاقات تعرض التغطيات الموثّقة هنا.</p>` : ""}
         <div class="vbar">
           <div class="seg" id="view"><button class="on" data-v="cards">بطاقات الفيديو</button><button data-v="table">جدول</button></div>
           <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
@@ -405,7 +405,7 @@
     </div>
 
     <section class="rfoot"><div class="wrap">
-      <div class="lg2"><span class="logo">${E(agency.name)}<i style="color:#fff">.</i></span><span style="color:#555">×</span>${brandMark(c, "bl")}</div>
+      <div class="lg2"><img class="mlg" src="assets/malaz-gold.png" alt="${E(agency.name)}" style="height:52px"><span style="color:#555">×</span>${brandMark(c, "bl")}</div>
       <div><h4>${E(agency.slogan || "")}</h4>
         <p>نسبة التفاعل = (الإعجابات + التعليقات + الحفظ والمشاركة) ÷ المشاهدات.${dataDate ? ` الأرقام بتاريخ ${E(dataDate)}.` : ""} ${c.methodology ? E(c.methodology) : ""}</p></div>
     </div></section>`;

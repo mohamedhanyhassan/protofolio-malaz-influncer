@@ -59,8 +59,6 @@
     const sum = k => { const v = covs.filter(c => c[k] !== null); return v.length ? v.reduce((a, c) => a + c[k], 0) : null; };
     const creators = new Set(covs.map(c => c.creator).filter(Boolean)).size + covs.filter(c => !c.creator).length;
     const s = { creators, coverages: covs.length, views: sum("views"), followers: sum("followers"), likes: sum("likes"), comments: sum("comments"), saves: sum("saves") };
-    const t = camp.totals || {};
-    for (const k in t) if (t[k] !== null && t[k] !== "" && t[k] !== undefined) s[k] = +t[k];
     s.er = (s.views && s.likes !== null) ? ((s.likes || 0) + (s.comments || 0) + (s.saves || 0)) / s.views * 100 : null;
     s.platforms = [...new Set(covs.flatMap(c => c.platforms))];
     return { covs, s };
