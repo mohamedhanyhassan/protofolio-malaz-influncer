@@ -9,6 +9,102 @@ window.PORTFOLIO = {
   },
   "campaigns": [
     {
+      "id": "zira-clinics",
+      "brand": "Zira Medical Clinics",
+      "title": "حملة *عيادات زيرا* الطبية",
+      "type": "حملة مشاهير",
+      "logo": "logos/zira.png",
+      "brandUrl": "https://www.instagram.com/zira_clinic/",
+      "city": "",
+      "date": "2025-08-24",
+      "dataDate": "",
+      "description": "حملة مؤثرين لعيادات زيرا الطبية بـ6 تغطيات على تيك توك وإنستغرام، من أغسطس إلى أكتوبر 2025.",
+      "hashtags": [
+        "عيادات_زيرا",
+        "ZiraClinics"
+      ],
+      "coverages": [
+        {
+          "url": "https://www.instagram.com/p/DNvbP1A2sDH/",
+          "creator": "",
+          "platforms": [
+            "Instagram"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@rehab.bkh/video/7542146068562185492",
+          "creator": "rehab.bkh",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@rehabsayy01/video/7543142621997321473",
+          "creator": "rehabsayy01",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@pq5n5/video/7553141254280744200",
+          "creator": "pq5n5",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@mod_z/video/7559128749892160775",
+          "creator": "mod_z",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@hisham_zaid01/video/7566680450463272248",
+          "creator": "hisham_zaid01",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        }
+      ]
+    },
+    {
       "id": "menz",
       "brand": "Menz",
       "title": "حملة مطعم *منز*",
