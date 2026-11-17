@@ -9,6 +9,844 @@ window.PORTFOLIO = {
   },
   "campaigns": [
     {
+      "id": "menz",
+      "brand": "Menz",
+      "title": "حملة مطعم *منز*",
+      "type": "حملة مشاهير",
+      "logo": "",
+      "brandUrl": "",
+      "city": "",
+      "date": "2026-01-19",
+      "dataDate": "",
+      "description": "حملة مؤثرين لمطعم منز: 60 تغطية بين زيارات للمطعم وطلبات توصيل، على تيك توك وإنستغرام من يناير إلى يوليو 2026.",
+      "hashtags": [
+        "منز",
+        "Menz"
+      ],
+      "coverages": [
+        {
+          "url": "https://www.instagram.com/p/DTseljSiFpL/",
+          "creator": "rest_cofee_riyadh_1",
+          "platforms": [
+            "Instagram"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@793y/video/7597183862489320712",
+          "creator": "793y",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://u.pcloud.link/publink/show?code=kZ93YK5ZF7y83PWzqY5fdMM6JRw8UFK0Tgvy",
+          "creator": "ahmadhmadeh03",
+          "platforms": [],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@dwain71/video/7597132129566297362",
+          "creator": "dwain71",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/DTuje6xCAqV/",
+          "creator": "ali_q2030",
+          "platforms": [
+            "Instagram"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@nzo1i/video/7597499489271680263",
+          "creator": "nzo1i",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@ts3il/video/7597443834439552276",
+          "creator": "ts3il",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://u.pcloud.link/publink/show?code=kZd3YK5Z3FzkChDIFWF0Sknvv1thaSPkis57",
+          "creator": "reeem.cooks",
+          "platforms": [],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@znov4/video/7597536418055081223",
+          "creator": "znov4",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@soso4ad/video/7597552216743922958",
+          "creator": "soso4ad",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@bto.eb/video/7599280361415265543",
+          "creator": "bto.eb",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@twinstaynay/video/7597884496301542663",
+          "creator": "twinstaynay",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@saraofficial.25/video/7597933484497259794",
+          "creator": "saraofficial.25",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@experiencewithus1/video/7598247891764874516",
+          "creator": "experiencewithus1",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/DT08_-RiDlk/",
+          "creator": "market.offers1",
+          "platforms": [
+            "Instagram"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/DT1amnxiIE0/",
+          "creator": "maha_mahross",
+          "platforms": [
+            "Instagram"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@soso_11a0/video/7599064010079735057",
+          "creator": "soso_11a0",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@hanolove.f8/video/7599725661284093191",
+          "creator": "hanolove.f8",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@amal_1442/video/7604443224152870165",
+          "creator": "amal_1442",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/DUIoM4ejAv1/",
+          "creator": "dr.reham.adel",
+          "platforms": [
+            "Instagram"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@sseham0015/video/7600261680655813908",
+          "creator": "sseham0015",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@znhie1/video/7600784374254046471",
+          "creator": "znhie1",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://u.pcloud.link/publink/show?code=kZo7Il5Zl2QRx5Y6zAfPA3gGdFW5ijpGyQ47",
+          "creator": "jweles04",
+          "platforms": [],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@d7ba0/video/7602490233627888916",
+          "creator": "d7ba0",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@c_8sl1/video/7602660017086450962",
+          "creator": "c_8sl1",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@ghada.gh33/video/7603138144468258066",
+          "creator": "ghada.gh33",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "توصيل",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://u.pcloud.link/publink/show?code=kZfkIl5ZxxTLQcRPI3pONxCTG2TQMY3F7QC7",
+          "creator": "tmani5000",
+          "platforms": [],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@asmakamal55/video/7602653872959524116",
+          "creator": "asmaelshiekh5",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@anfal3400/video/7603027989391150344",
+          "creator": "anfal3400",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/reel/DUX1DLtiERq/",
+          "creator": "meroka_mero",
+          "platforms": [
+            "Instagram"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@maweizaaa/video/7603375924783910164",
+          "creator": "maweizaaa",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "توصيل",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/stories/highlights/17873442798514691/",
+          "creator": "noor_kitchen_horizon",
+          "platforms": [
+            "Instagram"
+          ],
+          "kind": "توصيل",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@eman_363/video/7604871046046485768",
+          "creator": "eman_363",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@bilx76/video/7605538086986059016",
+          "creator": "bilx76",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "توصيل",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://u.pcloud.link/publink/show?code=kZcIrd5ZgQPYoxmrsK7GjtYuSIWzeFBXs6Rk",
+          "creator": "najdia_1",
+          "platforms": [],
+          "kind": "توصيل",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://u.pcloud.link/publink/show?code=kZ6u7c5Z7cp334qgnij9zEpvb1jti0frOa3k",
+          "creator": "mayosh386",
+          "platforms": [],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@karimgalhoom/video/7611275213132582164",
+          "creator": "kareem.galhoom",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/DVtg1GICEI6/",
+          "creator": "24daily.sa",
+          "platforms": [
+            "Instagram"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@24daily.sa/photo/7615672226251164946",
+          "creator": "24daily.sa",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/DYfUJ9TMexD/",
+          "creator": "adventures_in_abaya",
+          "platforms": [
+            "Instagram"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://u.pcloud.link/publink/show?code=kZg87c5Z7eJo8d52jOFkGLV1QXuUjQMTTTzk",
+          "creator": "about.todayy",
+          "platforms": [],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/DYkp3Vao0ng/",
+          "creator": "albdoor.15",
+          "platforms": [
+            "Instagram"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/DYyMtyNCMlf/",
+          "creator": "ammaras_drive_in",
+          "platforms": [
+            "Instagram"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/DYw69YrMzPJ/",
+          "creator": "ammaras_drive_in",
+          "platforms": [
+            "Instagram"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/DYwo2PaAmNm/",
+          "creator": "food_1890",
+          "platforms": [
+            "Instagram"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@food_1890/video/7643789645003721991",
+          "creator": "food_1890",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://u.pcloud.link/publink/show?code=kZpb7c5ZBBfefIE3RQzwyYtzTqqeP46N06g7",
+          "creator": "rest.blogs",
+          "platforms": [],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/DYuoAGCC0RT/",
+          "creator": "fooditude_with_aj",
+          "platforms": [
+            "Instagram"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://u.pcloud.link/publink/show?code=kZRb7c5ZUdSYGhmJEE8O9aBD8a4siVeTi6BV",
+          "creator": "yummy6_6",
+          "platforms": [],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/DZIlThcM4E2/",
+          "creator": "nouf449_",
+          "platforms": [
+            "Instagram"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@nouf.alnemer/video/7647179939493547285",
+          "creator": "nouf449_",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "زيارة",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@about.thenew/video/7660522963325799687",
+          "creator": "about.thenew",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "توصيل",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@mahay088/video/7660225648123841812",
+          "creator": "mahay088",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "توصيل",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@asmaelshiekh5/video/7660494718929095957",
+          "creator": "asmaelshiekh5",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "توصيل",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/reel/Das79boAmGr/",
+          "creator": "trend_foodh",
+          "platforms": [
+            "Instagram"
+          ],
+          "kind": "توصيل",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@trendfoodh/video/7661746999988915474",
+          "creator": "trend_foodh",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "توصيل",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/Das6lQyILt6/",
+          "creator": "p.d1ksa",
+          "platforms": [
+            "Instagram"
+          ],
+          "kind": "توصيل",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@nawal_abdullah40/video/7661692451341520146",
+          "creator": "p.d1ksa",
+          "platforms": [
+            "TikTok"
+          ],
+          "kind": "توصيل",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://u.pcloud.link/publink/show?code=kZTj7c5ZKGU0B8vM7oQsazLlHv24s7P1ejeX",
+          "creator": "p.d1ksa",
+          "platforms": [],
+          "kind": "توصيل",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/Da_Yd-0Iomv/",
+          "creator": "anadil.ksa",
+          "platforms": [
+            "Instagram"
+          ],
+          "kind": "توصيل",
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        }
+      ]
+    },
+    {
       "id": "smokey-house",
       "brand": "Smokey House",
       "title": "حملة *سموكي هاوس* في الرياض",
