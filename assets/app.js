@@ -396,7 +396,7 @@
           <div class="seg" id="view"><button class="on" data-v="cards">بطاقات الفيديو</button><button data-v="table">جدول</button></div>
           <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
             ${s.platforms.length > 1 ? `<select class="sel" id="pf"><option value="">كل المنصات</option>${s.platforms.map(p => `<option>${E(p)}</option>`).join("")}</select>` : ""}
-            <select class="sel" id="sort"><option value="">الترتيب الافتراضي</option><option value="views">الأعلى مشاهدة</option><option value="er">الأعلى تفاعلًا</option><option value="likes">الأعلى إعجابًا</option><option value="saves">الأعلى حفظًا</option></select>
+            <select class="sel" id="sort"><option value="">الأفضل أولًا</option><option value="views">الأعلى مشاهدة</option><option value="er">الأعلى تفاعلًا</option><option value="likes">الأعلى إعجابًا</option><option value="saves">الأعلى حفظًا</option></select>
           </div>
         </div>
         <div id="out"></div>
@@ -496,9 +496,12 @@
     }
 
     /* ----- coverage (cards / table) ----- */
+    /* default order: TikTok (and other autoplay players) first, then Instagram, then links with no player; highest views first inside each group, ER breaks ties */
+    const RANK = { tt: 0, yt: 0, mp4: 0, ig: 1, none: 2 };
+    const bestFirst = (a, b) => (RANK[sourceOf(a).kind] - RANK[sourceOf(b).kind]) || ((b.views ?? -1) - (a.views ?? -1)) || ((b.er ?? -1) - (a.er ?? -1));
     let view = "cards", sort = "", pf = "";
     const out = document.getElementById("out");
-    const list = () => { let r = covs.filter(v => !pf || v.platforms.includes(pf)); r = [...r].sort((a, b) => (sourceOf(a).kind === "none") - (sourceOf(b).kind === "none")); if (sort) r = [...r].sort((a, b) => (b[sort] ?? -1) - (a[sort] ?? -1)); return r; };
+    const list = () => { let r = covs.filter(v => !pf || v.platforms.includes(pf)); r = [...r].sort(bestFirst); if (sort) r = [...r].sort((a, b) => (b[sort] ?? -1) - (a[sort] ?? -1)); return r; };
     const draw = () => {
       destroyPlayers();
       const r = list();

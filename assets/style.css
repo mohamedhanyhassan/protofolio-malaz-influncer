@@ -448,3 +448,8 @@ footer .logo img{width:auto}
 .rlogos .bl img,.vcard .blg img,.rfoot .lg2 .bl img{border-radius:14px}
 .blogo img[src^="logos/"]{padding:0}
 .crow h3 em{font-style:normal;color:var(--gold-d)}
+
+/* Instagram embeds draw their own header/footer: keep our overlays off them */
+.media.ig .src,.media.ig .ov{display:none}
+.media.ig .no{top:auto;bottom:62px;right:12px}
+.media.ig .exp{bottom:auto;top:58px;left:12px;width:34px;height:34px}
