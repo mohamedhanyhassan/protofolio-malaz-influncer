@@ -9,6 +9,157 @@ window.PORTFOLIO = {
   },
   "campaigns": [
     {
+      "id": "basic-cafe",
+      "brand": "BASIC",
+      "title": "حملة *بيزك كافيه* في جدة",
+      "type": "حملة مشاهير",
+      "logo": "logos/basic.png",
+      "brandUrl": "https://www.instagram.com/basiccafe.sa/",
+      "city": "جدة — حي الروضة",
+      "date": "2025-08-18",
+      "dataDate": "",
+      "description": "كافيه بيزك في حي الروضة بجدة: قهوة حلوة ولحظات حلوة. حملة مؤثرين بـ10 تغطيات على تيك توك وإنستغرام في أغسطس 2025.",
+      "hashtags": [
+        "بيزك_كافيه",
+        "BasicCafe",
+        "KeepItBASIC",
+        "جدة",
+        "حي_الروضة"
+      ],
+      "coverages": [
+        {
+          "url": "https://www.tiktok.com/@fsz70005/video/7540051213924961554",
+          "creator": "fsz70005",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/reel/DNiu6b8MrTi/",
+          "creator": "",
+          "platforms": [
+            "Instagram"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@lina_esmail/video/7540673462931574034",
+          "creator": "lina_esmail",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@ameera8855/video/7542511428368928008",
+          "creator": "ameera8855",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/reel/DNqqOD5owWe/",
+          "creator": "",
+          "platforms": [
+            "Instagram"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@salem3703/video/7541589165121473799",
+          "creator": "salem3703",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/reel/DN0caCV0A_X/",
+          "creator": "",
+          "platforms": [
+            "Instagram"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/reel/DN02KCRWAi-/",
+          "creator": "",
+          "platforms": [
+            "Instagram"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/reel/DN3OBEy0IFd/",
+          "creator": "",
+          "platforms": [
+            "Instagram"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@e.al7arbi/video/7544057237153647890",
+          "creator": "e.al7arbi",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        }
+      ]
+    },
+    {
       "id": "endorphins-studios",
       "brand": "Endorphins Studios",
       "title": "حملة *Endorphins Studios*",
