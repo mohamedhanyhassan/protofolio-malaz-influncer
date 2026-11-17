@@ -9,18 +9,19 @@ window.PORTFOLIO = {
   },
   "campaigns": [
     {
-      "id": "unknown-sceproom",
-      "brand": "UNKNOWN SCEPROOM",
-      "title": "حملة *UNKNOWN SCEPROOM*",
+      "id": "endorphins-studios",
+      "brand": "Endorphins Studios",
+      "title": "حملة *Endorphins Studios*",
       "type": "حملة مشاهير",
-      "logo": "",
-      "brandUrl": "",
+      "logo": "logos/endorphins.png",
+      "brandUrl": "https://www.instagram.com/endorphins_studios/",
       "city": "",
       "date": "2025-05-13",
       "dataDate": "",
-      "description": "حملة مؤثرين لـ UNKNOWN SCEPROOM بـ26 تغطية على تيك توك وإنستغرام، من مايو إلى يوليو 2025.",
+      "description": "حملة مؤثرين لـ Endorphins Studios بـ26 تغطية على تيك توك وإنستغرام، من مايو إلى يوليو 2025.",
       "hashtags": [
-        "UNKNOWN_SCEPROOM"
+        "EndorphinsStudios",
+        "إندورفينز_ستوديوز"
       ],
       "coverages": [
         {
