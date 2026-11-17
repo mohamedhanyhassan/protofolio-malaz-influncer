@@ -17,7 +17,7 @@ window.PORTFOLIO = {
       "brandUrl": "",
       "city": "",
       "date": "2026-01-19",
-      "dataDate": "",
+      "dataDate": "2026-11-17",
       "description": "حملة مؤثرين لمطعم منز: 60 تغطية بين زيارات للمطعم وطلبات توصيل، على تيك توك وإنستغرام من يناير إلى يوليو 2026.",
       "hashtags": [
         "منز",
@@ -31,10 +31,10 @@ window.PORTFOLIO = {
             "Instagram"
           ],
           "kind": "زيارة",
-          "followers": null,
+          "followers": 44007,
           "views": null,
-          "likes": null,
-          "comments": null,
+          "likes": 47,
+          "comments": 3,
           "saves": null,
           "note": ""
         },
@@ -45,11 +45,11 @@ window.PORTFOLIO = {
             "TikTok"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 216000,
+          "views": 22800,
+          "likes": 591,
+          "comments": 42,
+          "saves": 304,
           "note": ""
         },
         {
@@ -71,11 +71,11 @@ window.PORTFOLIO = {
             "TikTok"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 115700,
+          "views": 12200,
+          "likes": 124,
+          "comments": 56,
+          "saves": 60,
           "note": ""
         },
         {
@@ -85,10 +85,10 @@ window.PORTFOLIO = {
             "Instagram"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
+          "followers": 38119,
+          "views": 1709,
           "likes": null,
-          "comments": null,
+          "comments": 9,
           "saves": null,
           "note": ""
         },
@@ -99,11 +99,11 @@ window.PORTFOLIO = {
             "TikTok"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 311400,
+          "views": 1421,
+          "likes": 663,
+          "comments": 2,
+          "saves": 199,
           "note": ""
         },
         {
@@ -118,7 +118,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": ""
+          "note": "(مخفي: اللينك ما رجعش أرقام — غالبًا محذوف أو خاص)",
+          "hidden": true
         },
         {
           "url": "https://u.pcloud.link/publink/show?code=kZd3YK5Z3FzkChDIFWF0Sknvv1thaSPkis57",
@@ -139,11 +140,11 @@ window.PORTFOLIO = {
             "TikTok"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 50200,
+          "views": 498,
+          "likes": 12,
+          "comments": 0,
+          "saves": 2,
           "note": ""
         },
         {
@@ -153,11 +154,11 @@ window.PORTFOLIO = {
             "TikTok"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 141500,
+          "views": 609,
+          "likes": 26,
+          "comments": 11,
+          "saves": 4,
           "note": ""
         },
         {
@@ -167,11 +168,11 @@ window.PORTFOLIO = {
             "TikTok"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 120500,
+          "views": 7402,
+          "likes": 27,
+          "comments": 11,
+          "saves": 11,
           "note": ""
         },
         {
@@ -181,11 +182,11 @@ window.PORTFOLIO = {
             "TikTok"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 107400,
+          "views": 1815,
+          "likes": 31,
+          "comments": 7,
+          "saves": 17,
           "note": ""
         },
         {
@@ -195,11 +196,11 @@ window.PORTFOLIO = {
             "TikTok"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 95600,
+          "views": 2020,
+          "likes": 19,
+          "comments": 1,
+          "saves": 9,
           "note": ""
         },
         {
@@ -214,7 +215,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": ""
+          "note": "(مخفي: اللينك ما رجعش أرقام — غالبًا محذوف أو خاص)",
+          "hidden": true
         },
         {
           "url": "https://www.instagram.com/p/DT08_-RiDlk/",
@@ -223,10 +225,10 @@ window.PORTFOLIO = {
             "Instagram"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 616633,
+          "views": 14156,
+          "likes": 37,
+          "comments": 11,
           "saves": null,
           "note": ""
         },
@@ -237,10 +239,10 @@ window.PORTFOLIO = {
             "Instagram"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
+          "followers": 207481,
+          "views": 7646,
           "likes": null,
-          "comments": null,
+          "comments": 1,
           "saves": null,
           "note": ""
         },
@@ -251,11 +253,11 @@ window.PORTFOLIO = {
             "TikTok"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 156300,
+          "views": 10800,
+          "likes": 44,
+          "comments": 19,
+          "saves": 243,
           "note": ""
         },
         {
@@ -265,11 +267,11 @@ window.PORTFOLIO = {
             "TikTok"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 178000,
+          "views": 200200,
+          "likes": 7265,
+          "comments": 40,
+          "saves": 2900,
           "note": ""
         },
         {
@@ -284,7 +286,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": ""
+          "note": "(مخفي: اللينك ما رجعش أرقام — غالبًا محذوف أو خاص)",
+          "hidden": true
         },
         {
           "url": "https://www.instagram.com/p/DUIoM4ejAv1/",
@@ -298,7 +301,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": ""
+          "note": "(مخفي: اللينك ما رجعش أرقام — غالبًا محذوف أو خاص)",
+          "hidden": true
         },
         {
           "url": "https://www.tiktok.com/@sseham0015/video/7600261680655813908",
@@ -307,11 +311,11 @@ window.PORTFOLIO = {
             "TikTok"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 59500,
+          "views": 302,
+          "likes": 14,
+          "comments": 0,
+          "saves": 5,
           "note": ""
         },
         {
@@ -321,11 +325,11 @@ window.PORTFOLIO = {
             "TikTok"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 108700,
+          "views": 18000,
+          "likes": 260,
+          "comments": 36,
+          "saves": 160,
           "note": ""
         },
         {
@@ -347,11 +351,11 @@ window.PORTFOLIO = {
             "TikTok"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 121400,
+          "views": 612,
+          "likes": 14,
+          "comments": 0,
+          "saves": 5,
           "note": ""
         },
         {
@@ -361,11 +365,11 @@ window.PORTFOLIO = {
             "TikTok"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 199500,
+          "views": 18800,
+          "likes": 52,
+          "comments": 2,
+          "saves": 15,
           "note": ""
         },
         {
@@ -375,11 +379,11 @@ window.PORTFOLIO = {
             "TikTok"
           ],
           "kind": "توصيل",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 55400,
+          "views": 8949,
+          "likes": 62,
+          "comments": 0,
+          "saves": 22,
           "note": ""
         },
         {
@@ -401,11 +405,11 @@ window.PORTFOLIO = {
             "TikTok"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 166300,
+          "views": 12000,
+          "likes": 268,
+          "comments": 10,
+          "saves": 35,
           "note": ""
         },
         {
@@ -420,7 +424,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": ""
+          "note": "(مخفي: اللينك ما رجعش أرقام — غالبًا محذوف أو خاص)",
+          "hidden": true
         },
         {
           "url": "https://www.instagram.com/reel/DUX1DLtiERq/",
@@ -429,10 +434,10 @@ window.PORTFOLIO = {
             "Instagram"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 100062,
+          "views": 43041,
+          "likes": 395,
+          "comments": 112,
           "saves": null,
           "note": ""
         },
@@ -443,11 +448,11 @@ window.PORTFOLIO = {
             "TikTok"
           ],
           "kind": "توصيل",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 264500,
+          "views": 27000,
+          "likes": 956,
+          "comments": 21,
+          "saves": 126,
           "note": ""
         },
         {
@@ -471,11 +476,11 @@ window.PORTFOLIO = {
             "TikTok"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 80100,
+          "views": 12000,
+          "likes": 242,
+          "comments": 12,
+          "saves": 178,
           "note": ""
         },
         {
@@ -485,11 +490,11 @@ window.PORTFOLIO = {
             "TikTok"
           ],
           "kind": "توصيل",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 136600,
+          "views": 31000,
+          "likes": 319,
+          "comments": 79,
+          "saves": 72,
           "note": ""
         },
         {
@@ -523,11 +528,11 @@ window.PORTFOLIO = {
             "TikTok"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 17900,
+          "views": 621,
+          "likes": 18,
+          "comments": 0,
+          "saves": 2,
           "note": ""
         },
         {
@@ -537,10 +542,10 @@ window.PORTFOLIO = {
             "Instagram"
           ],
           "kind": "زيارة",
-          "followers": null,
+          "followers": 56021,
           "views": null,
           "likes": null,
-          "comments": null,
+          "comments": 2,
           "saves": null,
           "note": ""
         },
@@ -551,11 +556,11 @@ window.PORTFOLIO = {
             "TikTok"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 15800,
+          "views": 709,
+          "likes": 6,
+          "comments": 1,
+          "saves": 1,
           "note": ""
         },
         {
@@ -565,10 +570,10 @@ window.PORTFOLIO = {
             "Instagram"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 42994,
+          "views": 3038,
+          "likes": 64,
+          "comments": 25,
           "saves": null,
           "note": ""
         },
@@ -591,10 +596,10 @@ window.PORTFOLIO = {
             "Instagram"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 33450,
+          "views": 338,
+          "likes": 8,
+          "comments": 4,
           "saves": null,
           "note": ""
         },
@@ -605,10 +610,10 @@ window.PORTFOLIO = {
             "Instagram"
           ],
           "kind": "زيارة",
-          "followers": null,
+          "followers": 88150,
           "views": null,
           "likes": null,
-          "comments": null,
+          "comments": 0,
           "saves": null,
           "note": ""
         },
@@ -619,10 +624,10 @@ window.PORTFOLIO = {
             "Instagram"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 88150,
+          "views": 60712,
+          "likes": 443,
+          "comments": 63,
           "saves": null,
           "note": ""
         },
@@ -633,10 +638,10 @@ window.PORTFOLIO = {
             "Instagram"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 30418,
+          "views": 7038,
+          "likes": 49,
+          "comments": 1,
           "saves": null,
           "note": ""
         },
@@ -647,11 +652,11 @@ window.PORTFOLIO = {
             "TikTok"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 600200,
+          "views": 15400,
+          "likes": 169,
+          "comments": 1,
+          "saves": 16,
           "note": ""
         },
         {
@@ -673,10 +678,10 @@ window.PORTFOLIO = {
             "Instagram"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
+          "followers": 33803,
+          "views": 8019,
           "likes": null,
-          "comments": null,
+          "comments": 37,
           "saves": null,
           "note": ""
         },
@@ -699,10 +704,10 @@ window.PORTFOLIO = {
             "Instagram"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 31129,
+          "views": 409,
+          "likes": 55,
+          "comments": 1,
           "saves": null,
           "note": ""
         },
@@ -713,11 +718,11 @@ window.PORTFOLIO = {
             "TikTok"
           ],
           "kind": "زيارة",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 425,
+          "views": 5791,
+          "likes": 36,
+          "comments": 4,
+          "saves": 27,
           "note": ""
         },
         {
@@ -732,7 +737,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": ""
+          "note": "(مخفي: اللينك ما رجعش أرقام — غالبًا محذوف أو خاص)",
+          "hidden": true
         },
         {
           "url": "https://www.tiktok.com/@mahay088/video/7660225648123841812",
@@ -741,11 +747,11 @@ window.PORTFOLIO = {
             "TikTok"
           ],
           "kind": "توصيل",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 35900,
+          "views": 220,
+          "likes": 6,
+          "comments": 0,
+          "saves": 4,
           "note": ""
         },
         {
@@ -755,11 +761,11 @@ window.PORTFOLIO = {
             "TikTok"
           ],
           "kind": "توصيل",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 166300,
+          "views": 3126,
+          "likes": 59,
+          "comments": 4,
+          "saves": 82,
           "note": ""
         },
         {
@@ -774,7 +780,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": ""
+          "note": "(مخفي: اللينك ما رجعش أرقام — غالبًا محذوف أو خاص)",
+          "hidden": true
         },
         {
           "url": "https://www.tiktok.com/@trendfoodh/video/7661746999988915474",
@@ -783,11 +790,11 @@ window.PORTFOLIO = {
             "TikTok"
           ],
           "kind": "توصيل",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 9593,
+          "views": 3903,
+          "likes": 14,
+          "comments": 0,
+          "saves": 32,
           "note": ""
         },
         {
@@ -797,10 +804,10 @@ window.PORTFOLIO = {
             "Instagram"
           ],
           "kind": "توصيل",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 31334,
+          "views": 190,
+          "likes": 0,
+          "comments": 0,
           "saves": null,
           "note": ""
         },
@@ -811,11 +818,11 @@ window.PORTFOLIO = {
             "TikTok"
           ],
           "kind": "توصيل",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 1924,
+          "views": 315,
+          "likes": 5,
+          "comments": 0,
+          "saves": 0,
           "note": ""
         },
         {
@@ -842,7 +849,22 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": ""
+          "note": "(مخفي: اللينك ما رجعش أرقام — غالبًا محذوف أو خاص)",
+          "hidden": true
+        }
+      ],
+      "insights": [
+        {
+          "title": "تغطية واحدة صنعت 35% من المشاهدات",
+          "body": "فيديو hanolove.f8 على تيك توك وصل 200 ألف مشاهدة ونسبة تفاعل 5%، وهي نفسها كانت من أعلى التغطيات في حملة حلاي. صانعة محتوى مضمونة لحملات المطاعم الجاية."
+        },
+        {
+          "title": "الزيارات أقوى من التوصيل",
+          "body": "تغطيات الزيارة للمطعم حققت 490 ألف مشاهدة من أصل 565 ألف، بنسبة تفاعل 3.2% مقابل 2.5% لتغطيات التوصيل. تجربة المكان نفسه بتبيع أكتر من الأكل لوحده."
+        },
+        {
+          "title": "تيك توك جاب 74% من المشاهدات",
+          "body": "27 فيديو تيك توك حققوا 419 ألف مشاهدة بنسبة تفاعل 3.9%، مقابل 0.9% على إنستغرام. الحملة الجاية الأولوية لتيك توك، وإنستغرام للتغطيات الداعمة."
         }
       ]
     },

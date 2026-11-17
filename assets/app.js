@@ -56,7 +56,7 @@
     const ext = M.safeUrl(c.url);
     return `<div class="media ${s.kind === "ig" ? "ig" : ""} ${s.kind === "none" && !full ? "none" : ""}" data-kind="${s.kind}" data-full="${full ? 1 : 0}" data-src="${E(s.src || "")}" data-id="${E(s.id || "")}">
       <div class="ph"><div class="av">${E(initial(c.creator))}</div><b class="ltr">${c.creator ? "@" + E(c.creator) : ""}</b>
-        <small class="phmsg">${s.kind === "none" ? (ext ? (c.link.platform === "Snapchat" ? "سناب شات ما بيسمحش بعرض الفيديو هنا" : c.link.kind === "story" ? "الستوري بتتعرض على إنستغرام" : "التغطية بتتعرض على المنصة") : "رابط الفيديو يُضاف قريبًا") : "جارِ تحميل الفيديو…"}</small>
+        <small class="phmsg">${s.kind === "none" ? (ext ? (c.link.platform === "Snapchat" ? "سناب شات ما بيسمحش بعرض الفيديو هنا" : c.link.kind === "story" ? "الستوري بتتعرض على إنستغرام" : c.link.platform === "Link" ? "اضغط لمشاهدة الفيديو" : "التغطية بتتعرض على المنصة") : "رابط الفيديو يُضاف قريبًا") : "جارِ تحميل الفيديو…"}</small>
         ${s.kind === "none" && ext ? `<a class="btn gold phbtn" href="${E(ext)}" target="_blank" rel="noopener">${IC.out} ${openLabel(c).replace(" ←", "")}</a>` : ""}
         ${s.kind === "tt" ? `<span class="ttload"><i></i><i></i><i></i></span>${c.views ? `<span class="ttv"><b class="num">${M.compact(c.views)}</b> مشاهدة</span>` : ""}<a class="btn gold phbtn ttfail" href="${E(ext)}" target="_blank" rel="noopener">${IC.play} شاهد الفيديو على تيك توك</a>` : ""}
         ${s.kind === "none" && src ? "" : `<div class="chips" style="justify-content:center">${pfBadges(c.platforms)}</div>`}</div>
