@@ -10,7 +10,7 @@ Read this file first. It explains what the project is, how it is built, the deci
 - **Design reference:** a report page the user liked (https://abdelrahmanyasser012345-ctrl.github.io/hlay-cafe-report/). The campaign page copies its structure and animations in Malaz colors.
 
 ## Hosting
-- **Static site on GitHub Pages**, with no server and no build step. The user uploads files through the GitHub web UI (Add file → Upload files).
+- **Static site**, repo `mohamedhanyhassan/protofolio-malaz-influncer` (branch `main`), auto-deployed by Vercel project `protofolio-malaz-influncer` (https://protofolio-malaz-influncer.vercel.app). No build step. The user may also upload files through the GitHub web UI.
 - Because of that, everything is plain HTML, CSS and vanilla JS. **Don't add a bundler, a framework or a backend** unless the user asks.
 
 ## Files
@@ -49,6 +49,9 @@ window.PORTFOLIO = {
 - **Totals are always computed** from the coverages in `MZ.campStats`. The user asked for this explicitly: there are no manual totals anymore, and `admin.html` deletes any legacy `totals` field on load.
 - **ER** = (likes + comments + saves) ÷ views. **Reach** = views ÷ followers.
 
+## Home page (`home()` in `app.js`, styles in the `v3 — Home` section of `style.css`)
+Same visual language as the campaign report (`body.report homepg`): dark hero with the gold Malaz logo and a gold TOTAL VIEWS card (views, campaigns, coverages, creators), gold marquee of brand names, KPI row, a featured campaign (highest views), a card grid of all campaigns sorted by views (search + type chips; campaigns with no numbers show «الأرقام تُضاف قريبًا»), WHY MALAZ cards, and a dark CTA band.
+
 ## Campaign page sections (`campaign()` in `app.js`)
 The sections are built from the data, and each one is hidden when its data isn't there.
 1. **Hero:** black background with falling diamond confetti; Malaz gold logo × brand logo; title; pills; a floating gold TOTAL VIEWS card with a count-up.
@@ -82,7 +85,11 @@ The sections are built from the data, and each one is hidden when its data isn't
 ## Status / known gaps
 - **Not tested against live services.** The build environment had no internet, so the TikTok and Instagram embeds and the Apify calls were only tested with mocks. Verify them live first.
 - Hlay campaign: only 4 of its 50 creators are in `data.js`. Its insights text quotes the full-campaign numbers (16,030 of 20,226 likes, 5,039 saves).
-- The Binrushd Optical rows have numbers but no URLs. The Stepia, Pharmafection, Nutrili and Infinity Kits campaigns have URLs but no numbers or logos.
+- Coverage order on a campaign page defaults to TikTok first, then Instagram, then links with no player (Snapchat, stories), highest views first in each group.
+- Brand logos live in `logos/` as files (umandi, binrushd, endorphins, basic, unknown). Logos that are white/transparent are placed on a black square so they read on gold and white backgrounds.
+- Binrushd: 4 coverages still have no URL (abdullah_lara_official, ghada_elshahawy, zekra_mousa, vibes_with_anam); Instagram links were matched to creators by row order and need the user's confirmation.
+- No numbers yet: UNKNOWN Escape Game (26 links), Endorphins Studios (4), BASIC cafe (10), Stepia, Pharmafection, Nutrili, Infinity Kits. The session that added them had no network access to TikTok/Instagram/Apify, so numbers must come from the admin ⚡ button or a sheet from the user.
+- When a coverage has no username, the campaign shows "N تغطية" instead of "N مؤثر".
 - The Instagram post `DecemLlNIEI` appears in both Stepia and Pharmafection. The admin flags it as a duplicate; the user needs to decide which campaign it belongs to.
 - `admin.html` has no password. It is harmless, because it only edits a local draft, but the user may want it removed from the public repo.
 

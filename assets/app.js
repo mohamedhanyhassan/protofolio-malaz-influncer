@@ -158,40 +158,107 @@
 
   /* ================= HOME ================= */
   function home() {
+    document.body.classList.add("report", "homepg");
     const all = camps.map(c => ({ c, ...M.campStats(c) }));
     const tViews = all.reduce((a, x) => a + (x.s.views || 0), 0);
-    const tCreators = all.reduce((a, x) => a + (x.s.creators || 0), 0);
+    const tCovs = all.reduce((a, x) => a + x.covs.length, 0);
+    const names = new Set(); let unnamed = 0;
+    all.forEach(x => x.covs.forEach(v => v.creator ? names.add(v.creator.toLowerCase()) : unnamed++));
+    const tCreators = names.size + unnamed;
+    const tLikes = all.reduce((a, x) => a + (x.s.likes || 0), 0);
+    const cities = new Set(); camps.forEach(c => String(c.city || "").split(/[·،,—-]/).map(s => s.trim()).filter(Boolean).forEach(s => { if (/^(الرياض|جدة|جازان|خميس مشيط|الدمام|مكة|المدينة|الخبر|أبها|الطائف)$/.test(s)) cities.add(s); }));
     const types = [...new Set(camps.map(c => c.type).filter(Boolean))];
+    const featured = all.filter(x => x.s.views).sort((a, b) => b.s.views - a.s.views)[0];
+    const conf = Array.from({ length: 26 }, (_, i) => `<i style="left:${(i * 37) % 100}%;top:${-5 - (i * 13) % 30}px;background:${["#ffb004", "#629e63", "#f6f4ef", "#ffb004"][i % 4]};animation-delay:${-(i * .83).toFixed(2)}s;animation-duration:${7 + (i % 5)}s;width:${6 + (i % 3) * 3}px;height:${6 + (i % 3) * 3}px"></i>`).join("");
+    const mq = [];
+    camps.forEach(c => { if (c.brand) mq.push(c.brand); });
+    if (tViews) mq.push("مشاهدة " + M.compact(tViews));
+    mq.push("تغطية " + tCovs);
+    if (cities.size) mq.push(...cities);
+    while (mq.length && mq.length < 10) mq.push(...mq.slice(0, 10 - mq.length));
+    const mqHTML = mq.map(x => `<span>${E(x)}</span>`).join("");
+    const mark = c => { const s = M.safeUrl(c.logo); return s ? `<img src="${E(s)}" alt="${E(c.brand)}">` : `<span>${E(initial(c.brand))}</span>`; };
+
     app.innerHTML = `
-    <section class="hero fade"><div class="wrap">
-      <span class="eyebrow">لوحة التغطية — <span class="num">${new Date().getFullYear()}</span></span>
-      <h1>تغطية تتوسّع<br><em>مع كل حملة.</em></h1>
-      <p class="lead">سجل حي لكل حملة مؤثرين — المنصة، الموقع، روابط التغطية والنتائج، في مكان واحد.</p>
-      <div class="kpis">
-        <div class="kpi"><div class="v num">${M.fmt(camps.length)}</div><div class="l">حملات</div></div>
-        <div class="kpi g"><div class="v num">${M.fmt(tCreators)}</div><div class="l">مؤثرين</div></div>
-        <div class="kpi"><div class="v num">${M.fmt(tViews)}</div><div class="l">إجمالي المشاهدات</div></div>
-        <div class="kpi hl"><div class="v num">${E(agency.influencersPool)}</div><div class="l">من المشاهير والمؤثرين داخل المملكة، نختار منهم ما يناسب كل حملة وجمهورها.</div></div>
-      </div>
-      <div class="why">
-        <div><span class="eyebrow">WHY MALAZ</span><h2>اختيار المشاهير عند ${E(agency.name)} مو عشوائي.</h2>
-        <p>نشتغل على حملات المشاهير كجزء من استراتيجية متكاملة: ما ينزل أي مشهور في الحملة إلا بعد اختياره واعتماده بما يتناسب مع النشاط والجمهور والمنصة وطبيعة الحملة، مع متابعة التغطيات والنتائج في مكان واحد.</p></div>
-        <div class="steps">
-          <div class="step"><small>SELECTION — 01</small><b>اختيار المشاهير المناسبين للحملة</b></div>
-          <div class="step"><small>CONTROL — 02</small><b>ما يتم اعتماد أي اسم قبل اختياره</b></div>
-          <div class="step"><small>TRACKING — 03</small><b>متابعة التغطيات والروابط والمشاهدات</b></div>
+    <section class="rhero hhero"><div class="confetti">${conf}</div><div class="wrap">
+      <div class="rmeta"><span>${E((agency.nameEn || "MALAZ").toUpperCase())} / CAMPAIGN PORTFOLIO</span><span class="dots">• • •</span><span class="num">${new Date().getFullYear()}</span></div>
+      <div class="rgrid">
+        <div>
+          <img class="hlogo rv" src="assets/malaz-gold.png" alt="${E(agency.name)}">
+          <h1 class="rtitle rv d1">حملات مؤثرين<br><em>بأرقام حقيقية.</em></h1>
+          <p class="rdesc rv d2">بورتفوليو ${E(agency.name)} لحملات المشاهير والمؤثرين في السعودية: كل تغطية بفيديوها، وكل حملة بأرقامها ونتائجها، في مكان واحد.</p>
+          <div class="racts rv d3">
+            <a class="btn gold" href="#campaigns">تصفّح الحملات ↓</a>
+            ${agency.site ? `<a class="btn" href="${E(M.safeUrl(agency.site))}" target="_blank" rel="noopener">${IC.out} تواصل معنا</a>` : ""}
+          </div>
         </div>
+        <div class="vcard-wrap rv d2"><span class="dia a"></span><span class="dia b"></span>
+          <div class="vcard"><span class="h h1"></span><span class="h h2"></span><span class="h h3"></span><span class="h h4"></span>
+            <small>TOTAL VIEWS</small>
+            <div class="big" data-count="${tViews}">0</div>
+            <div class="cap">مشاهدة عبر حملاتنا</div>
+            <div class="vmini"><div><b class="num" data-count="${camps.length}">0</b><span>حملة</span></div><div><b class="num" data-count="${tCovs}">0</b><span>تغطية</span></div><div><b class="num" data-count="${tCreators}">0</b><span>مؤثر</span></div></div>
+          </div><span class="dotrow">• • • • • • • •</span></div>
       </div>
     </div></section>
-    <section class="sec" id="campaigns"><div class="wrap">
-      <div class="sec-h"><div><span class="eyebrow">الحملات</span><h2>كل <em>حملاتنا</em></h2></div>
-        <p style="color:var(--muted);max-width:420px">توثيق كامل لكل تغطيات الحملات ونتائجها. اضغط على أي حملة لفتح تفاصيل المؤثرين ومشاهدة الفيديوهات.</p></div>
-      <div class="tools">
-        <label class="search">${IC.search}<input id="q" type="search" placeholder="دوّر على حملة أو يوزر…" autocomplete="off"></label>
-        ${types.length > 1 ? `<button class="chip on" data-t="">الكل</button>` + types.map(t => `<button class="chip" data-t="${E(t)}">${E(t)}</button>`).join("") : ""}
+    <div class="rmarq"><div class="tr">${mqHTML}${mqHTML}</div></div>
+
+    <div class="wrap">
+      <div class="rkpis hk">
+        <div class="rk dark rv"><div class="v" data-count="${tViews}">0</div><div class="l">مشاهدة حققتها تغطيات المؤثرين في حملاتنا</div></div>
+        <div class="rk rv d1"><div class="v" data-count="${camps.length}">0</div><div class="l">حملة موثّقة</div></div>
+        <div class="rk rv d2"><div class="v" data-count="${tCovs}">0</div><div class="l">تغطية بالفيديو</div></div>
+        <div class="rk rv d3"><div class="v" data-count="${tLikes}">0</div><div class="l">إعجاب</div></div>
+        <div class="rk gold rv d4"><div class="v">${E(agency.influencersPool || "+5000")}</div><div class="l">مشهور ومؤثر داخل المملكة نختار منهم</div></div>
       </div>
-      <div class="clist" id="clist"></div>
+
+      ${featured ? `<section class="rsec">
+        <span class="rlabel rv">01 / FEATURED CAMPAIGN</span>
+        <h2 class="rh2 rv">الحملة <em>الأعلى مشاهدة</em></h2>
+        <a class="feat rv" href="#c-${E(featured.c.id)}">
+          <div class="fl1"><div class="flogo">${mark(featured.c)}</div>
+            <div><span class="fk">${E(featured.c.type || "حملة")}${featured.c.city ? " · " + E(featured.c.city) : ""}</span>
+            <h3>${hl(featured.c.title || featured.c.brand)}</h3>
+            ${featured.c.description ? `<p>${E(featured.c.description)}</p>` : ""}
+            <span class="btn gold">افتح تقرير الحملة ←</span></div></div>
+          <div class="fstats">
+            <div class="big"><b class="num">${M.fmt(featured.s.views)}</b><span>مشاهدة</span></div>
+            <div><b class="num">${M.fmt(featured.covs.length)}</b><span>تغطية</span></div>
+            ${featured.s.likes !== null ? `<div><b class="num">${M.compact(featured.s.likes)}</b><span>إعجاب</span></div>` : ""}
+            ${featured.s.er !== null ? `<div class="g"><b class="num">${M.pct(featured.s.er)}</b><span>نسبة التفاعل</span></div>` : ""}
+          </div>
+        </a>
+      </section>` : ""}
+
+      <section class="rsec" id="campaigns">
+        <span class="rlabel rv">${featured ? "02" : "01"} / ALL CAMPAIGNS</span>
+        <h2 class="rh2 rv">كل <em>حملاتنا</em></h2>
+        <p class="rsub rv">اضغط على أي حملة لفتح تقريرها: المؤثرين والفيديوهات والأرقام.</p>
+        <div class="tools">
+          <label class="search">${IC.search}<input id="q" type="search" placeholder="دوّر على براند أو مدينة أو يوزر مؤثر…" autocomplete="off"></label>
+          ${types.length > 1 ? `<div class="tiers-f" id="tyf"><button class="on" data-t="">الكل</button>${types.map(t => `<button data-t="${E(t)}">${E(t)}</button>`).join("")}</div>` : ""}
+        </div>
+        <div class="cgrid" id="clist"></div>
+      </section>
+
+      <section class="rsec">
+        <span class="rlabel rv">${featured ? "03" : "02"} / WHY ${E((agency.nameEn || "MALAZ").toUpperCase())}</span>
+        <h2 class="rh2 rv">اختيار المشاهير عندنا <em>مو عشوائي</em></h2>
+        <div class="ins">
+          <div class="insc rv d1"><span class="n num">01 · SELECTION</span><h3>نختار المشهور المناسب</h3><p>كل اسم يتم اختياره حسب النشاط والجمهور والمنصة وطبيعة الحملة، من قاعدة فيها ${E(agency.influencersPool || "+5000")} مشهور ومؤثر داخل المملكة.</p></div>
+          <div class="insc rv d2"><span class="n num">02 · CONTROL</span><h3>ما ينزل أحد قبل الاعتماد</h3><p>البراند يعتمد كل اسم قبل الزيارة أو التصوير، ونتابع المحتوى والرسائل الأساسية قبل النشر.</p></div>
+          <div class="insc rv d3"><span class="n num">03 · TRACKING</span><h3>كل تغطية موثّقة بأرقامها</h3><p>روابط التغطيات والمشاهدات والتفاعل في تقرير واحد لكل حملة، مع ما تعلمناه للحملة الجاية.</p></div>
+        </div>
+      </section>
+    </div>
+
+    <section class="rfoot hcta"><div class="wrap">
+      <div><img class="mlg" src="assets/malaz-gold.png" alt="${E(agency.name)}" style="height:58px"></div>
+      <div><h4>${E(agency.slogan || "")}</h4>
+        <p>عندك براند وتبي حملة مؤثرين بنتائج تقدر تقيسها؟ كلّمنا ونخطط لحملتك الجاية.</p>
+        ${agency.site ? `<a class="btn gold" href="${E(M.safeUrl(agency.site))}" target="_blank" rel="noopener" style="margin-top:12px">${IC.out} ${E((agency.site || "").replace(/^https?:\/\//, "").replace(/\/$/, ""))}</a>` : ""}</div>
     </div></section>`;
+
     let q = "", ty = "";
     const list = document.getElementById("clist");
     const draw = () => {
@@ -202,23 +269,31 @@
         const hay = [x.c.brand, x.c.title, x.c.type, x.c.city].join(" ").toLowerCase();
         return hay.includes(qq) || x.covs.some(v => (v.creator || "").toLowerCase().includes(qq));
       });
+      rows.sort((a, b) => (b.s.views || 0) - (a.s.views || 0) || b.covs.length - a.covs.length);
       list.innerHTML = rows.length ? rows.map(x => {
         const hit = qq && x.covs.find(v => (v.creator || "").toLowerCase().includes(qq));
-        return `<a class="crow fade" href="#c-${E(x.c.id)}">
-          ${logoHTML(x.c)}
-          <div><span class="badge">${E(x.c.type || "حملة")}</span><h3>${hl(x.c.title || x.c.brand)}</h3>
-            <div class="meta">${E(x.c.brand)}${x.c.city ? " · " + E(x.c.city) : ""}${hit ? ` · <span class="ltr" style="color:var(--green-d)">@${E(hit.creator)}</span>` : ""}</div></div>
-          <div class="side"><span class="chips">${pfBadges(x.s.platforms)}</span>
-            <span class="badge line"><span class="num">${M.fmt(x.s.creators)}</span> مؤثر</span>
-            ${x.s.views ? `<span class="badge gold"><span class="num">${M.fmt(x.s.views)}</span> مشاهدة</span>` : ""}</div>
-          <span class="arr">‹</span></a>`;
+        const vids = x.covs.filter(v => sourceOf(v).kind !== "none").length;
+        return `<a class="ccard" href="#c-${E(x.c.id)}">
+          <div class="ctop"><div class="clogo">${mark(x.c)}</div><span class="chips">${pfBadges(x.s.platforms)}</span></div>
+          <span class="ctype">${E(x.c.type || "حملة")}</span>
+          <h3>${hl(x.c.title || x.c.brand)}</h3>
+          <div class="cmeta">${E(x.c.brand || "")}${x.c.city ? " · " + E(x.c.city) : ""}${hit ? ` · <span class="ltr hit">@${E(hit.creator)}</span>` : ""}</div>
+          <div class="cst">
+            ${x.s.views ? `<div class="v"><b class="num">${M.compact(x.s.views)}</b><span>مشاهدة</span></div>` : ""}
+            <div><b class="num">${x.covs.length}</b><span>${vids === x.covs.length ? "فيديو" : "تغطية"}</span></div>
+            ${vids && vids < x.covs.length ? `<div><b class="num">${vids}</b><span>فيديو</span></div>` : ""}
+            ${x.s.er !== null ? `<div><b class="num">${M.pct(x.s.er, 1)}</b><span>تفاعل</span></div>` : ""}
+          </div>
+          ${x.s.views ? "" : `<div class="soon">الأرقام تُضاف قريبًا</div>`}
+          <span class="cgo">افتح التقرير ←</span></a>`;
       }).join("") : `<div class="empty">ما فيه نتائج لـ «${E(q)}»</div>`;
     };
     document.getElementById("q").addEventListener("input", e => { q = e.target.value; draw(); });
-    document.querySelectorAll(".chip[data-t]").forEach(b => b.addEventListener("click", () => {
-      document.querySelectorAll(".chip[data-t]").forEach(x => x.classList.remove("on")); b.classList.add("on"); ty = b.dataset.t; draw();
+    document.querySelectorAll("#tyf button").forEach(b => b.addEventListener("click", () => {
+      document.querySelectorAll("#tyf button").forEach(x => x.classList.remove("on")); b.classList.add("on"); ty = b.dataset.t; draw();
     }));
     draw();
+    reveal(app);
     document.title = agency.name + " — بورتفوليو الحملات";
   }
 
@@ -298,6 +373,8 @@
     const withViews = covs.filter(v => v.views !== null).length;
     const avg = s.views && withViews ? s.views / withViews : null;
     const playable = covs.some(v => sourceOf(v).kind !== "none");
+    const anon = covs.some(v => !v.creator);
+    const who = anon ? `<span class="num">${M.fmt(covs.length)}</span> تغطية` : `<span class="num">${M.fmt(s.creators)}</span> مؤثر`;
     const plat = s.platforms.map(p => p.toUpperCase()).join(" + ");
 
     /* marquee items */
@@ -305,7 +382,7 @@
     (c.hashtags || []).forEach(h => mq.push("#" + String(h).replace(/^#/, "")));
     if (c.brand) mq.push(c.brand);
     if (s.views) mq.push("مشاهدة " + M.compact(s.views));
-    if (s.creators) mq.push("صانع محتوى " + s.creators);
+    if (s.creators) mq.push(anon ? "تغطية " + covs.length : "صانع محتوى " + s.creators);
     if (s.followers) mq.push("متابع " + M.compact(s.followers));
     if (s.likes) mq.push("إعجاب " + M.compact(s.likes));
     if (c.city) mq.push(c.city);
@@ -339,7 +416,7 @@
           <h1 class="rtitle rv d2">${hl(c.title || c.brand)}</h1>
           ${c.description ? `<p class="rdesc rv d3">${E(c.description)}</p>` : ""}
           <div class="rpills rv d4">
-            <span class="rpill gold"><span class="num">${M.fmt(s.creators)}</span> مؤثر</span>
+            <span class="rpill gold">${who}</span>
             ${s.followers ? `<span class="rpill"><span class="num">${M.compact(s.followers)}</span> متابع</span>` : ""}
             ${plat ? `<span class="rpill ltr">${E(plat)}</span>` : ""}
             ${c.city ? `<span class="rpill">${E(c.city)}</span>` : ""}
@@ -538,12 +615,12 @@
       <div class="cb">
         <div class="ch">${v.creator ? `<a ${cu ? `href="${E(cu)}" target="_blank" rel="noopener"` : ""}>${E(v.creator)}</a>` : `<b style="color:var(--muted)">تغطية <span class="num">#${v._no}</span></b>`}
           ${v.followers !== null ? `<span class="fpill"><span class="num">${M.compact(v.followers)}</span> متابع</span>` : ""}</div>
-        <div class="st">
+        ${[v.views, v.likes, v.comments, v.saves].every(x => x === null) ? `<div class="soon">أرقام التغطية تُضاف قريبًا</div>` : `<div class="st">
           <div><b>${M.fmt(v.views)}</b><span>مشاهدة</span></div>
           <div><b>${M.fmt(v.likes)}</b><span>إعجاب</span></div>
           <div><b>${M.fmt(v.comments)}</b><span>تعليق</span></div>
           <div><b>${M.fmt(v.saves)}</b><span>حفظ ومشاركة</span></div>
-        </div>
+        </div>`}
         ${v.followers !== null ? `<div class="rl"><span>الوصول <span class="num">${v.reach !== null ? Math.round(v.reach) + "%" : "—"}</span> من المتابعين</span><b class="num">${M.fmt(v.followers)} متابع</b></div>` : ""}
         ${v.er !== null ? `<span class="erp ${erClass(v.er)}">نسبة التفاعل <span class="num">${M.pct(v.er)}</span></span>` : ""}
         ${(v.formats && v.formats.length) || v.location || v.kind ? `<div class="chips">${v.kind ? `<span class="badge line">${E(ar(v.kind))}</span>` : ""}${(v.formats || []).map(f => `<span class="badge line">${E(ar(f))}</span>`).join("")}${v.location ? `<span class="badge">${E(ar(v.location))}</span>` : ""}</div>` : ""}
@@ -621,7 +698,7 @@
     destroyPlayers();
     const h = decodeURIComponent(location.hash.slice(1));
     document.querySelectorAll(".top nav a[data-r]").forEach(a => a.classList.toggle("on", (a.dataset.r === "home" && !h.startsWith("c-")) ));
-    document.body.classList.remove("report");
+    document.body.classList.remove("report", "homepg");
     if (h.startsWith("c-")) campaign(h.slice(2)); else home();
     if (h === "campaigns") { const el = document.getElementById("campaigns"); if (el) el.scrollIntoView(); } else scrollTo(0, 0);
   }

@@ -231,7 +231,7 @@ window.PORTFOLIO = {
     {
       "id": "unknown-escape-game",
       "brand": "UNKNOWN",
-      "title": "حملة *UNKNOWN* Escape Game",
+      "title": "حملة *UNKNOWN Escape Game*",
       "type": "حملة مشاهير",
       "logo": "logos/unknown.png",
       "brandUrl": "https://unknownroom.com/",

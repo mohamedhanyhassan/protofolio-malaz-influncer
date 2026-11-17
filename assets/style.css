@@ -453,3 +453,107 @@ footer .logo img{width:auto}
 .media.ig .src,.media.ig .ov{display:none}
 .media.ig .no{top:auto;bottom:62px;right:12px}
 .media.ig .exp{bottom:auto;top:58px;left:12px;width:34px;height:34px}
+
+/* =====================================================================
+   v3 — Home (cinematic, same language as the campaign report)
+   ===================================================================== */
+.hhero{padding-bottom:90px}
+.hhero .rmeta>span:first-child{color:#bdb6aa}
+.hlogo{height:84px;width:auto;display:block;margin-bottom:26px}
+.hhero .rtitle{font-size:clamp(42px,6vw,82px)}
+.hhero .rdesc{font-size:18px;max-width:600px}
+.hhero .racts{margin-top:30px}
+.hhero .racts .btn{font-size:15px;padding:12px 22px}
+.vmini{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;width:100%;margin-top:22px;border-top:2px solid #0b0b0b;padding-top:16px}
+.vmini b{display:block;font-weight:900;font-size:26px;line-height:1.1}
+.vmini span{font-size:12.5px;font-weight:700}
+.hk{position:relative;z-index:2}
+.hk .rk{box-shadow:0 18px 40px rgba(0,0,0,.08)}
+
+/* featured campaign */
+.feat{display:grid;grid-template-columns:1.4fr 1fr;gap:28px;margin-top:26px;background:#0b0b0b;color:#fff;border-radius:28px;padding:34px;text-decoration:none;position:relative;overflow:hidden;transition:.35s}
+.feat::before{content:"";position:absolute;inset:0;background:radial-gradient(520px 320px at 90% 0%,rgba(255,176,4,.22),transparent 70%),radial-gradient(520px 320px at 0% 100%,rgba(98,158,99,.25),transparent 70%);pointer-events:none}
+.feat>*{position:relative}
+.feat:hover{transform:translateY(-5px);box-shadow:0 30px 60px rgba(0,0,0,.18)}
+.fl1{display:flex;gap:22px;align-items:flex-start}
+.flogo{flex:none;width:96px;height:96px;border-radius:22px;overflow:hidden;background:#fff;display:grid;place-items:center}
+.flogo img{width:100%;height:100%;object-fit:contain}
+.flogo span{font-family:var(--fd);font-weight:900;font-size:40px;color:#0b0b0b}
+.fk{font-family:"Alexandria";font-size:13px;font-weight:700;color:var(--gold)}
+.feat h3{font-size:clamp(26px,3vw,38px);margin:6px 0 10px}
+.feat h3 em{font-style:normal;color:var(--gold)}
+.feat p{color:#cfc9be;font-size:15px;margin-bottom:18px;max-width:560px}
+.fstats{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-content:center}
+.fstats div{background:#161616;border:1px solid #262626;border-radius:18px;padding:16px 18px}
+.fstats div.big{grid-column:1/-1;background:var(--gold);border-color:var(--gold);color:#0b0b0b}
+.fstats div.g{border-color:var(--green)}
+.fstats b{display:block;font-weight:900;font-size:26px;line-height:1.2;text-align:right}
+.fstats .big b{font-size:clamp(34px,4vw,48px)}
+.fstats span{font-size:13px;color:#bdb6aa}
+.fstats .big span{color:#3d2c00;font-weight:700}
+
+/* campaign grid */
+.homepg .tools{margin:26px 0 18px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.homepg .search{border-color:#e6dfcf;border-radius:99px}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.ccard{background:#fff;border:1px solid #ece5d6;border-radius:24px;padding:22px;text-decoration:none;display:flex;flex-direction:column;gap:8px;transition:.35s;position:relative;overflow:hidden}
+.ccard::after{content:"";position:absolute;width:110px;height:110px;left:-44px;bottom:-44px;transform:rotate(45deg);background:var(--gold);opacity:0;transition:.35s}
+.ccard:hover{transform:translateY(-6px);border-color:#0b0b0b;box-shadow:0 22px 46px rgba(0,0,0,.09)}
+.ccard:hover::after{opacity:.18}
+.ctop{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:6px}
+.clogo{width:64px;height:64px;border-radius:16px;border:1px solid #ece5d6;overflow:hidden;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold),#ffd47a);flex:none}
+.clogo img{width:100%;height:100%;object-fit:contain;background:#fff}
+.clogo span{font-family:var(--fd);font-weight:900;font-size:28px;color:#0b0b0b}
+.ctop .chips{justify-content:flex-end}
+.ctype{align-self:flex-start;font-size:12px;font-weight:700;color:var(--green-d);background:var(--green-l);padding:3px 10px;border-radius:99px}
+.ccard h3{font-size:21px;line-height:1.35}
+.ccard h3 em{font-style:normal;color:var(--gold-d)}
+.cmeta{color:#7c766c;font-size:13px}
+.cmeta .hit{color:var(--green-d);font-weight:700}
+.cst{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.cst div{background:#f6f2e8;border-radius:14px;padding:8px 12px;min-width:70px}
+.cst div.v{background:#0b0b0b;color:#fff}
+.cst div.v b{color:var(--gold)}
+.cst b{display:block;font-weight:800;font-size:18px;line-height:1.2;text-align:right}
+.cst span{font-size:11.5px;color:#7c766c}
+.cst div.v span{color:#bdb6aa}
+.soon{font-size:12.5px;color:#8a6200;background:var(--gold-l);border:1px dashed #f0c766;border-radius:10px;padding:5px 10px;align-self:flex-start}
+.cgo{margin-top:auto;padding-top:10px;font-size:13.5px;font-weight:700;color:#0b0b0b;position:relative;z-index:1}
+.ccard:hover .cgo{color:var(--green-d)}
+
+/* CTA footer */
+.hcta .btn.gold{background:var(--gold);color:#0b0b0b;border-color:var(--gold);font-weight:700}
+.hcta p{font-size:15px}
+
+@media(max-width:980px){
+  .feat{grid-template-columns:1fr;padding:24px}
+
+  .hk .rk.dark{grid-column:1/-1}
+}
+@media(max-width:700px){
+  .hlogo{height:60px;margin-bottom:18px}
+  .hhero .rtitle{font-size:40px}
+  .hhero .rdesc{font-size:16px}
+  .fl1{flex-direction:column}
+  .flogo{width:72px;height:72px}
+  .cgrid{grid-template-columns:1fr}
+  .vmini b{font-size:22px}
+}
+/* marquee: run the strip left-to-right so it never shows an empty band in RTL */
+.rmarq{direction:ltr}
+.card .soon{align-self:stretch;text-align:center}
+@media(max-width:700px){
+  .rgrid4{grid-template-columns:1fr 1fr;gap:10px}
+  .rgrid4 .cb{padding:12px;gap:8px}
+  .rgrid4 .st{gap:6px}
+  .rgrid4 .st div{padding:7px 4px}
+  .rgrid4 .st b{font-size:15px}
+  .rgrid4 .st span{font-size:11px}
+  .rgrid4 .ch a{font-size:14px}
+  .rgrid4 .media .snd span{display:none}
+  .rgrid4 .media .snd{padding:8px}
+  .rgrid4 .note,.rgrid4 .olink{font-size:12.5px}
+  .rgrid4 .media.none{height:200px}
+  .rkpis{gap:10px}
+  .rk{min-height:120px;padding:18px}
+}
