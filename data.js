@@ -1809,14 +1809,6 @@ window.PORTFOLIO = {
           "likes": 674,
           "comments": 47,
           "saves": 89
-        },
-        {
-          "url": "https://www.instagram.com/p/DecemLlNIEI/",
-          "creator": "shahyelserfy",
-          "followers": 59138,
-          "views": 61277,
-          "likes": 757,
-          "comments": 60
         }
       ],
       "dataDate": "2026-11-17",
@@ -1887,13 +1879,13 @@ window.PORTFOLIO = {
     {
       "id": "nutrili",
       "brand": "Nutrili",
-      "title": "حملة *Nutrili*",
+      "title": "حملة *نيوتريلي* Nutrili",
       "type": "حملة مشاهير",
       "logo": "logos/nutrili.png",
       "brandUrl": "https://www.instagram.com/nutrili.me/",
       "city": "",
       "date": "",
-      "description": "حملة مؤثرين لـ Nutrili على تيك توك وإنستغرام.",
+      "description": "نيوتريلي براند بمكونات طبيعية فاخرة، أسسه ويقوده علماء، بتغليف معاد تدويره وشحن لكل العالم. حملة مؤثرين على تيك توك وإنستغرام.",
       "coverages": [
         {
           "url": "https://www.instagram.com/p/DZUuzhbtKoa/",
@@ -1950,20 +1942,21 @@ window.PORTFOLIO = {
       ],
       "dataDate": "2026-11-17",
       "hashtags": [
+        "نيوتريلي",
         "Nutrili",
-        "نيوتريلي"
+        "مكونات_طبيعية"
       ]
     },
     {
       "id": "infinity-kits",
       "brand": "Infinity Kits",
-      "title": "حملة *إنفينتي* Infinity Kits",
+      "title": "حملة *إنفينتي* لصناعة العطور واللب جلوس",
       "type": "حملة مشاهير",
       "logo": "logos/infinity.png",
       "brandUrl": "https://infinity-kits.com/",
       "city": "",
       "date": "",
-      "description": "حملة مؤثرين لـ إنفينتي Infinity Kits على تيك توك وإنستغرام.",
+      "description": "إنفينتي تقدّم تجربة إبداعية ممتعة تجمع بين الجمال والابتكار: حقائب تفاعلية تحضّر فيها عطرك أو اللب جلوس بنفسك وتصنع لمستك الخاصة. حملة مؤثرين على تيك توك وإنستغرام.",
       "coverages": [
         {
           "url": "https://www.instagram.com/p/DcbHLc1OOVP/",
@@ -1984,8 +1977,10 @@ window.PORTFOLIO = {
       ],
       "dataDate": "2026-11-17",
       "hashtags": [
+        "إنفينتي",
         "InfinityKits",
-        "إنفينتي"
+        "اصنع_عطرك",
+        "لب_جلوس"
       ]
     }
   ]

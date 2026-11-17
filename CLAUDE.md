@@ -96,7 +96,8 @@ Route fade-in, gold scroll-progress bar, scroll reveals with stagger for campaig
 - The home hero uses a dark glass panel (`.hpanel`, `v5` CSS) with total views, 3 stats and a scrolling strip of brand logos; no big Malaz logo and no underline on the hero title (the user disliked both).
 - A coverage with `hidden: true` is kept in data/admin but excluded from the site (`campStats` filters it). Used for 5 links that returned nothing from Apify (BASIC lina_esmail TikTok, IG DNqqOD5owWe; UNKNOWN kenz_3699, IG DKOsJNIson9, IG DLxLSZisoRB).
 - When a coverage has no username, the campaign shows "N تغطية" instead of "N مؤثر".
-- The Instagram post `DecemLlNIEI` appears in both Stepia and Pharmafection. The admin flags it as a duplicate; the user needs to decide which campaign it belongs to.
+- The Instagram post `DecemLlNIEI` belongs to Pharmafection (user confirmed); it was removed from Stepia.
+- Brand facts from the user: Infinity Kits = DIY perfume and lip-gloss kits (you make your own); Nutrili = premium natural ingredients, founded and led by scientists, recycled packaging, ships worldwide; Stepia = Saudi online shoe store; Pharmafection = Korean skincare, Jeddah.
 - `admin.html` has no password. It is harmless, because it only edits a local draft, but the user may want it removed from the public repo.
 
 ## Working conventions
