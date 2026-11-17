@@ -513,10 +513,10 @@
     <div class="rmarq"><div class="tr">${mqHTML}${mqHTML}</div></div>
 
     <div class="wrap">
-      ${s.views || s.likes !== null || s.comments !== null ? `<div class="rkpis">
+      ${s.views || s.likes !== null || s.comments !== null ? `<div class="rkpis ${s.saves === null ? "n4" : ""}">
         <div class="rk dark rv"><div class="v" ${s.views ? `data-count="${s.views}"` : ""}>${s.views ? 0 : "—"}</div><div class="l">${s.views ? `مشاهدة من ${M.fmt(withViews)} تغطية${avg ? `، بمتوسط ${M.compact(avg)} للتغطية` : ""}${s.followers ? ` · ${M.compact(s.followers)} متابع مجتمعين` : ""}` : "المشاهدات تُضاف قريبًا"}</div></div>
         <div class="rk rv d1"><div class="v" ${s.likes !== null ? `data-count="${s.likes}"` : ""}>${s.likes !== null ? 0 : "—"}</div><div class="l">إعجاب</div></div>
-        <div class="rk rv d2"><div class="v" ${s.saves !== null ? `data-count="${s.saves}"` : ""}>${s.saves !== null ? 0 : "—"}</div><div class="l">حفظ ومشاركة</div></div>
+        ${s.saves !== null ? `<div class="rk rv d2"><div class="v" data-count="${s.saves}">0</div><div class="l">حفظ ومشاركة</div></div>` : ""}
         <div class="rk rv d3"><div class="v" ${s.comments !== null ? `data-count="${s.comments}"` : ""}>${s.comments !== null ? 0 : "—"}</div><div class="l">تعليق</div></div>
         <div class="rk gold rv d4"><div class="v" ${s.er !== null ? `data-count="${s.er.toFixed(2)}" data-dec="2" data-suf="%"` : ""}>${s.er !== null ? 0 : "—"}</div><div class="l">نسبة التفاعل الإجمالية</div></div>
       </div>` : ""}

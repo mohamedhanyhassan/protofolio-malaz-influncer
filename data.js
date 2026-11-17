@@ -11,17 +11,21 @@ window.PORTFOLIO = {
     {
       "id": "smokey-house",
       "brand": "Smokey House",
-      "title": "حملة *سموكي هاوس*",
+      "title": "حملة *سموكي هاوس* في الرياض",
       "type": "زيارات فروع",
-      "logo": "",
-      "brandUrl": "",
-      "city": "",
+      "logo": "logos/smokey-house.png",
+      "brandUrl": "https://www.instagram.com/smokey_house/",
+      "city": "الرياض — مجمع شرفات الندى",
       "date": "2025-07-08",
       "dataDate": "",
-      "description": "زيارات مؤثرين لسموكي هاوس بـ6 تغطيات على تيك توك وإنستغرام في يوليو 2025.",
+      "description": "سموكي هاوس مطعم برجر وريبز وبريسكت مدخّن، ماركة سعودية مسجلة في مجمع شرفات الندى بالرياض، ومتوفر عبر تطبيقات التوصيل. زيارات مؤثرين بـ6 تغطيات على تيك توك وإنستغرام في يوليو 2025.",
       "hashtags": [
         "سموكي_هاوس",
-        "SmokeyHouse"
+        "SmokeyHouse",
+        "برجر",
+        "ريبز",
+        "بريسكت",
+        "الرياض"
       ],
       "coverages": [
         {
@@ -39,7 +43,8 @@ window.PORTFOLIO = {
           "likes": 429,
           "comments": 16,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@riyadh.guides/video/7524839350450785543",
@@ -56,7 +61,8 @@ window.PORTFOLIO = {
           "likes": 1933,
           "comments": 292,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@mlal138/video/7524680785190800658",
@@ -73,7 +79,8 @@ window.PORTFOLIO = {
           "likes": 600,
           "comments": 139,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@noly_a__/video/7527411353309564168",
@@ -90,7 +97,8 @@ window.PORTFOLIO = {
           "likes": 1441,
           "comments": 73,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@nnyyf_1/video/7530188723808488711",
@@ -107,7 +115,8 @@ window.PORTFOLIO = {
           "likes": 124,
           "comments": 39,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@heoks2/video/7532870610154786055",
@@ -124,7 +133,8 @@ window.PORTFOLIO = {
           "likes": 221,
           "comments": 34,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         }
       ]
     },
