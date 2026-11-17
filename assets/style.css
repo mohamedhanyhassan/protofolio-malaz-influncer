@@ -437,3 +437,9 @@ body.report .top .ml-light{display:block!important}
 .rlogos .mlg{height:62px;width:auto}
 footer .logo img{width:auto}
 @media(max-width:700px){.rlogos .mlg{height:44px}}
+
+/* coverage without an embeddable video: compact header instead of an empty 9:16 box */
+.media.none{aspect-ratio:auto;height:230px}
+.media.none .ph{gap:8px}
+.media.none .ph .av{width:58px;height:58px;font-size:24px}
+.media .ph .phbtn{font-size:13px;padding:8px 14px;margin-top:4px;pointer-events:auto}

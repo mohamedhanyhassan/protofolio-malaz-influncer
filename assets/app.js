@@ -16,6 +16,8 @@
     search: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7c766c" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>',
     link: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>'
   };
+  const AR = { Visit: "زيارة", Video: "فيديو", Post: "بوست", Reel: "ريلز", Stories: "ستوري", Story: "ستوري", Spotlight: "سبوتلايت", Riyadh: "الرياض", Jeddah: "جدة", Jazan: "جازان", "Khamis Mushayt": "خميس مشيط", Dammam: "الدمام", Makkah: "مكة", Madinah: "المدينة" };
+  const ar = s => AR[s] || s;
   const pfBadges = arr => (arr || []).map(p => `<span class="pf pf-${E(p)}">${E(p)}</span>`).join("");
   const initial = s => (String(s || "?").replace(/[^A-Za-z0-9؀-ۿ]/g, "")[0] || "?").toUpperCase();
   const logoHTML = c => {
@@ -51,10 +53,12 @@
     const s = sourceOf(c);
     const src = c.link.platform && c.link.platform !== "Link" ? `<span class="pf pf-${E(c.link.platform)}">${E(c.link.platform)}</span>` : (s.kind === "mp4" ? '<span class="badge dark">مقطع من الفيديو</span>' : "");
     const canSound = s.kind === "mp4" || s.kind === "tt" || s.kind === "yt";
-    return `<div class="media ${s.kind === "ig" ? "ig" : ""}" data-kind="${s.kind}" data-full="${full ? 1 : 0}" data-src="${E(s.src || "")}" data-id="${E(s.id || "")}">
+    const ext = M.safeUrl(c.url);
+    return `<div class="media ${s.kind === "ig" ? "ig" : ""} ${s.kind === "none" && !full ? "none" : ""}" data-kind="${s.kind}" data-full="${full ? 1 : 0}" data-src="${E(s.src || "")}" data-id="${E(s.id || "")}">
       <div class="ph"><div class="av">${E(initial(c.creator))}</div><b class="ltr">${c.creator ? "@" + E(c.creator) : ""}</b>
-        <small>${s.kind === "none" ? (c.url ? "افتح التغطية من الرابط" : "لا يوجد رابط فيديو") : "جارِ تحميل الفيديو…"}</small>
-        <div class="chips" style="justify-content:center">${pfBadges(c.platforms)}</div></div>
+        <small>${s.kind === "none" ? (ext ? (c.link.platform === "Snapchat" ? "سناب شات ما بيسمحش بعرض الفيديو هنا" : c.link.kind === "story" ? "الستوري بتتعرض على إنستغرام" : "التغطية بتتعرض على المنصة") : "رابط الفيديو يُضاف قريبًا") : "جارِ تحميل الفيديو…"}</small>
+        ${s.kind === "none" && ext ? `<a class="btn gold phbtn" href="${E(ext)}" target="_blank" rel="noopener">${IC.out} ${openLabel(c).replace(" ←", "")}</a>` : ""}
+        ${s.kind === "none" && src ? "" : `<div class="chips" style="justify-content:center">${pfBadges(c.platforms)}</div>`}</div>
       ${full ? "" : '<div class="ov"></div>'}
       ${no ? `<span class="no">#${no}</span>` : ""}
       ${src && !full ? `<span class="src">${src}</span>` : ""}
@@ -92,7 +96,7 @@
       if (p.kind === "tt") f.src = TT_BASE + id + ttParams(p.full);
       if (p.kind === "ig") f.src = "https://www.instagram.com/p/" + encodeURIComponent(id) + "/embed/";
       if (p.kind === "yt") f.src = "https://www.youtube.com/embed/" + encodeURIComponent(id) + "?autoplay=1&mute=" + (p.sound ? 0 : 1) + "&loop=1&playlist=" + encodeURIComponent(id) + "&playsinline=1&enablejsapi=1&controls=" + (p.full ? 1 : 0);
-      f.addEventListener("load", () => { const ph = el.querySelector(".ph"); if (ph && p.kind !== "tt") ph.style.display = "none"; });
+      f.addEventListener("load", () => { const ph = el.querySelector(".ph"); if (!ph) return; if (p.kind !== "tt") ph.style.display = "none"; else setTimeout(() => { ph.style.display = "none"; }, 3500); });
       el.insertBefore(f, el.firstChild.nextSibling);
       p.iframe = f;
     }
@@ -293,6 +297,7 @@
     const startDate = c.date ? new Date(c.date).toLocaleDateString("ar-SA-u-ca-gregory-nu-latn", { day: "numeric", month: "long", year: "numeric" }) : "";
     const withViews = covs.filter(v => v.views !== null).length;
     const avg = s.views && withViews ? s.views / withViews : null;
+    const playable = covs.some(v => sourceOf(v).kind !== "none");
     const plat = s.platforms.map(p => p.toUpperCase()).join(" + ");
 
     /* marquee items */
@@ -385,8 +390,8 @@
 
       <section class="rsec" id="sec-cov">
         <span class="rlabel rv">${sn()} / COVERAGE</span>
-        <h2 class="rh2 rv"><span class="num">${M.fmt(covs.length)}</span> ${covs.length > 1 ? "تغطية" : "تغطية"} <em>وكل فيديو يشتغل هنا مباشرة</em></h2>
-        <p class="rsub rv">مقطع من كل تغطية يعمل تلقائيًا بدون صوت — اضغط زر الصوت لتسمعه، أو كبّر الفيديو، أو افتحه كاملًا على المنصة.</p>
+        ${playable ? `<h2 class="rh2 rv"><span class="num">${M.fmt(covs.length)}</span> تغطية <em>وكل فيديو يشتغل هنا مباشرة</em></h2>
+        <p class="rsub rv">مقطع من كل تغطية يعمل تلقائيًا بدون صوت — اضغط زر الصوت لتسمعه، أو كبّر الفيديو، أو افتحه كاملًا على المنصة.</p>` : `<h2 class="rh2 rv"><span class="num">${M.fmt(covs.length)}</span> تغطية <em>وأرقام كل مؤثر</em></h2>`}
         <div class="vbar">
           <div class="seg" id="view"><button class="on" data-v="cards">بطاقات الفيديو</button><button data-v="table">جدول</button></div>
           <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
@@ -493,7 +498,7 @@
     /* ----- coverage (cards / table) ----- */
     let view = "cards", sort = "", pf = "";
     const out = document.getElementById("out");
-    const list = () => { let r = covs.filter(v => !pf || v.platforms.includes(pf)); if (sort) r = [...r].sort((a, b) => (b[sort] ?? -1) - (a[sort] ?? -1)); return r; };
+    const list = () => { let r = covs.filter(v => !pf || v.platforms.includes(pf)); r = [...r].sort((a, b) => (sourceOf(a).kind === "none") - (sourceOf(b).kind === "none")); if (sort) r = [...r].sort((a, b) => (b[sort] ?? -1) - (a[sort] ?? -1)); return r; };
     const draw = () => {
       destroyPlayers();
       const r = list();
@@ -536,7 +541,7 @@
         </div>
         ${v.followers !== null ? `<div class="rl"><span>الوصول <span class="num">${v.reach !== null ? Math.round(v.reach) + "%" : "—"}</span> من المتابعين</span><b class="num">${M.fmt(v.followers)} متابع</b></div>` : ""}
         ${v.er !== null ? `<span class="erp ${erClass(v.er)}">نسبة التفاعل <span class="num">${M.pct(v.er)}</span></span>` : ""}
-        ${(v.formats && v.formats.length) || v.location || v.kind ? `<div class="chips">${v.kind ? `<span class="badge line">${E(v.kind)}</span>` : ""}${(v.formats || []).map(f => `<span class="badge line">${E(f)}</span>`).join("")}${v.location ? `<span class="badge">${E(v.location)}</span>` : ""}</div>` : ""}
+        ${(v.formats && v.formats.length) || v.location || v.kind ? `<div class="chips">${v.kind ? `<span class="badge line">${E(ar(v.kind))}</span>` : ""}${(v.formats || []).map(f => `<span class="badge line">${E(ar(f))}</span>`).join("")}${v.location ? `<span class="badge">${E(ar(v.location))}</span>` : ""}</div>` : ""}
         ${v.note ? `<p class="note">${E(v.note)}</p>` : ""}
         ${url ? `<a class="olink" href="${E(url)}" target="_blank" rel="noopener">${openLabel(v)}</a>` : ""}
       </div></article>`;
@@ -549,9 +554,9 @@
     return `<div class="twrap"><table><thead><tr>${th("#")}${th("اليوزر")}${th("النوع")}${th("الموقع")}${th("المنصة")}${th("التغطية")}${th("الرابط")}${th("المتابعون", "followers")}${th("المشاهدات", "views")}${th("اللايكات", "likes")}${th("الكومنتات", "comments")}${th("الحفظ", "saves")}${th("التفاعل", "er")}</tr></thead><tbody>
     ${r.map((v, i) => {
       const s = sourceOf(v), url = M.safeUrl(v.url);
-      return `<tr><td class="num">${v._no}</td><td class="u">${E(v.creator || "—")}</td><td>${E(v.kind || "—")}</td><td>${E(v.location || "—")}</td>
+      return `<tr><td class="num">${v._no}</td><td class="u">${E(v.creator || "—")}</td><td>${E(ar(v.kind) || "—")}</td><td>${E(ar(v.location) || "—")}</td>
       <td><div class="chips">${pfBadges(v.platforms) || "—"}</div></td>
-      <td><div class="chips">${(v.formats || []).map(f => `<span class="badge line">${E(f)}</span>`).join("") || "—"}</div></td>
+      <td><div class="chips">${(v.formats || []).map(f => `<span class="badge line">${E(ar(f))}</span>`).join("") || "—"}</div></td>
       <td>${s.kind !== "none" ? `<button class="play" data-open="${i}" title="تشغيل داخل الموقع">${IC.play}</button>` : url ? `<a class="play" href="${E(url)}" target="_blank" rel="noopener">${IC.out}</a>` : "—"}</td>
       <td class="num">${M.fmt(v.followers)}</td><td class="num">${M.fmt(v.views)}</td><td class="num">${M.fmt(v.likes)}</td><td class="num">${M.fmt(v.comments)}</td><td class="num">${M.fmt(v.saves)}</td><td class="num">${M.pct(v.er)}</td></tr>`;
     }).join("")}</tbody>
