@@ -17,7 +17,7 @@ window.PORTFOLIO = {
       "brandUrl": "https://www.instagram.com/basiccafe.sa/",
       "city": "جدة — حي الروضة",
       "date": "2025-08-18",
-      "dataDate": "",
+      "dataDate": "2026-11-17",
       "description": "كافيه بيزك في حي الروضة بجدة: قهوة حلوة ولحظات حلوة. حملة مؤثرين بـ10 تغطيات على تيك توك وإنستغرام في أغسطس 2025.",
       "hashtags": [
         "بيزك_كافيه",
@@ -33,23 +33,23 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 253500,
+          "views": 16900,
+          "likes": 976,
+          "comments": 15,
+          "saves": 139,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/reel/DNiu6b8MrTi/",
-          "creator": "",
+          "creator": "shimaanagah_",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
+          "followers": 786063,
+          "views": 71891,
           "likes": null,
-          "comments": null,
+          "comments": 125,
           "saves": null,
           "note": ""
         },
@@ -72,11 +72,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 110000,
+          "views": 2042,
+          "likes": 17,
+          "comments": 45,
+          "saves": 50,
           "note": ""
         },
         {
@@ -98,49 +98,49 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 119100,
+          "views": 773,
+          "likes": 228,
+          "comments": 50,
+          "saves": 49,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/reel/DN0caCV0A_X/",
-          "creator": "",
+          "creator": "heidi_ahmed2",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 87127,
+          "views": 1718,
+          "likes": 26,
+          "comments": 4,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/reel/DN02KCRWAi-/",
-          "creator": "",
+          "creator": "wejdanlens",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
+          "followers": 33688,
+          "views": 1541,
           "likes": null,
-          "comments": null,
+          "comments": 4,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/reel/DN3OBEy0IFd/",
-          "creator": "",
+          "creator": "walaa.sulliman",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 28611,
+          "views": 412,
+          "likes": 7,
+          "comments": 0,
           "saves": null,
           "note": ""
         },
@@ -150,11 +150,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 114500,
+          "views": 1339,
+          "likes": 53,
+          "comments": 3,
+          "saves": 48,
           "note": ""
         }
       ]
@@ -168,7 +168,7 @@ window.PORTFOLIO = {
       "brandUrl": "https://www.instagram.com/endorphins_studios/",
       "city": "",
       "date": "2026-04-15",
-      "dataDate": "",
+      "dataDate": "2026-11-17",
       "description": "حملة مؤثرين لـ Endorphins Studios بـ4 تغطيات على إنستغرام في أبريل ومايو 2026.",
       "hashtags": [
         "EndorphinsStudios"
@@ -176,53 +176,53 @@ window.PORTFOLIO = {
       "coverages": [
         {
           "url": "https://www.instagram.com/p/DX-GHhesQoh/",
-          "creator": "",
+          "creator": "fatimaaugc_",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 14521,
+          "views": 8659,
+          "likes": 201,
+          "comments": 9,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/DXKkba9CJN9/",
-          "creator": "",
+          "creator": "diariesofasaudigirl",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
+          "followers": 3500,
+          "views": 7797,
           "likes": null,
-          "comments": null,
+          "comments": 85,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/DX-HPlbx-iA/",
-          "creator": "",
+          "creator": "mariaali.20",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 61511,
+          "views": 2125,
+          "likes": 63,
+          "comments": 11,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/DXZQq6LiMAD/",
-          "creator": "",
+          "creator": "faralh",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
+          "followers": 201264,
+          "views": 21391,
           "likes": null,
-          "comments": null,
+          "comments": 12,
           "saves": null,
           "note": ""
         }
@@ -237,7 +237,7 @@ window.PORTFOLIO = {
       "brandUrl": "https://unknownroom.com/",
       "city": "",
       "date": "2025-05-13",
-      "dataDate": "",
+      "dataDate": "2026-11-17",
       "description": "UNKNOWN Escape Game: تجربة غرف هروب وألغاز. حملة مؤثرين بـ26 تغطية على تيك توك وإنستغرام، من مايو إلى يوليو 2025.",
       "hashtags": [
         "UNKNOWN",
@@ -265,23 +265,23 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 25100,
+          "views": 75300,
+          "likes": 2119,
+          "comments": 26,
+          "saves": 1868,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/reel/DJ6uLACIfI8/",
-          "creator": "",
+          "creator": "drswifediaries",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
+          "followers": 149652,
+          "views": 11730,
           "likes": null,
-          "comments": null,
+          "comments": 106,
           "saves": null,
           "note": ""
         },
@@ -291,49 +291,49 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 3722,
+          "views": 1357,
+          "likes": 30,
+          "comments": 3,
+          "saves": 12,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/reel/DJ6SCuCoeNA/",
-          "creator": "",
+          "creator": "dhahran.sa",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 43683,
+          "views": 11958,
+          "likes": 25,
+          "comments": 10,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/reel/DKF05c9NKeX/",
-          "creator": "",
+          "creator": "mariam.hegazy",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
+          "followers": 136064,
+          "views": 18571,
           "likes": null,
-          "comments": null,
+          "comments": 115,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/DKL67j4I3gj/",
-          "creator": "",
+          "creator": "fun.wd.fizz",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 61153,
+          "views": 16376,
+          "likes": 970,
+          "comments": 43,
           "saves": null,
           "note": ""
         },
@@ -343,11 +343,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 6778,
+          "views": 880,
+          "likes": 19,
+          "comments": 2,
+          "saves": 9,
           "note": ""
         },
         {
@@ -356,49 +356,49 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 21800,
+          "views": 2237,
+          "likes": 248,
+          "comments": 1,
+          "saves": 9,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/reel/DLzw9acoj2T/",
-          "creator": "",
+          "creator": "yokaaamk",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 85375,
+          "views": 539,
+          "likes": 3,
+          "comments": 1,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/DLzABw-NQ8J/",
-          "creator": "",
+          "creator": "fifiii.316",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 42426,
+          "views": 8612,
+          "likes": 68,
+          "comments": 4,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/reel/DL0VTzhAe9Z/",
-          "creator": "",
+          "creator": "naglaadelfathy",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 47469,
+          "views": 13053,
+          "likes": 325,
+          "comments": 17,
           "saves": null,
           "note": ""
         },
@@ -408,11 +408,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 23000,
+          "views": 707,
+          "likes": 20,
+          "comments": 1,
+          "saves": 5,
           "note": ""
         },
         {
@@ -421,11 +421,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 126100,
+          "views": 2167,
+          "likes": 21,
+          "comments": 2,
+          "saves": 7,
           "note": ""
         },
         {
@@ -443,14 +443,14 @@ window.PORTFOLIO = {
         },
         {
           "url": "https://www.instagram.com/p/DKM3tG9My1h/",
-          "creator": "",
+          "creator": "daliaahmad.official",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 77330,
+          "views": 16907,
+          "likes": 179,
+          "comments": 48,
           "saves": null,
           "note": ""
         },
@@ -460,11 +460,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 79500,
+          "views": 50000,
+          "likes": 1022,
+          "comments": 13,
+          "saves": 453,
           "note": ""
         },
         {
@@ -473,11 +473,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 75900,
+          "views": 1145,
+          "likes": 91,
+          "comments": 63,
+          "saves": 67,
           "note": ""
         },
         {
@@ -486,23 +486,23 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 109100,
+          "views": 79000,
+          "likes": 763,
+          "comments": 136,
+          "saves": 532,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/DLVJI1kI1Q6/",
-          "creator": "",
+          "creator": "twinklish_arabia",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
+          "followers": 111688,
+          "views": 19653,
           "likes": null,
-          "comments": null,
+          "comments": 78,
           "saves": null,
           "note": ""
         },
@@ -512,23 +512,23 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 30600,
+          "views": 15000,
+          "likes": 260,
+          "comments": 3,
+          "saves": 374,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/DLhaBh5Ij1q/",
-          "creator": "",
+          "creator": "meroka_mero",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 100107,
+          "views": 5835,
+          "likes": 64,
+          "comments": 114,
           "saves": null,
           "note": ""
         },
@@ -538,11 +538,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 12100,
+          "views": 41000,
+          "likes": 160,
+          "comments": 46,
+          "saves": 285,
           "note": ""
         },
         {
@@ -551,11 +551,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 44400,
+          "views": 4539,
+          "likes": 137,
+          "comments": 6,
+          "saves": 114,
           "note": ""
         },
         {
@@ -564,11 +564,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 121500,
+          "views": 71300,
+          "likes": 1515,
+          "comments": 56,
+          "saves": 1200,
           "note": ""
         },
         {
@@ -595,7 +595,7 @@ window.PORTFOLIO = {
       "brandUrl": "https://u-mandi.com/",
       "city": "جدة — حي المروة",
       "date": "2025-07-29",
-      "dataDate": "2025-08-18",
+      "dataDate": "2026-11-17",
       "description": "زيارات مؤثرين لمطعم أوماندي في حي المروة بجدة على 3 مراحل: الافتتاح التجريبي من 29 يوليو، ثم الافتتاح الرسمي في 8 أغسطس، ثم زيارات ما بعد الافتتاح حتى 18 أغسطس 2025، بتغطيات على تيك توك وإنستغرام وسناب شات.",
       "hashtags": [
         "أوماندي",
@@ -615,9 +615,9 @@ window.PORTFOLIO = {
             "Reel"
           ],
           "kind": "بعد الافتتاح",
-          "followers": null,
-          "views": 1106,
-          "likes": 7,
+          "followers": 21786,
+          "views": 3745,
+          "likes": 17,
           "comments": 0,
           "saves": null,
           "note": "زيارة 12/8",
@@ -633,9 +633,9 @@ window.PORTFOLIO = {
             "Reel"
           ],
           "kind": "بعد الافتتاح",
-          "followers": null,
-          "views": 508,
-          "likes": 5,
+          "followers": 28611,
+          "views": 3015,
+          "likes": 9,
           "comments": 0,
           "saves": null,
           "note": "زيارة 12/8",
@@ -651,10 +651,10 @@ window.PORTFOLIO = {
             "Reel"
           ],
           "kind": "بعد الافتتاح",
-          "followers": null,
-          "views": 10100,
-          "likes": 411,
-          "comments": 1,
+          "followers": 188816,
+          "views": 10526,
+          "likes": 403,
+          "comments": 11,
           "saves": null,
           "note": "زيارة 14/8",
           "location": "جدة"
@@ -669,10 +669,10 @@ window.PORTFOLIO = {
             "Reel"
           ],
           "kind": "بعد الافتتاح",
-          "followers": null,
-          "views": 1949,
-          "likes": 214,
-          "comments": 42,
+          "followers": 114597,
+          "views": 4219,
+          "likes": 223,
+          "comments": 40,
           "saves": null,
           "note": "زيارة 15/8",
           "location": "جدة"
@@ -705,10 +705,10 @@ window.PORTFOLIO = {
             "Reel"
           ],
           "kind": "الافتتاح",
-          "followers": null,
-          "views": 913,
+          "followers": 33640,
+          "views": 1033,
           "likes": 6,
-          "comments": 2,
+          "comments": 1,
           "saves": null,
           "note": "زيارة 8/8",
           "location": "جدة"
@@ -741,10 +741,10 @@ window.PORTFOLIO = {
             "Reel"
           ],
           "kind": "الافتتاح",
-          "followers": null,
-          "views": 831,
+          "followers": 30328,
+          "views": 14791,
           "likes": 7,
-          "comments": 7,
+          "comments": 127,
           "saves": null,
           "note": "زيارة 8/8",
           "location": "جدة"
@@ -796,8 +796,8 @@ window.PORTFOLIO = {
           ],
           "kind": "افتتاح تجريبي",
           "followers": null,
-          "views": 921,
-          "likes": 19,
+          "views": 1989,
+          "likes": 43,
           "comments": 4,
           "saves": null,
           "note": "زيارة 1/8",
@@ -813,8 +813,8 @@ window.PORTFOLIO = {
             "Reel"
           ],
           "kind": "افتتاح تجريبي",
-          "followers": null,
-          "views": 803,
+          "followers": 53873,
+          "views": 1036,
           "likes": 6,
           "comments": 1,
           "saves": null,
@@ -823,7 +823,7 @@ window.PORTFOLIO = {
         },
         {
           "url": "https://www.instagram.com/reel/DNC2DUcI1Nz/",
-          "creator": "shimaanagahofficial",
+          "creator": "shimaanagah_",
           "platforms": [
             "Instagram"
           ],
@@ -831,10 +831,10 @@ window.PORTFOLIO = {
             "Post"
           ],
           "kind": "افتتاح تجريبي",
-          "followers": null,
-          "views": 97000,
-          "likes": 125,
-          "comments": 45,
+          "followers": 786063,
+          "views": 97767,
+          "likes": 84,
+          "comments": 5050,
           "saves": null,
           "note": "زيارة 6/8",
           "location": "جدة"
@@ -849,11 +849,11 @@ window.PORTFOLIO = {
             "Reel"
           ],
           "kind": "بعد الافتتاح",
-          "followers": null,
-          "views": 40700,
-          "likes": 706,
-          "comments": 59,
-          "saves": 10,
+          "followers": 110000,
+          "views": 3347,
+          "likes": 689,
+          "comments": 57,
+          "saves": 63,
           "note": "زيارة 11/8",
           "location": "جدة"
         },
@@ -867,11 +867,11 @@ window.PORTFOLIO = {
             "Reel"
           ],
           "kind": "بعد الافتتاح",
-          "followers": null,
-          "views": 3093,
-          "likes": 84,
-          "comments": 7,
-          "saves": 4,
+          "followers": 466500,
+          "views": 8269,
+          "likes": 111,
+          "comments": 11,
+          "saves": 50,
           "note": "زيارة 12/8",
           "location": "جدة"
         },
@@ -885,11 +885,11 @@ window.PORTFOLIO = {
             "Reel"
           ],
           "kind": "بعد الافتتاح",
-          "followers": null,
-          "views": 35400,
-          "likes": 823,
-          "comments": 27,
-          "saves": 16,
+          "followers": 71900,
+          "views": 30200,
+          "likes": 246,
+          "comments": 28,
+          "saves": 228,
           "note": "زيارة 12/8",
           "location": "جدة"
         },
@@ -903,11 +903,11 @@ window.PORTFOLIO = {
             "Reel"
           ],
           "kind": "بعد الافتتاح",
-          "followers": null,
-          "views": 386,
-          "likes": 14,
+          "followers": 32000,
+          "views": 473,
+          "likes": 17,
           "comments": 0,
-          "saves": 0,
+          "saves": 1,
           "note": "زيارة 12/8",
           "location": "جدة"
         },
@@ -939,17 +939,17 @@ window.PORTFOLIO = {
             "Reel"
           ],
           "kind": "بعد الافتتاح",
-          "followers": null,
-          "views": 20300,
-          "likes": 567,
+          "followers": 114400,
+          "views": 22600,
+          "likes": 595,
           "comments": 9,
-          "saves": 3,
+          "saves": 55,
           "note": "زيارة 15/8",
           "location": "جدة"
         },
         {
           "url": "https://www.tiktok.com/@jehad_story1/video/7537337703545769223",
-          "creator": "jehad_story",
+          "creator": "jehad_story1",
           "platforms": [
             "TikTok"
           ],
@@ -957,11 +957,11 @@ window.PORTFOLIO = {
             "Reel"
           ],
           "kind": "الافتتاح",
-          "followers": null,
-          "views": 1348,
-          "likes": 38,
+          "followers": 9560,
+          "views": 1982,
+          "likes": 41,
           "comments": 0,
-          "saves": 1,
+          "saves": 7,
           "note": "زيارة 8/8",
           "location": "جدة"
         },
@@ -993,11 +993,11 @@ window.PORTFOLIO = {
             "Reel"
           ],
           "kind": "الافتتاح",
-          "followers": null,
-          "views": 25700,
-          "likes": 432,
-          "comments": 133,
-          "saves": 244,
+          "followers": 166900,
+          "views": 59600,
+          "likes": 728,
+          "comments": 145,
+          "saves": 701,
           "note": "زيارة 8/8",
           "location": "جدة"
         },
@@ -1011,11 +1011,11 @@ window.PORTFOLIO = {
             "Reel"
           ],
           "kind": "الافتتاح",
-          "followers": null,
-          "views": 8462,
-          "likes": 229,
-          "comments": 45,
-          "saves": 57,
+          "followers": 119100,
+          "views": 10100,
+          "likes": 377,
+          "comments": 44,
+          "saves": 121,
           "note": "زيارة 8/8",
           "location": "جدة"
         },
@@ -1029,11 +1029,11 @@ window.PORTFOLIO = {
             "Reel"
           ],
           "kind": "الافتتاح",
-          "followers": null,
-          "views": 776,
-          "likes": 42,
+          "followers": 1117,
+          "views": 2140,
+          "likes": 238,
           "comments": 3,
-          "saves": 3,
+          "saves": 15,
           "note": "زيارة 8/8",
           "location": "جدة"
         },
@@ -1047,11 +1047,11 @@ window.PORTFOLIO = {
             "Reel"
           ],
           "kind": "افتتاح تجريبي",
-          "followers": null,
-          "views": 9059,
-          "likes": 292,
-          "comments": 133,
-          "saves": 374,
+          "followers": 12600,
+          "views": 11100,
+          "likes": 326,
+          "comments": 126,
+          "saves": 447,
           "note": "زيارة 29/7",
           "location": "جدة"
         },
@@ -1065,11 +1065,11 @@ window.PORTFOLIO = {
             "Reel"
           ],
           "kind": "افتتاح تجريبي",
-          "followers": null,
-          "views": 17400,
-          "likes": 220,
-          "comments": 11,
-          "saves": 30,
+          "followers": 76400,
+          "views": 8528,
+          "likes": 254,
+          "comments": 15,
+          "saves": 137,
           "note": "زيارة 31/7",
           "location": "جدة"
         },
@@ -1083,11 +1083,11 @@ window.PORTFOLIO = {
             "Reel"
           ],
           "kind": "افتتاح تجريبي",
-          "followers": null,
-          "views": 16200,
-          "likes": 345,
-          "comments": 30,
-          "saves": 71,
+          "followers": 108600,
+          "views": 100900,
+          "likes": 1017,
+          "comments": 44,
+          "saves": 610,
           "note": "زيارة 1/8",
           "location": "جدة"
         },
@@ -1101,11 +1101,11 @@ window.PORTFOLIO = {
             "Reel"
           ],
           "kind": "افتتاح تجريبي",
-          "followers": null,
-          "views": 532,
-          "likes": 105,
-          "comments": 16,
-          "saves": 23,
+          "followers": 2998,
+          "views": 994,
+          "likes": 14,
+          "comments": 3,
+          "saves": 13,
           "note": "زيارة 2/8",
           "location": "جدة"
         },
@@ -1137,11 +1137,11 @@ window.PORTFOLIO = {
             "Reel"
           ],
           "kind": "افتتاح تجريبي",
-          "followers": null,
-          "views": 18900,
-          "likes": 294,
-          "comments": 14,
-          "saves": 256,
+          "followers": 15200,
+          "views": 41300,
+          "likes": 463,
+          "comments": 19,
+          "saves": 677,
           "note": "زيارة 4/8",
           "location": "جدة"
         },
@@ -1155,11 +1155,11 @@ window.PORTFOLIO = {
             "Reel"
           ],
           "kind": "افتتاح تجريبي",
-          "followers": null,
-          "views": 125600,
-          "likes": 654,
-          "comments": 11,
-          "saves": 121,
+          "followers": 223000,
+          "views": 7621,
+          "likes": 668,
+          "comments": 12,
+          "saves": 356,
           "note": "زيارة 6/8",
           "location": "جدة"
         },
@@ -1173,11 +1173,11 @@ window.PORTFOLIO = {
             "Reel"
           ],
           "kind": "افتتاح تجريبي",
-          "followers": null,
-          "views": 490500,
-          "likes": 6808,
-          "comments": 724,
-          "saves": 2300,
+          "followers": 86900,
+          "views": 729100,
+          "likes": 10100,
+          "comments": 1007,
+          "saves": 6475,
           "note": "زيارة 6/8",
           "location": "جدة"
         },
@@ -1191,11 +1191,11 @@ window.PORTFOLIO = {
             "Reel"
           ],
           "kind": "افتتاح تجريبي",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 76400,
+          "views": 19100,
+          "likes": 215,
+          "comments": 11,
+          "saves": 117,
           "note": "زيارة 31/7",
           "location": "جدة"
         },
@@ -1209,11 +1209,11 @@ window.PORTFOLIO = {
             "Reel"
           ],
           "kind": "افتتاح تجريبي",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 2998,
+          "views": 8456,
+          "likes": 130,
+          "comments": 14,
+          "saves": 48,
           "note": "زيارة 2/8",
           "location": "جدة"
         },
@@ -1227,11 +1227,11 @@ window.PORTFOLIO = {
             "Reel"
           ],
           "kind": "بعد الافتتاح",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 195400,
+          "views": 53500,
+          "likes": 429,
+          "comments": 40,
+          "saves": 765,
           "note": "زيارة 18/8",
           "location": "جدة"
         },
@@ -1245,11 +1245,11 @@ window.PORTFOLIO = {
             "Reel"
           ],
           "kind": "بعد الافتتاح",
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 29800,
+          "views": 1555,
+          "likes": 57,
+          "comments": 1,
+          "saves": 9,
           "note": "زيارة 18/8",
           "location": "جدة"
         },
@@ -1346,16 +1346,16 @@ window.PORTFOLIO = {
       ],
       "insights": [
         {
-          "title": "الافتتاح التجريبي صنع 80% من المشاهدات",
-          "body": "زيارات الافتتاح التجريبي (29 يوليو – 6 أغسطس) حققت 846 ألف مشاهدة من أصل 1.06 مليون. توزيع الزيارات على أيام قبل الافتتاح الرسمي أعطى كل تغطية مساحتها، بدل ما تنزل كلها في يوم واحد."
+          "title": "الافتتاح التجريبي صنع 79% من المشاهدات",
+          "body": "زيارات الافتتاح التجريبي (29 يوليو – 6 أغسطس) حققت 1.1 مليون مشاهدة من أصل 1.39 مليون. توزيع الزيارات على أيام قبل الافتتاح الرسمي أعطى كل تغطية مساحتها، بدل ما تنزل كلها في يوم واحد."
         },
         {
-          "title": "تيك توك ضعف إنستغرام في التفاعل",
-          "body": "تيك توك جاب 906 ألف مشاهدة بنسبة تفاعل 2.18%، مقابل 154 ألف مشاهدة و1.11% على إنستغرام. الحملات القادمة يُفضّل تكون تيك توك أولًا، وإنستغرام للتغطيات الداعمة."
+          "title": "تغطية واحدة = نص الحملة",
+          "body": "فيديو rashakwik على تيك توك وصل 729 ألف مشاهدة لوحده (52% من الحملة)، ومعه lina_esmail وshimaanagah_ صنعوا 67% من المشاهدات. هؤلاء أولوية للحملات القادمة."
         },
         {
-          "title": "3 تغطيات = 67% من المشاهدات",
-          "body": "rashakwik وحدها حققت 490 ألف مشاهدة، ومعها mn_g73 وshimaanagahofficial. وbrandat32 سجّل أعلى تفاعل في الحملة (8.3%) بـ1,100 مشاركة. هؤلاء أولوية للحملات القادمة، وتغطياتهم مناسبة للتعزيز بإعلانات Spark."
+          "title": "4 تغطيات تخطّت حجم الحساب",
+          "body": "rashakwik وnirvanaa_11 وte.7s وom_soso135 حققوا مشاهدات أكثر من عدد متابعيهم. محتوى أثبت إنه يوصل لبرا جمهور الحساب، ومناسب للتعزيز بإعلانات Spark بأقل تكلفة."
         }
       ]
     },
@@ -1497,10 +1497,10 @@ window.PORTFOLIO = {
           ],
           "kind": "Visit",
           "location": "Riyadh",
-          "followers": null,
-          "views": 18300,
-          "likes": 1330,
-          "comments": 403,
+          "followers": 113488,
+          "views": 18837,
+          "likes": 1158,
+          "comments": 399,
           "saves": null,
           "note": ""
         },
@@ -1536,9 +1536,9 @@ window.PORTFOLIO = {
           ],
           "kind": "Visit",
           "location": "Riyadh",
-          "followers": null,
-          "views": 21580,
-          "likes": 721,
+          "followers": 169490,
+          "views": 23157,
+          "likes": 688,
           "comments": 139,
           "saves": null,
           "note": ""
@@ -1555,9 +1555,9 @@ window.PORTFOLIO = {
           ],
           "kind": "Visit",
           "location": "Riyadh",
-          "followers": null,
-          "views": 22500,
-          "likes": 547,
+          "followers": 159281,
+          "views": 22615,
+          "likes": 515,
           "comments": 29,
           "saves": null,
           "note": ""
@@ -1575,8 +1575,8 @@ window.PORTFOLIO = {
           ],
           "kind": "Visit",
           "location": "Riyadh",
-          "followers": null,
-          "views": 18652,
+          "followers": 211354,
+          "views": 14063,
           "likes": 245,
           "comments": 66,
           "saves": null,
@@ -1595,9 +1595,9 @@ window.PORTFOLIO = {
           ],
           "kind": "Visit",
           "location": "Riyadh",
-          "followers": null,
-          "views": 20850,
-          "likes": 241,
+          "followers": 73876,
+          "views": 20982,
+          "likes": 231,
           "comments": 2,
           "saves": null,
           "note": ""
@@ -1622,7 +1622,7 @@ window.PORTFOLIO = {
           "note": ""
         },
         {
-          "creator": "randamohamed333",
+          "creator": "randa.visuals",
           "url": "https://www.instagram.com/reel/DF7iO5xtdtM/",
           "platforms": [
             "Instagram",
@@ -1634,10 +1634,10 @@ window.PORTFOLIO = {
           ],
           "kind": "Visit",
           "location": "Jeddah",
-          "followers": null,
-          "views": 35125,
+          "followers": 201451,
+          "views": 35157,
           "likes": 1825,
-          "comments": 235,
+          "comments": 603,
           "saves": null,
           "note": ""
         },
@@ -1731,9 +1731,9 @@ window.PORTFOLIO = {
           ],
           "kind": "Visit",
           "location": "Jeddah",
-          "followers": null,
-          "views": 3589,
-          "likes": 24,
+          "followers": 353347,
+          "views": 3889,
+          "likes": 20,
           "comments": 8,
           "saves": null,
           "note": ""
@@ -1765,7 +1765,8 @@ window.PORTFOLIO = {
         "جدة",
         "جازان",
         "خميس_مشيط"
-      ]
+      ],
+      "dataDate": "2026-11-17"
     },
     {
       "id": "stepia",
@@ -1779,18 +1780,41 @@ window.PORTFOLIO = {
       "description": "",
       "coverages": [
         {
-          "url": "https://www.instagram.com/reel/DfNcf8PtTMq/"
+          "url": "https://www.instagram.com/reel/DfNcf8PtTMq/",
+          "creator": "awsafalfares",
+          "followers": 102028,
+          "views": 8303,
+          "likes": 220,
+          "comments": 7
         },
         {
-          "url": "https://www.tiktok.com/@sh.h.a92/video/7701692996437200134"
+          "url": "https://www.tiktok.com/@sh.h.a92/video/7701692996437200134",
+          "creator": "sh.h.a92",
+          "followers": 51900,
+          "views": 26300,
+          "likes": 128,
+          "comments": 60,
+          "saves": 62
         },
         {
-          "url": "https://www.tiktok.com/@azi.0990/video/7703580498005609749"
+          "url": "https://www.tiktok.com/@azi.0990/video/7703580498005609749",
+          "creator": "azi.0990",
+          "followers": 105400,
+          "views": 33700,
+          "likes": 674,
+          "comments": 47,
+          "saves": 89
         },
         {
-          "url": "https://www.instagram.com/p/DecemLlNIEI/"
+          "url": "https://www.instagram.com/p/DecemLlNIEI/",
+          "creator": "shahyelserfy",
+          "followers": 59138,
+          "views": 61277,
+          "likes": 757,
+          "comments": 60
         }
-      ]
+      ],
+      "dataDate": "2026-11-17"
     },
     {
       "id": "pharmafection",
@@ -1804,21 +1828,45 @@ window.PORTFOLIO = {
       "description": "",
       "coverages": [
         {
-          "url": "https://www.instagram.com/reel/DeWpHY_N_-r/"
+          "url": "https://www.instagram.com/reel/DeWpHY_N_-r/",
+          "creator": "awsafalfares",
+          "followers": 102028,
+          "views": 36420,
+          "likes": 763,
+          "comments": 21
         },
         {
-          "url": "https://www.instagram.com/p/DeJajn6q1PK/"
+          "url": "https://www.instagram.com/p/DeJajn6q1PK/",
+          "creator": "hudavaiolet",
+          "followers": 63748,
+          "views": 41159,
+          "likes": 445,
+          "comments": 38
         },
         {
-          "url": "https://www.instagram.com/p/DeC3PT5MThx/"
+          "url": "https://www.instagram.com/p/DeC3PT5MThx/",
+          "creator": "shifa_shamshad",
+          "followers": 3497,
+          "views": 1085,
+          "comments": 28
         },
         {
-          "url": "https://www.instagram.com/reel/DekhchlKY_5/"
+          "url": "https://www.instagram.com/reel/DekhchlKY_5/",
+          "creator": "ameeramd02",
+          "followers": 14351,
+          "views": 1160,
+          "comments": 3
         },
         {
-          "url": "https://www.instagram.com/p/DecemLlNIEI/"
+          "url": "https://www.instagram.com/p/DecemLlNIEI/",
+          "creator": "shahyelserfy",
+          "followers": 59138,
+          "views": 61277,
+          "likes": 757,
+          "comments": 60
         }
-      ]
+      ],
+      "dataDate": "2026-11-17"
     },
     {
       "id": "nutrili",
@@ -1832,24 +1880,59 @@ window.PORTFOLIO = {
       "description": "",
       "coverages": [
         {
-          "url": "https://www.instagram.com/p/DZUuzhbtKoa/"
+          "url": "https://www.instagram.com/p/DZUuzhbtKoa/",
+          "creator": "heidi_ahmed2",
+          "followers": 87127,
+          "views": 37799,
+          "likes": 380,
+          "comments": 29
         },
         {
-          "url": "https://www.instagram.com/p/DZSmSaoI_9F/"
+          "url": "https://www.instagram.com/p/DZSmSaoI_9F/",
+          "creator": "dhahran.sa",
+          "followers": 43684,
+          "views": 38384,
+          "likes": 402,
+          "comments": 3
         },
         {
-          "url": "https://www.tiktok.com/@shahadbokhari/video/7691781182438133010"
+          "url": "https://www.tiktok.com/@shahadbokhari/video/7691781182438133010",
+          "creator": "shahadbokhari",
+          "followers": 4046,
+          "views": 968,
+          "likes": 39,
+          "comments": 2,
+          "saves": 14
         },
         {
-          "url": "https://www.tiktok.com/@ro5.28/video/7691326627589950728"
+          "url": "https://www.tiktok.com/@ro5.28/video/7691326627589950728",
+          "creator": "ro5.28",
+          "followers": 10500,
+          "views": 1067,
+          "likes": 43,
+          "comments": 2,
+          "saves": 16
         },
         {
-          "url": "https://www.tiktok.com/@theraahma/video/7691330469157211413"
+          "url": "https://www.tiktok.com/@theraahma/video/7691330469157211413",
+          "creator": "theraahma",
+          "followers": 3064,
+          "views": 710,
+          "likes": 49,
+          "comments": 8,
+          "saves": 11
         },
         {
-          "url": "https://www.tiktok.com/@le1mz/video/7688743990883011861"
+          "url": "https://www.tiktok.com/@le1mz/video/7688743990883011861",
+          "creator": "le1mz",
+          "followers": 6427,
+          "views": 1657,
+          "likes": 64,
+          "comments": 2,
+          "saves": 17
         }
-      ]
+      ],
+      "dataDate": "2026-11-17"
     },
     {
       "id": "infinity-kits",
@@ -1863,12 +1946,23 @@ window.PORTFOLIO = {
       "description": "",
       "coverages": [
         {
-          "url": "https://www.instagram.com/p/DcbHLc1OOVP/"
+          "url": "https://www.instagram.com/p/DcbHLc1OOVP/",
+          "creator": "maram_alnahla",
+          "followers": 145850,
+          "views": 17527,
+          "comments": 65
         },
         {
-          "url": "https://www.tiktok.com/@blog.jojoo/video/7668297176598039828"
+          "url": "https://www.tiktok.com/@blog.jojoo/video/7668297176598039828",
+          "creator": "blog.jojoo",
+          "followers": 29200,
+          "views": 514,
+          "likes": 47,
+          "comments": 14,
+          "saves": 14
         }
-      ]
+      ],
+      "dataDate": "2026-11-17"
     }
   ]
 };

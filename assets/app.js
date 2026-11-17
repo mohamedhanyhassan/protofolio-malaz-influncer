@@ -220,24 +220,28 @@
 
     app.innerHTML = `
     <section class="rhero hhero"><div class="confetti">${conf}</div><div class="wrap">
-      <div class="rmeta"><span>${E((agency.nameEn || "MALAZ").toUpperCase())} / CAMPAIGN PORTFOLIO</span><span class="dots">• • •</span><span class="num">${new Date().getFullYear()}</span></div>
+      <div class="rmeta"><span>${E((agency.nameEn || "MALAZ").toUpperCase())} / CAMPAIGN PORTFOLIO</span><span class="dots">• • •</span></div>
       <div class="rgrid">
         <div>
-          <img class="hlogo rv" src="assets/malaz-gold.png" alt="${E(agency.name)}">
-          <h1 class="rtitle rv d1">حملات مؤثرين<br><em>بأرقام حقيقية.</em></h1>
+          <span class="heyebrow rv"><i></i>بورتفوليو حملات المشاهير والمؤثرين</span>
+          <h1 class="rtitle rv d1">حملات مؤثرين<br><em>بأرقام حقيقية</em></h1>
           <p class="rdesc rv d2">بورتفوليو ${E(agency.name)} لحملات المشاهير والمؤثرين في السعودية: كل تغطية بفيديوها، وكل حملة بأرقامها ونتائجها، في مكان واحد.</p>
           <div class="racts rv d3">
             <a class="btn gold" href="#campaigns">تصفّح الحملات ↓</a>
             ${agency.site ? `<a class="btn" href="${E(M.safeUrl(agency.site))}" target="_blank" rel="noopener">${IC.out} تواصل معنا</a>` : ""}
           </div>
         </div>
-        <div class="vcard-wrap rv d2"><span class="dia a"></span><span class="dia b"></span>
-          <div class="vcard"><span class="h h1"></span><span class="h h2"></span><span class="h h3"></span><span class="h h4"></span>
-            <small>TOTAL VIEWS</small>
-            <div class="big" data-count="${tViews}">0</div>
-            <div class="cap">مشاهدة عبر حملاتنا</div>
-            <div class="vmini"><div><b class="num" data-count="${camps.length}">0</b><span>حملة</span></div><div><b class="num" data-count="${tCovs}">0</b><span>تغطية</span></div><div><b class="num" data-count="${tCreators}">0</b><span>مؤثر</span></div></div>
-          </div><span class="dotrow">• • • • • • • •</span></div>
+        <div class="hpanel rv d2">
+          <small>TOTAL VIEWS</small>
+          <div class="big" data-count="${tViews}">0</div>
+          <div class="cap">مشاهدة حققتها تغطيات المؤثرين في حملاتنا</div>
+          <div class="hstats">
+            <div><b class="num" data-count="${camps.length}">0</b><span>حملة</span></div>
+            <div><b class="num" data-count="${tCovs}">0</b><span>تغطية</span></div>
+            <div><b class="num" data-count="${tCreators}">0</b><span>مؤثر</span></div>
+          </div>
+          <div class="hbrands"><span>براندات اشتغلنا معاها</span><div class="hlogos"><div class="ht">${camps.map(c => `<span class="hl" title="${E(c.brand)}">${mark(c)}</span>`).join("")}${camps.map(c => `<span class="hl" title="${E(c.brand)}">${mark(c)}</span>`).join("")}</div></div></div>
+        </div>
       </div>
     </div></section>
     <div class="rmarq"><div class="tr">${mqHTML}${mqHTML}</div></div>
@@ -611,7 +615,7 @@
       const best = present.filter(t => t.er !== null).sort((a, b) => b.er - a.er)[0];
       const mostViews = present.slice().sort((a, b) => b.views - a.views)[0];
       const maxEr = Math.max(...present.map(t => t.er || 0)) || 1;
-      document.getElementById("tierTitle").innerHTML = best ? `حسابات <span class="num">${E(best.n)}</span> <em>حققت أعلى تفاعل</em>` : "تصنيف المؤثرين <em>حسب المتابعين</em>";
+      document.getElementById("tierTitle").innerHTML = best ? `حسابات <bdi>${E(best.n)}</bdi> <em>حققت أعلى تفاعل</em>` : "تصنيف المؤثرين <em>حسب المتابعين</em>";
       const C = 2 * Math.PI * 32;
       const card = t => `<div class="tcard rv ${t === best ? "best" : ""}">
         <div class="ring"><svg viewBox="0 0 76 76"><circle class="bg" cx="38" cy="38" r="32"/><circle class="fg" cx="38" cy="38" r="32" stroke-dasharray="${C}" stroke-dashoffset="${C}" data-off="${C * (1 - (t.er || 0) / maxEr)}"/></svg><span>${M.pct(t.er)}<small>تفاعل</small></span></div>
