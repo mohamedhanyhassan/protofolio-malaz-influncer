@@ -229,18 +229,21 @@ window.PORTFOLIO = {
       ]
     },
     {
-      "id": "unknown-sceproom",
-      "brand": "UNKNOWN SCEPROOM",
-      "title": "حملة *UNKNOWN SCEPROOM*",
+      "id": "unknown-escape-game",
+      "brand": "UNKNOWN",
+      "title": "حملة *UNKNOWN* Escape Game",
       "type": "حملة مشاهير",
-      "logo": "",
-      "brandUrl": "",
+      "logo": "logos/unknown.png",
+      "brandUrl": "https://unknownroom.com/",
       "city": "",
       "date": "2025-05-13",
       "dataDate": "",
-      "description": "حملة مؤثرين لـ UNKNOWN SCEPROOM بـ26 تغطية على تيك توك وإنستغرام، من مايو إلى يوليو 2025.",
+      "description": "UNKNOWN Escape Game: تجربة غرف هروب وألغاز. حملة مؤثرين بـ26 تغطية على تيك توك وإنستغرام، من مايو إلى يوليو 2025.",
       "hashtags": [
-        "UNKNOWN_SCEPROOM"
+        "UNKNOWN",
+        "UnknownEscapeGame",
+        "غرف_الهروب",
+        "EscapeRoom"
       ],
       "coverages": [
         {
