@@ -354,22 +354,24 @@
         <div class="vcard-wrap rv d2"><span class="dia a"></span><span class="dia b"></span>
           <div class="vcard"><span class="h h1"></span><span class="h h2"></span><span class="h h3"></span><span class="h h4"></span>
             ${brandMark(c, "blg")}
-            <small>TOTAL VIEWS</small>
-            <div class="big" ${s.views ? `data-count="${s.views}"` : ""}>${s.views ? "0" : "—"}</div>
-            <div class="cap">مشاهدة خلال الحملة</div>
+            ${s.views ? `<small>TOTAL VIEWS</small>
+            <div class="big" data-count="${s.views}">0</div>
+            <div class="cap">مشاهدة خلال الحملة</div>` : `<small>COVERAGES</small>
+            <div class="big" data-count="${covs.length}">0</div>
+            <div class="cap">تغطية خلال الحملة</div>`}
           </div><span class="dotrow">• • • • • • • •</span></div>
       </div>
     </div></section>
     <div class="rmarq"><div class="tr">${mqHTML}${mqHTML}</div></div>
 
     <div class="wrap">
-      <div class="rkpis">
+      ${s.views || s.likes !== null || s.comments !== null ? `<div class="rkpis">
         <div class="rk dark rv"><div class="v" ${s.views ? `data-count="${s.views}"` : ""}>${s.views ? 0 : "—"}</div><div class="l">${s.views ? `مشاهدة من ${M.fmt(withViews)} تغطية${avg ? `، بمتوسط ${M.compact(avg)} للتغطية` : ""}${s.followers ? ` · ${M.compact(s.followers)} متابع مجتمعين` : ""}` : "المشاهدات تُضاف قريبًا"}</div></div>
         <div class="rk rv d1"><div class="v" ${s.likes !== null ? `data-count="${s.likes}"` : ""}>${s.likes !== null ? 0 : "—"}</div><div class="l">إعجاب</div></div>
         <div class="rk rv d2"><div class="v" ${s.saves !== null ? `data-count="${s.saves}"` : ""}>${s.saves !== null ? 0 : "—"}</div><div class="l">حفظ ومشاركة</div></div>
         <div class="rk rv d3"><div class="v" ${s.comments !== null ? `data-count="${s.comments}"` : ""}>${s.comments !== null ? 0 : "—"}</div><div class="l">تعليق</div></div>
         <div class="rk gold rv d4"><div class="v" ${s.er !== null ? `data-count="${s.er.toFixed(2)}" data-dec="2" data-suf="%"` : ""}>${s.er !== null ? 0 : "—"}</div><div class="l">نسبة التفاعل الإجمالية</div></div>
-      </div>
+      </div>` : ""}
 
       ${metrics.length ? `<section class="rsec" id="sec-chart">
         <span class="rlabel rv">${sn()} / REACH VS ENGAGEMENT</span>
