@@ -11,19 +11,20 @@ window.PORTFOLIO = {
     {
       "id": "umandi",
       "brand": "Umandi",
-      "title": "افتتاح *Umandi*",
+      "title": "افتتاح *أوماندي* في جدة",
       "type": "افتتاح فرع",
-      "logo": "",
-      "brandUrl": "",
-      "city": "",
+      "logo": "logos/umandi.png",
+      "brandUrl": "https://u-mandi.com/",
+      "city": "جدة — حي المروة",
       "date": "2025-07-29",
       "dataDate": "2025-08-18",
-      "description": "زيارات مؤثرين لـ Umandi على 3 مراحل: الافتتاح التجريبي من 29 يوليو، ثم الافتتاح الرسمي في 8 أغسطس، ثم زيارات ما بعد الافتتاح حتى 18 أغسطس 2025، بتغطيات على تيك توك وإنستغرام وسناب شات.",
+      "description": "زيارات مؤثرين لمطعم أوماندي في حي المروة بجدة على 3 مراحل: الافتتاح التجريبي من 29 يوليو، ثم الافتتاح الرسمي في 8 أغسطس، ثم زيارات ما بعد الافتتاح حتى 18 أغسطس 2025، بتغطيات على تيك توك وإنستغرام وسناب شات.",
       "hashtags": [
+        "أوماندي",
         "Umandi",
-        "افتتاح_تجريبي",
-        "الافتتاح",
-        "بعد_الافتتاح"
+        "جدة",
+        "حي_المروة",
+        "افتتاح_تجريبي"
       ],
       "coverages": [
         {
@@ -41,7 +42,8 @@ window.PORTFOLIO = {
           "likes": 7,
           "comments": 0,
           "saves": null,
-          "note": "زيارة 12/8"
+          "note": "زيارة 12/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.instagram.com/reel/DNRSfvVI17p/",
@@ -58,7 +60,8 @@ window.PORTFOLIO = {
           "likes": 5,
           "comments": 0,
           "saves": null,
-          "note": "زيارة 12/8"
+          "note": "زيارة 12/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.instagram.com/reel/DNbQE0GC8lJ/",
@@ -75,7 +78,8 @@ window.PORTFOLIO = {
           "likes": 411,
           "comments": 1,
           "saves": null,
-          "note": "زيارة 14/8"
+          "note": "زيارة 14/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.instagram.com/reel/DNbH2jVIm56/",
@@ -92,7 +96,8 @@ window.PORTFOLIO = {
           "likes": 214,
           "comments": 42,
           "saves": null,
-          "note": "زيارة 15/8"
+          "note": "زيارة 15/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.instagram.com/reel/DNLKu0PsovZ/",
@@ -109,7 +114,8 @@ window.PORTFOLIO = {
           "likes": 10,
           "comments": 3,
           "saves": null,
-          "note": "زيارة 8/8"
+          "note": "زيارة 8/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.instagram.com/reel/DNN-Tsotx6c/",
@@ -126,7 +132,8 @@ window.PORTFOLIO = {
           "likes": 6,
           "comments": 2,
           "saves": null,
-          "note": "زيارة 8/8"
+          "note": "زيارة 8/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.instagram.com/reel/DNIlA9HirKg/",
@@ -143,7 +150,8 @@ window.PORTFOLIO = {
           "likes": 4,
           "comments": 0,
           "saves": null,
-          "note": "زيارة 8/8"
+          "note": "زيارة 8/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.instagram.com/reel/DNOBbS-Nln3/",
@@ -160,7 +168,8 @@ window.PORTFOLIO = {
           "likes": 7,
           "comments": 7,
           "saves": null,
-          "note": "زيارة 8/8"
+          "note": "زيارة 8/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.instagram.com/reel/DMva2x1tN1Z/",
@@ -177,7 +186,8 @@ window.PORTFOLIO = {
           "likes": 70,
           "comments": 5,
           "saves": null,
-          "note": "زيارة 29/7"
+          "note": "زيارة 29/7",
+          "location": "جدة"
         },
         {
           "url": "https://www.instagram.com/reel/DMx9T5uq2C7/",
@@ -194,7 +204,8 @@ window.PORTFOLIO = {
           "likes": 601,
           "comments": 122,
           "saves": null,
-          "note": "زيارة 30/7 · منشور مشترك مع larayounes2024"
+          "note": "زيارة 30/7 · منشور مشترك مع larayounes2024",
+          "location": "جدة"
         },
         {
           "url": "https://www.instagram.com/reel/DM7WKsuoGm4/",
@@ -211,7 +222,8 @@ window.PORTFOLIO = {
           "likes": 19,
           "comments": 4,
           "saves": null,
-          "note": "زيارة 1/8"
+          "note": "زيارة 1/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.instagram.com/reel/DNBlKD2OKQQ/",
@@ -228,7 +240,8 @@ window.PORTFOLIO = {
           "likes": 6,
           "comments": 1,
           "saves": null,
-          "note": "زيارة 4/8"
+          "note": "زيارة 4/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.instagram.com/reel/DNC2DUcI1Nz/",
@@ -245,7 +258,8 @@ window.PORTFOLIO = {
           "likes": 125,
           "comments": 45,
           "saves": null,
-          "note": "زيارة 6/8"
+          "note": "زيارة 6/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.tiktok.com/@ameera8855/video/7537439872995413255",
@@ -262,7 +276,8 @@ window.PORTFOLIO = {
           "likes": 706,
           "comments": 59,
           "saves": 10,
-          "note": "زيارة 11/8"
+          "note": "زيارة 11/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.tiktok.com/@rehab.bkh/video/7538050576894938388",
@@ -279,7 +294,8 @@ window.PORTFOLIO = {
           "likes": 84,
           "comments": 7,
           "saves": 4,
-          "note": "زيارة 12/8"
+          "note": "زيارة 12/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.tiktok.com/@un_v8/video/7537674122155855111",
@@ -296,7 +312,8 @@ window.PORTFOLIO = {
           "likes": 823,
           "comments": 27,
           "saves": 16,
-          "note": "زيارة 12/8"
+          "note": "زيارة 12/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.tiktok.com/@walaa.sulliman/video/7537814199293070613",
@@ -313,7 +330,8 @@ window.PORTFOLIO = {
           "likes": 14,
           "comments": 0,
           "saves": 0,
-          "note": "زيارة 12/8"
+          "note": "زيارة 12/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.tiktok.com/@soomatork_sa/video/7539250335731207441",
@@ -330,7 +348,8 @@ window.PORTFOLIO = {
           "likes": 450,
           "comments": 29,
           "saves": 12,
-          "note": "زيارة 14/8"
+          "note": "زيارة 14/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.tiktok.com/@e.al7arbi/video/7539235710595796231",
@@ -347,7 +366,8 @@ window.PORTFOLIO = {
           "likes": 567,
           "comments": 9,
           "saves": 3,
-          "note": "زيارة 15/8"
+          "note": "زيارة 15/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.tiktok.com/@jehad_story1/video/7537337703545769223",
@@ -364,7 +384,8 @@ window.PORTFOLIO = {
           "likes": 38,
           "comments": 0,
           "saves": 1,
-          "note": "زيارة 8/8"
+          "note": "زيارة 8/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.tiktok.com/@manal.taha1/video/7536308528990915858",
@@ -381,7 +402,8 @@ window.PORTFOLIO = {
           "likes": 185,
           "comments": 17,
           "saves": 33,
-          "note": "زيارة 8/8"
+          "note": "زيارة 8/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.tiktok.com/@pq5n5/video/7536559118581107976",
@@ -398,7 +420,8 @@ window.PORTFOLIO = {
           "likes": 432,
           "comments": 133,
           "saves": 244,
-          "note": "زيارة 8/8"
+          "note": "زيارة 8/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.tiktok.com/@salem3703/video/7536305777728867602",
@@ -415,7 +438,8 @@ window.PORTFOLIO = {
           "likes": 229,
           "comments": 45,
           "saves": 57,
-          "note": "زيارة 8/8"
+          "note": "زيارة 8/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.tiktok.com/@te.7s/video/7537317313230458130",
@@ -432,7 +456,8 @@ window.PORTFOLIO = {
           "likes": 42,
           "comments": 3,
           "saves": 3,
-          "note": "زيارة 8/8"
+          "note": "زيارة 8/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.tiktok.com/@rena.137/video/7532881387054042386",
@@ -449,7 +474,8 @@ window.PORTFOLIO = {
           "likes": 292,
           "comments": 133,
           "saves": 374,
-          "note": "زيارة 29/7"
+          "note": "زيارة 29/7",
+          "location": "جدة"
         },
         {
           "url": "https://www.tiktok.com/@hudavaiolet/video/7533326320063827207",
@@ -466,7 +492,8 @@ window.PORTFOLIO = {
           "likes": 220,
           "comments": 11,
           "saves": 30,
-          "note": "زيارة 31/7"
+          "note": "زيارة 31/7",
+          "location": "جدة"
         },
         {
           "url": "https://www.tiktok.com/@lina_esmail/video/7533974913716112658",
@@ -483,7 +510,8 @@ window.PORTFOLIO = {
           "likes": 345,
           "comments": 30,
           "saves": 71,
-          "note": "زيارة 1/8"
+          "note": "زيارة 1/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.tiktok.com/@om_soso135/video/7536029673352989960",
@@ -500,7 +528,8 @@ window.PORTFOLIO = {
           "likes": 105,
           "comments": 16,
           "saves": 23,
-          "note": "زيارة 2/8"
+          "note": "زيارة 2/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.tiktok.com/@brandat32/video/7535214954291432722",
@@ -517,7 +546,8 @@ window.PORTFOLIO = {
           "likes": 1400,
           "comments": 92,
           "saves": 1100,
-          "note": "زيارة 5/8"
+          "note": "زيارة 5/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.tiktok.com/@nirvanaa_11/video/7535548998665473288",
@@ -534,7 +564,8 @@ window.PORTFOLIO = {
           "likes": 294,
           "comments": 14,
           "saves": 256,
-          "note": "زيارة 4/8"
+          "note": "زيارة 4/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.tiktok.com/@mn_g73/video/7535769382782373128",
@@ -551,7 +582,8 @@ window.PORTFOLIO = {
           "likes": 654,
           "comments": 11,
           "saves": 121,
-          "note": "زيارة 6/8"
+          "note": "زيارة 6/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.tiktok.com/@rashakwik/video/7535669934177684754",
@@ -568,7 +600,8 @@ window.PORTFOLIO = {
           "likes": 6808,
           "comments": 724,
           "saves": 2300,
-          "note": "زيارة 6/8"
+          "note": "زيارة 6/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.tiktok.com/@hudavaiolet/video/7533305255375752455",
@@ -585,7 +618,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": "زيارة 31/7"
+          "note": "زيارة 31/7",
+          "location": "جدة"
         },
         {
           "url": "https://www.tiktok.com/@om_soso135/video/7535230233834720519",
@@ -602,7 +636,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": "زيارة 2/8"
+          "note": "زيارة 2/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.tiktok.com/@khalid1593/video/7540082764146691346",
@@ -619,7 +654,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": "زيارة 18/8"
+          "note": "زيارة 18/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.tiktok.com/@agrammal/video/7540431657464073480",
@@ -636,7 +672,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": "زيارة 18/8"
+          "note": "زيارة 18/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.snapchat.com/@hudavaiolet/spotlight/W7_EDlXWTBiXAEEniNoMPwAAYeXF5Y2JsYWVmAZhh4lKMAZhh4iZzAAAAAQ",
@@ -653,7 +690,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": "زيارة 31/7"
+          "note": "زيارة 31/7",
+          "location": "جدة"
         },
         {
           "url": "https://www.snapchat.com/@yallashoppings/spotlight/W7_EDlXWTBiXAEEniNoMPwAAYcWp2anlxcW9xAZiLbmxnAZiLWMByAAAAAQ",
@@ -670,7 +708,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": "زيارة 8/8"
+          "note": "زيارة 8/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.snapchat.com/@marmos777",
@@ -687,7 +726,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": "زيارة 4/8"
+          "note": "زيارة 4/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.snapchat.com/@manhola_25/JfCoID1YSiy_U4WSP9r0uAAAgdWFwYW1oZmFnAZi9yxw2AZi9ywyLAAAAAg",
@@ -704,7 +744,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": "زيارة 18/8"
+          "note": "زيارة 18/8",
+          "location": "جدة"
         },
         {
           "url": "https://www.instagram.com/stories/iiisuhad/3702571474652088241/",
@@ -721,7 +762,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": "زيارة 18/8"
+          "note": "زيارة 18/8",
+          "location": "جدة"
         }
       ],
       "insights": [

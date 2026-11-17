@@ -443,3 +443,8 @@ footer .logo img{width:auto}
 .media.none .ph{gap:8px}
 .media.none .ph .av{width:58px;height:58px;font-size:24px}
 .media .ph .phbtn{font-size:13px;padding:8px 14px;margin-top:4px;pointer-events:auto}
+
+/* brand logos with a solid background (square) look cleaner with rounded corners */
+.rlogos .bl img,.vcard .blg img,.rfoot .lg2 .bl img{border-radius:14px}
+.blogo img[src^="logos/"]{padding:0}
+.crow h3 em{font-style:normal;color:var(--gold-d)}

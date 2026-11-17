@@ -206,7 +206,7 @@
         const hit = qq && x.covs.find(v => (v.creator || "").toLowerCase().includes(qq));
         return `<a class="crow fade" href="#c-${E(x.c.id)}">
           ${logoHTML(x.c)}
-          <div><span class="badge">${E(x.c.type || "حملة")}</span><h3>${E(x.c.title || x.c.brand)}</h3>
+          <div><span class="badge">${E(x.c.type || "حملة")}</span><h3>${hl(x.c.title || x.c.brand)}</h3>
             <div class="meta">${E(x.c.brand)}${x.c.city ? " · " + E(x.c.city) : ""}${hit ? ` · <span class="ltr" style="color:var(--green-d)">@${E(hit.creator)}</span>` : ""}</div></div>
           <div class="side"><span class="chips">${pfBadges(x.s.platforms)}</span>
             <span class="badge line"><span class="num">${M.fmt(x.s.creators)}</span> مؤثر</span>
