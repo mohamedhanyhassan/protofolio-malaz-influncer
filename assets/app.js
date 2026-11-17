@@ -56,8 +56,9 @@
     const ext = M.safeUrl(c.url);
     return `<div class="media ${s.kind === "ig" ? "ig" : ""} ${s.kind === "none" && !full ? "none" : ""}" data-kind="${s.kind}" data-full="${full ? 1 : 0}" data-src="${E(s.src || "")}" data-id="${E(s.id || "")}">
       <div class="ph"><div class="av">${E(initial(c.creator))}</div><b class="ltr">${c.creator ? "@" + E(c.creator) : ""}</b>
-        <small>${s.kind === "none" ? (ext ? (c.link.platform === "Snapchat" ? "سناب شات ما بيسمحش بعرض الفيديو هنا" : c.link.kind === "story" ? "الستوري بتتعرض على إنستغرام" : "التغطية بتتعرض على المنصة") : "رابط الفيديو يُضاف قريبًا") : "جارِ تحميل الفيديو…"}</small>
+        <small class="phmsg">${s.kind === "none" ? (ext ? (c.link.platform === "Snapchat" ? "سناب شات ما بيسمحش بعرض الفيديو هنا" : c.link.kind === "story" ? "الستوري بتتعرض على إنستغرام" : "التغطية بتتعرض على المنصة") : "رابط الفيديو يُضاف قريبًا") : "جارِ تحميل الفيديو…"}</small>
         ${s.kind === "none" && ext ? `<a class="btn gold phbtn" href="${E(ext)}" target="_blank" rel="noopener">${IC.out} ${openLabel(c).replace(" ←", "")}</a>` : ""}
+        ${s.kind === "tt" ? `<span class="ttload"><i></i><i></i><i></i></span>${c.views ? `<span class="ttv"><b class="num">${M.compact(c.views)}</b> مشاهدة</span>` : ""}<a class="btn gold phbtn ttfail" href="${E(ext)}" target="_blank" rel="noopener">${IC.play} شاهد الفيديو على تيك توك</a>` : ""}
         ${s.kind === "none" && src ? "" : `<div class="chips" style="justify-content:center">${pfBadges(c.platforms)}</div>`}</div>
       ${full ? "" : '<div class="ov"></div>'}
       ${no ? `<span class="no">#${no}</span>` : ""}
@@ -105,11 +106,12 @@
     clearTimeout(p.ttTimer);
     p.ttTimer = setTimeout(() => {
       if (p.ready || p.iframe !== f) return;
-      p.legacy = true;
-      f.src = "https://www.tiktok.com/embed/v2/" + id + "?autoplay=1&muted=1";
-      const ph = p.el.querySelector(".ph"); if (ph) ph.style.display = "none";
+      p.failed = true; p.legacy = true;
+      f.remove(); p.iframe = null;
+      p.el.classList.add("ttfailed");
+      const m = p.el.querySelector(".phmsg"); if (m) m.textContent = "الفيديو بيتعرض على تيك توك";
       const b = p.el.querySelector(".snd"); if (b) b.style.display = "none";
-    }, 7000);
+    }, 8000);
   }
 
   function load(p) {
@@ -134,7 +136,7 @@
       }
       if (p.kind === "ig") f.src = "https://www.instagram.com/p/" + encodeURIComponent(id) + "/embed/";
       if (p.kind === "yt") f.src = "https://www.youtube.com/embed/" + encodeURIComponent(id) + "?autoplay=1&mute=" + (p.sound ? 0 : 1) + "&loop=1&playlist=" + encodeURIComponent(id) + "&playsinline=1&enablejsapi=1&controls=" + (p.full ? 1 : 0);
-      f.addEventListener("load", () => { const ph = el.querySelector(".ph"); if (!ph) return; if (p.kind !== "tt") ph.style.display = "none"; else setTimeout(() => { ph.style.display = "none"; }, 3500); });
+      f.addEventListener("load", () => { const ph = el.querySelector(".ph"); if (!ph) return; if (p.kind !== "tt") ph.style.display = "none"; });
       el.insertBefore(f, el.firstChild.nextSibling);
       p.iframe = f;
     }
@@ -174,8 +176,9 @@
     if (!d || !d["x-tiktok-player"]) return;
     let p = null; players.forEach(q => { if (q.iframe && q.iframe.contentWindow === e.source) p = q; });
     if (!p) return;
-    if (d.type === "onPlayerReady") {
-      p.ready = true;
+    if (d.type === "onPlayerReady" || d.type === "onStateChange" || d.type === "onCurrentTime") {
+      if (p.ready) return;
+      p.ready = true; clearTimeout(p.ttTimer);
       const ph = p.el.querySelector(".ph"); if (ph) ph.style.display = "none";
       ttSend(p, p.sound ? "unMute" : "mute");
       if (p.visible || p.full) ttSend(p, "play"); else ttSend(p, "pause");

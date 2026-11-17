@@ -55,7 +55,7 @@
   };
 
   M.campStats = function (camp) {
-    const covs = (camp.coverages || []).map(M.cov);
+    const covs = (camp.coverages || []).filter(v => !v.hidden).map(M.cov);  // hidden: dead/private links kept in data but not shown
     const sum = k => { const v = covs.filter(c => c[k] !== null); return v.length ? v.reduce((a, c) => a + c[k], 0) : null; };
     const creators = new Set(covs.map(c => c.creator).filter(Boolean)).size + covs.filter(c => !c.creator).length;
     const s = { creators, coverages: covs.length, views: sum("views"), followers: sum("followers"), likes: sum("likes"), comments: sum("comments"), saves: sum("saves") };

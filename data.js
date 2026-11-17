@@ -64,7 +64,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": ""
+          "note": " (مخفي: اللينك ما رجعش أرقام — غالبًا محذوف أو خاص)",
+          "hidden": true
         },
         {
           "url": "https://www.tiktok.com/@ameera8855/video/7542511428368928008",
@@ -90,7 +91,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": ""
+          "note": " (مخفي: اللينك ما رجعش أرقام — غالبًا محذوف أو خاص)",
+          "hidden": true
         },
         {
           "url": "https://www.tiktok.com/@salem3703/video/7541589165121473799",
@@ -257,7 +259,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": ""
+          "note": " (مخفي: اللينك ما رجعش أرقام — غالبًا محذوف أو خاص)",
+          "hidden": true
         },
         {
           "url": "https://www.tiktok.com/@blogger.layan/video/7507340338340596999",
@@ -439,7 +442,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": ""
+          "note": " (مخفي: اللينك ما رجعش أرقام — غالبًا محذوف أو خاص)",
+          "hidden": true
         },
         {
           "url": "https://www.instagram.com/p/DKM3tG9My1h/",
@@ -582,7 +586,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": ""
+          "note": " (مخفي: اللينك ما رجعش أرقام — غالبًا محذوف أو خاص)",
+          "hidden": true
         }
       ]
     },
