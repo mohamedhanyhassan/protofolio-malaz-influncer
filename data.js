@@ -17,8 +17,8 @@ window.PORTFOLIO = {
       "brandUrl": "https://www.instagram.com/zira_clinic/",
       "city": "",
       "date": "2025-08-24",
-      "dataDate": "",
-      "description": "حملة مؤثرين لعيادات زيرا الطبية بـ6 تغطيات على تيك توك وإنستغرام، من أغسطس إلى أكتوبر 2025.",
+      "dataDate": "2026-11-17",
+      "description": "عيادات زيرا الطبية. حملة مؤثرين على تيك توك وإنستغرام من أغسطس إلى أكتوبر 2025.",
       "hashtags": [
         "عيادات_زيرا",
         "ZiraClinics"
@@ -26,14 +26,14 @@ window.PORTFOLIO = {
       "coverages": [
         {
           "url": "https://www.instagram.com/p/DNvbP1A2sDH/",
-          "creator": "",
+          "creator": "shimaanagah_",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
+          "followers": 785681,
           "views": null,
           "likes": null,
-          "comments": null,
+          "comments": 121,
           "saves": null,
           "note": ""
         },
@@ -43,11 +43,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 466500,
+          "views": 10700,
+          "likes": 53,
+          "comments": 5,
+          "saves": 18,
           "note": ""
         },
         {
@@ -56,11 +56,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 140300,
+          "views": 1247,
+          "likes": 119,
+          "comments": 7,
+          "saves": 7,
           "note": ""
         },
         {
@@ -74,7 +74,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": ""
+          "note": "(مخفي: اللينك ما رجعش أرقام — غالبًا محذوف أو خاص)",
+          "hidden": true
         },
         {
           "url": "https://www.tiktok.com/@mod_z/video/7559128749892160775",
@@ -82,11 +83,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 20400,
+          "views": 5711,
+          "likes": 64,
+          "comments": 2,
+          "saves": 18,
           "note": ""
         },
         {
@@ -95,11 +96,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 54000,
+          "views": 12400,
+          "likes": 89,
+          "comments": 6,
+          "saves": 18,
           "note": ""
         }
       ]
