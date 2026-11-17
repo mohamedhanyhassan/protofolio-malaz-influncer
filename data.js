@@ -898,18 +898,18 @@ window.PORTFOLIO = {
     },
     {
       "id": "binrushd-optical",
-      "brand": "Binrushd Optical",
-      "title": "حملة زيارات الفروع",
-      "type": "حملة مشاهير",
-      "logo": "",
+      "brand": "Binrushd",
+      "title": "زيارات فروع *بن رشد* للعيون",
+      "type": "زيارات فروع",
+      "logo": "logos/binrushd.png",
       "brandUrl": "",
       "city": "الرياض · جدة · خميس مشيط · جازان",
       "date": "",
-      "description": "زيارات مؤثرين لفروع بن رشد للبصريات في 4 مدن.",
+      "description": "زيارات مؤثرين لفروع مركز بن رشد التخصصي للعيون في 4 مدن: الرياض وجدة وخميس مشيط وجازان، بتغطيات على إنستغرام وتيك توك وسناب شات.",
       "coverages": [
         {
           "creator": "reema_elharbi",
-          "url": "",
+          "url": "https://www.instagram.com/p/DFSx1UMNDhv/",
           "platforms": [
             "Instagram"
           ],
@@ -920,7 +920,7 @@ window.PORTFOLIO = {
           "kind": "Visit",
           "location": "Riyadh",
           "followers": null,
-          "views": 23250,
+          "views": 18300,
           "likes": 1330,
           "comments": 403,
           "saves": null,
@@ -948,7 +948,7 @@ window.PORTFOLIO = {
         },
         {
           "creator": "dr.reham.adel",
-          "url": "",
+          "url": "https://www.instagram.com/p/DFSbqQKNkrM/",
           "platforms": [
             "Instagram"
           ],
@@ -967,7 +967,7 @@ window.PORTFOLIO = {
         },
         {
           "creator": "ahmadhmadeh03",
-          "url": "",
+          "url": "https://www.instagram.com/p/DFXU-GmOCoz/",
           "platforms": [
             "Instagram"
           ],
@@ -986,7 +986,7 @@ window.PORTFOLIO = {
         },
         {
           "creator": "alaa.alkazzaz",
-          "url": "",
+          "url": "https://www.instagram.com/p/DFWFMTyorma/",
           "platforms": [
             "Instagram",
             "TikTok"
@@ -1006,7 +1006,7 @@ window.PORTFOLIO = {
         },
         {
           "creator": "dietitian.sarah.official",
-          "url": "",
+          "url": "https://www.instagram.com/reel/DFfXSJYM7Fn/",
           "platforms": [
             "Instagram",
             "TikTok"
@@ -1045,7 +1045,7 @@ window.PORTFOLIO = {
         },
         {
           "creator": "randamohamed333",
-          "url": "",
+          "url": "https://www.instagram.com/reel/DF7iO5xtdtM/",
           "platforms": [
             "Instagram",
             "TikTok"
@@ -1059,7 +1059,7 @@ window.PORTFOLIO = {
           "followers": null,
           "views": 35125,
           "likes": 1825,
-          "comments": 603,
+          "comments": 235,
           "saves": null,
           "note": ""
         },
@@ -1085,7 +1085,7 @@ window.PORTFOLIO = {
         },
         {
           "creator": "taj.vloog",
-          "url": "",
+          "url": "https://www.tiktok.com/@taj.vloog/video/7469400217440308487",
           "platforms": [
             "Instagram",
             "TikTok",
@@ -1105,7 +1105,7 @@ window.PORTFOLIO = {
         },
         {
           "creator": "beessoo1406",
-          "url": "",
+          "url": "https://www.tiktok.com/@beessoo1406/video/7468757797610573074",
           "platforms": [
             "TikTok",
             "Snapchat"
@@ -1143,7 +1143,7 @@ window.PORTFOLIO = {
         },
         {
           "creator": "_manal.taha",
-          "url": "",
+          "url": "https://www.instagram.com/p/DF5G_YDIsqy/",
           "platforms": [
             "Instagram"
           ],
@@ -1162,7 +1162,7 @@ window.PORTFOLIO = {
         },
         {
           "creator": "7s.s.1",
-          "url": "",
+          "url": "https://www.tiktok.com/@7s.s.1/video/7469886415636139271",
           "platforms": [
             "TikTok"
           ],
@@ -1178,6 +1178,15 @@ window.PORTFOLIO = {
           "saves": null,
           "note": ""
         }
+      ],
+      "hashtags": [
+        "بن_رشد",
+        "بن_رشد_للعيون",
+        "Binrushd",
+        "الرياض",
+        "جدة",
+        "جازان",
+        "خميس_مشيط"
       ]
     },
     {
