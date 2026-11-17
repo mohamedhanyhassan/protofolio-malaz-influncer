@@ -98,8 +98,8 @@ textarea.i{min-height:80px;resize:vertical}
 </div>
 
 <div class="dlg" id="bulk"><div class="box">
-  <h3>إضافة تغطيات بالجملة</h3>
-  <p class="hint">الصق لينكات (كل لينك في سطر، أو انسخ عمود من الشيت). أو الصق صفوف من الشيت بالترتيب ده:<br><span class="ltr">url · username · followers · views · likes · comments · saves · note</span></p>
+  <h3>إضافة لينكات التغطيات</h3>
+  <p class="hint">الصق لينكات تيك توك أو إنستغرام — كل لينك في سطر، أو انسخ عمود اللينكات من الشيت. لو مفتاح Apify متحط، الأرقام هتتجاب لوحدها بعد الإضافة.</p>
   <textarea class="i ltr-i" id="bulkT" style="min-height:200px;margin:10px 0"></textarea>
   <div class="row-acts"><button class="btn gold" id="bulkOk">إضافة</button><button class="btn" id="bulkNo">إلغاء</button></div>
 </div></div>
@@ -198,6 +198,74 @@ function linkStatus(v){
   return '<span class="ls warn" title="مش هيتعرض جوه الموقع — هيفتح في صفحة المنصة">↗ برا الموقع</span>';
 }
 
+/* ---------- auto stats (Apify) ---------- */
+const TOK_KEY = "malaz_apify_token";
+const getTok = () => { try{ return localStorage.getItem(TOK_KEY)||""; }catch(e){ return ""; } };
+const setTok = t => { try{ t ? localStorage.setItem(TOK_KEY,t) : localStorage.removeItem(TOK_KEY); }catch(e){} };
+const getPath = (o, path) => { if(o==null) return undefined; if(o[path]!==undefined) return o[path]; return path.split(".").reduce((x,k)=>x==null?undefined:x[k], o); };
+const pick = (o, ...keys) => { for(const k of keys){ const v = getPath(o,k); if(v!==undefined && v!==null && v!=="") return v; } return null; };
+const numOrNull = v => (v===null||v===undefined||v===""||isNaN(+v)||+v<0) ? null : +v;
+async function apify(actor, input){
+  const tok = getTok();
+  const r = await fetch(`https://api.apify.com/v2/acts/${actor}/run-sync-get-dataset-items?token=${encodeURIComponent(tok)}&timeout=280`, { method:"POST", headers:{ "Content-Type":"application/json" }, body: JSON.stringify(input) });
+  if(r.status===401||r.status===403) throw new Error("المفتاح غلط — راجعه من بيانات الوكالة");
+  if(r.status===402) throw new Error("رصيد Apify خلص — اشحن الحساب أو استنى الشهر الجاي");
+  if(!r.ok) throw new Error("Apify رجّع خطأ "+r.status);
+  return r.json();
+}
+async function fetchStats(c, onlyIdx){
+  if(!getTok()) { alert("حط مفتاح Apify الأول من «بيانات الوكالة» في القايمة الجانبية."); sel=-1; render(); return; }
+  const rows = c.coverages.map((v,i)=>({v,i,L:M.parseLink(v.url)})).filter(x=>(onlyIdx===undefined||x.i===onlyIdx) && x.L.id && (x.L.platform==="TikTok"||x.L.platform==="Instagram"));
+  if(!rows.length){ status("ما فيه لينكات تيك توك أو إنستغرام كاملة نجيب أرقامها."); return; }
+  const tt = rows.filter(x=>x.L.platform==="TikTok"), ig = rows.filter(x=>x.L.platform==="Instagram");
+  let ok = 0, miss = 0; const errs = [];
+  status(`⏳ بيجيب أرقام ${rows.length} تغطية… ممكن ياخد دقيقة أو اتنين`);
+  if(tt.length){
+    try{
+      const items = await apify("clockworks~tiktok-scraper", { postURLs: tt.map(x=>x.v.url), resultsPerPage: 1, shouldDownloadVideos:false, shouldDownloadCovers:false, shouldDownloadSubtitles:false, shouldDownloadSlideshowImages:false });
+      tt.forEach(x=>{
+        const it = items.find(o=>{ const id = String(pick(o,"id")||""); const u = String(pick(o,"webVideoUrl","url")||""); return id===x.L.id || u.includes(x.L.id); });
+        if(!it){ miss++; return; }
+        const v = x.v, user = pick(it,"authorMeta.name","authorMeta.uniqueId");
+        if(user) v.creator = user;
+        v.followers = numOrNull(pick(it,"authorMeta.fans")) ?? v.followers;
+        v.views = numOrNull(pick(it,"playCount")) ?? v.views;
+        v.likes = numOrNull(pick(it,"diggCount")) ?? v.likes;
+        v.comments = numOrNull(pick(it,"commentCount")) ?? v.comments;
+        const sv = numOrNull(pick(it,"collectCount")), sh = numOrNull(pick(it,"shareCount"));
+        if(sv!==null||sh!==null) v.saves = (sv||0)+(sh||0);
+        v.platforms = ["TikTok"]; ok++;
+      });
+    }catch(e){ errs.push("تيك توك: "+e.message); }
+  }
+  if(ig.length){
+    try{
+      const items = await apify("apify~instagram-scraper", { directUrls: ig.map(x=>x.v.url), resultsType:"posts", resultsLimit:1, addParentData:false });
+      const users = new Set();
+      ig.forEach(x=>{
+        const it = items.find(o=>String(pick(o,"shortCode")||"")===x.L.id || String(pick(o,"url")||"").includes(x.L.id));
+        if(!it){ miss++; return; }
+        const v = x.v, user = pick(it,"ownerUsername");
+        if(user){ v.creator = user; users.add(user); }
+        v.views = numOrNull(pick(it,"videoPlayCount","videoViewCount","playCount")) ?? v.views;
+        v.likes = numOrNull(pick(it,"likesCount")) ?? v.likes;
+        v.comments = numOrNull(pick(it,"commentsCount")) ?? v.comments;
+        const of = numOrNull(pick(it,"ownerFollowersCount")); if(of!==null) v.followers = of;
+        v.platforms = ["Instagram"]; ok++;
+      });
+      const need = [...users].filter(u=>ig.some(x=>x.v.creator===u && x.v.followers==null));
+      if(need.length){
+        const prof = await apify("apify~instagram-profile-scraper", { usernames: need });
+        prof.forEach(p=>{ const u = pick(p,"username"), f = numOrNull(pick(p,"followersCount")); if(u && f!==null) ig.forEach(x=>{ if(x.v.creator===u) x.v.followers = f; }); });
+      }
+    }catch(e){ errs.push("إنستغرام: "+e.message); }
+  }
+  if(ok) c.dataDate = new Date().toISOString().slice(0,10);
+  save(); render();
+  status(`✓ اتجابت أرقام ${ok} تغطية` + (miss?` · ${miss} ماترجعش (خاص أو محذوف)`:"") + (errs.length?" · ⚠ "+errs.join(" — "):""));
+}
+function status(t){ const el = $("#fetchMsg"); if(el) el.textContent = t; else $("#saved").textContent = t; }
+
 /* ---------- sidebar ---------- */
 function renderSide(){
   $("#clist").innerHTML = data.campaigns.map((c,i)=>`<div class="citem ${i===sel?"on":""} ${c.hidden?"hid":""}" data-i="${i}">${logoHTML(c)}<div><b>${E((c.title||c.brand||"بدون اسم").replace(/\*/g,""))}</b><small>${E(c.brand||"")} · ${(c.coverages||[]).length} تغطية${c.hidden?" · مخفية":""}</small></div></div>`).join("") || '<p class="hint" style="padding:8px">لا توجد حملات</p>';
@@ -221,8 +289,18 @@ function renderAgency(){
   $("#ed").innerHTML = `<fieldset><legend>بيانات الوكالة</legend><div class="fg">
     ${field("name","اسم الوكالة",a.name)}${field("site","موقع الوكالة",a.site,{ltr:1})}
     ${field("slogan","الشعار",a.slogan,{wide:1})}${field("influencersPool","رقم قاعدة المؤثرين (يظهر في الرئيسية)",a.influencersPool,{ltr:1,ph:"+5000"})}
-  </div></fieldset>`;
+  </div></fieldset>
+  <fieldset><legend>جلب الأرقام تلقائيًا من اللينكات</legend>
+    <p class="hint" style="margin-bottom:10px;font-size:13px;line-height:1.9">عشان اللوحة تجيب المشاهدات واللايكات والكومنتات والحفظ وعدد المتابعين لوحدها من لينكات تيك توك وإنستغرام، محتاجة مفتاح من <a href="https://console.apify.com/sign-up" target="_blank" rel="noopener">Apify</a> (فيه رصيد مجاني شهري، وبعده بيتحاسب بالسنت على كل لينك).<br>
+    1) اعمل حساب على Apify ← 2) من <b>Settings ← API &amp; Integrations</b> انسخ <b>Personal API token</b> ← 3) الصقه هنا.<br>
+    المفتاح بيتحفظ في متصفحك بس، ومش بيدخل في ملف data.js ولا بيترفع على GitHub.</p>
+    <div class="fg"><label class="f wide">Apify API token<input class="i ltr-i" id="apTok" type="password" placeholder="apify_api_…" value="${E(getTok())}"></label></div>
+    <div class="row-acts"><button class="btn" id="apShow">إظهار</button><button class="btn" id="apDel" style="color:#c62828">مسح المفتاح</button><span class="hint" id="apMsg"></span></div>
+  </fieldset>`;
   $("#ed").querySelectorAll("[data-k]").forEach(inp=>inp.oninput=()=>{ a[inp.dataset.k] = inp.value; save(); });
+  $("#apTok").oninput = e => { setTok(e.target.value.trim()); $("#apMsg").textContent = e.target.value.trim() ? "✓ اتحفظ" : ""; };
+  $("#apShow").onclick = () => { const t=$("#apTok"); t.type = t.type==="password"?"text":"password"; };
+  $("#apDel").onclick = () => { setTok(""); $("#apTok").value=""; $("#apMsg").textContent="اتمسح"; };
 }
 function renderCampaign(){
   const c = data.campaigns[sel]; if(!c){ $("#ed").innerHTML = '<div class="empty">اختار حملة أو أضف واحدة جديدة.</div>'; return; }
@@ -268,22 +346,17 @@ function renderCampaign(){
   </fieldset>
   <fieldset><legend>التغطيات (${c.coverages.length})</legend>
     ${nd?`<div class="warn">فيه ${nd} لينك متكرر في حملة تانية أو في نفس الحملة (متعلّم باللون البرتقالي) — راجعه.</div>`:""}
-    <div class="ctab"><table><thead><tr><th>#</th><th>لينك التغطية</th><th>الفيديو</th><th>اليوزر</th><th>المنصات</th><th>التغطية</th><th>النوع</th><th>الموقع</th><th>متابعين</th><th>مشاهدات</th><th>لايكات</th><th>كومنتات</th><th>حفظ</th><th>فيديو MP4</th><th>ملاحظة</th><th></th></tr></thead>
+    <div class="ctab"><table><thead><tr><th>#</th><th>لينك التغطية</th><th>الفيديو</th><th>اليوزر</th><th>متابعين</th><th>مشاهدات</th><th>لايكات</th><th>كومنتات</th><th>حفظ ومشاركة</th><th>ملاحظة</th><th></th></tr></thead>
     <tbody>${c.coverages.map((v,i)=>{ const k=normUrl(v.url); const d = k && dups[k] && dups[k].length>1; return `<tr data-i="${i}" class="${d?"dup":""}" title="${d?"متكرر في: "+E(dups[k].join("، ")):""}">
       <td class="num">${i+1}</td>
       <td><input class="url" data-c="url" value="${E(v.url||"")}" placeholder="https://www.tiktok.com/@user/video/…"></td>
       <td class="stc">${linkStatus(v)}</td>
       <td><input class="u" data-c="creator" value="${E(v.creator||"")}"></td>
-      <td><input class="u" data-c="platforms" value="${E((v.platforms||[]).join(", "))}" placeholder="TikTok, Instagram"></td>
-      <td><input class="u" data-c="formats" value="${E((v.formats||[]).join(", "))}" placeholder="Reel, Stories"></td>
-      <td><input class="u" data-c="kind" value="${E(v.kind||"")}" placeholder="Visit"></td>
-      <td><input class="u" data-c="location" value="${E(v.location||"")}"></td>
       ${["followers","views","likes","comments","saves"].map(k=>`<td><input class="n" data-c="${k}" inputmode="numeric" value="${v[k]??""}"></td>`).join("")}
-      <td><input class="u" data-c="video" value="${E(v.video||"")}" placeholder="videos/x.mp4"></td>
       <td><input class="note" data-c="note" value="${E(v.note||"")}"></td>
-      <td style="white-space:nowrap"><button class="ic-b" data-a="up" title="لفوق">↑</button><button class="ic-b del" data-a="del" title="حذف">✕</button></td></tr>`; }).join("")}</tbody></table></div>
-    <div class="row-acts"><button class="btn dark" id="addRow">+ تغطية</button><button class="btn gold" id="bulkBtn">إضافة لينكات بالجملة</button></div>
-    <p class="hint" style="margin-top:10px">الصق لينك تيك توك وهو بيطلّع اليوزر والمنصة لوحده. الفيديو بيشتغل جوه الموقع من لينك تيك توك أو إنستغرام أو يوتيوب، أو من ملف MP4 (حطه في فولدر videos واكتب مساره) — ملف MP4 بيدي أحسن تجربة.</p>
+      <td style="white-space:nowrap"><button class="ic-b" data-a="get" title="جيب أرقام اللينك ده">⚡</button><button class="ic-b" data-a="up" title="لفوق">↑</button><button class="ic-b del" data-a="del" title="حذف">✕</button></td></tr>`; }).join("")}</tbody></table></div>
+    <div class="row-acts"><button class="btn gold" id="bulkBtn">+ إضافة لينكات</button><button class="btn dark" id="getAll">⚡ جيب الأرقام من اللينكات</button><button class="btn" id="addRow">+ صف فاضي</button><span class="hint" id="fetchMsg" style="align-self:center"></span></div>
+    <p class="hint" style="margin-top:10px">الصق لينكات تيك توك أو إنستغرام ودوس «جيب الأرقام»: اليوزر والمتابعين والمشاهدات واللايكات والكومنتات والحفظ بيتملوا لوحدهم (محتاج مفتاح Apify من «بيانات الوكالة»). أي رقم تقدر تعدّله بإيدك. ⚡ جنب أي صف بتجيب أرقام اللينك ده بس.<br>إنستغرام مش بيعلن عدد الحفظ، فالخانة دي بتفضل فاضية في لينكاته إلا لو كتبتها.</p>
   </fieldset>`;
 
   const ed = $("#ed");
@@ -329,10 +402,12 @@ function renderCampaign(){
         save(); render();
       };
     });
+    tr.querySelector('[data-a="get"]').onclick = () => fetchStats(c, +tr.dataset.i);
     tr.querySelector('[data-a="del"]').onclick = () => { c.coverages.splice(+tr.dataset.i,1); save(); render(); };
     tr.querySelector('[data-a="up"]').onclick = () => { const i=+tr.dataset.i; if(i>0){ [c.coverages[i-1],c.coverages[i]]=[c.coverages[i],c.coverages[i-1]]; save(); render(); } };
   });
   $("#addRow").onclick = () => { c.coverages.push({url:"",creator:"",platforms:[],formats:[],kind:"",location:"",followers:null,views:null,likes:null,comments:null,saves:null,video:"",note:""}); save(); render(); const r = ed.querySelectorAll("tbody tr"); r[r.length-1].querySelector("input").focus(); };
+  $("#getAll").onclick = () => fetchStats(c);
   $("#bulkBtn").onclick = () => { $("#bulkT").value=""; $("#bulk").classList.add("open"); $("#bulkT").focus(); };
 }
 $("#bulkNo").onclick = () => $("#bulk").classList.remove("open");
@@ -360,6 +435,7 @@ $("#bulkOk").onclick = async () => {
   save(); render();
   const left = shorts.length - fixed;
   setTimeout(()=>{ $("#saved").textContent = "✓ اتضاف " + added + " تغطية" + (left?` — ${left} لينك مختصر محتاج تنسخ لينكه الكامل`:""); }, 400);
+  if(getTok() && added) fetchStats(c);
 };
 
 function render(){ renderSide(); if(sel===-1) renderAgency(); else renderCampaign(); }

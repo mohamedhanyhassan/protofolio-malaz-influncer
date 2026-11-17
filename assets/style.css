@@ -427,3 +427,13 @@ body.report > footer{display:none}
   .rtitle{font-size:34px}
   .rmarq span{font-size:14px}
 }
+
+/* Malaz logo images */
+.top .logo{display:flex;align-items:center}
+.top .logo img{height:34px;width:auto;display:block}
+.ml-light{display:none!important}
+body.report .top .ml-dark{display:none!important}
+body.report .top .ml-light{display:block!important}
+.rlogos .mlg{height:62px;width:auto}
+footer .logo img{width:auto}
+@media(max-width:700px){.rlogos .mlg{height:44px}}
