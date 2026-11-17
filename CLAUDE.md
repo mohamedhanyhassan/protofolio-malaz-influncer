@@ -65,6 +65,7 @@ The sections are built from the data, and each one is hidden when its data isn't
 5. **CREATOR TIERS:** tier cards with ER rings plus a donut of each tier's share of views. Shown only when at least 2 tiers have coverages that include follower counts.
 6. **COVERAGE:** a grid of video cards (or a table view).
    - TikTok: embedded with `https://www.tiktok.com/player/v1/{id}`, autoplays muted, controlled by `postMessage({type:'mute'|'unMute'|'play'|'pause','x-tiktok-player':true})`. **Don't use `muted=1`**: it locks the volume.
+   - Since Nov 2026 the user saw "Player authentication failed — this link is invalid or has expired. Request a new embed link" on plain player/v1 URLs. `ttSrc()` now asks TikTok's oEmbed (`/oembed?url=…/video/{id}`) for the player URL first (it may carry an embed token; cached in sessionStorage), falls back to the plain player/v1 URL, and if the player has not posted `onPlayerReady` within 7 s it switches to the legacy `https://www.tiktok.com/embed/v2/{id}` player (no sound button / postMessage control). Not verified live from the build environment.
    - Instagram: `https://www.instagram.com/p/{shortcode}/embed/`. It doesn't autoplay and has no sound control.
    - MP4 files (`video` field): a native `<video>` element.
    - Players are lazy-loaded and paused or played by an IntersectionObserver. Only one player has sound at a time.
@@ -72,6 +73,9 @@ The sections are built from the data, and each one is hidden when its data isn't
 8. **Dark footer band** with both logos and the ER methodology.
 
 **Watch out:** the `.top` class is the sticky header. The bar-chart "top 5" class is `.hot`. A name clash between the two broke the chart once.
+
+## Motion (`v4 — Motion` in `style.css`, `motion()` / `revealNew()` in `app.js`)
+Route fade-in, gold scroll-progress bar, scroll reveals with stagger for campaign cards and coverage cards, pointer spotlight on the dark heroes, tilt + light sweep on the gold card, underline draw-in on gold title words and section headings, hover motion on cards and gold buttons. `prefers-reduced-motion` turns it off.
 
 ## Admin (`admin.html`)
 - **Draft storage:** edits autosave to localStorage under `malaz_portfolio_draft_v1`. The public `index.html` shows this draft too, with a yellow banner, but only in the same browser. "Export data.js" downloads the file.

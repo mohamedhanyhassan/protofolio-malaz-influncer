@@ -76,6 +76,42 @@
     if (btn) btn.addEventListener("click", e => { e.stopPropagation(); setSound(p, !p.sound); });
     return p;
   }
+  /* TikTok: prefer the player URL that TikTok's own oEmbed hands out (it may carry
+     an embed token), fall back to the plain player/v1 URL, and if the player never
+     reports ready, fall back to the legacy embed/v2 player. */
+  const ttCache = {};
+  function ttSrc(id, full) {
+    if (ttCache[id]) return ttCache[id].then(u => withTT(u, full));
+    let k = "mz_tt_" + id, hit = null;
+    try { hit = sessionStorage.getItem(k); } catch (e) {}
+    if (hit !== null) { ttCache[id] = Promise.resolve(hit); return ttCache[id].then(u => withTT(u, full)); }
+    const ctl = typeof AbortController !== "undefined" ? new AbortController() : null;
+    const t = setTimeout(() => ctl && ctl.abort(), 4000);
+    ttCache[id] = fetch("https://www.tiktok.com/oembed?url=" + encodeURIComponent("https://www.tiktok.com/@_/video/" + id), ctl ? { signal: ctl.signal } : {})
+      .then(r => r.ok ? r.json() : null)
+      .then(j => { const m = j && j.html && j.html.match(/src="(https:\/\/www\.tiktok\.com\/player\/v1\/[^"]+)"/); return m ? m[1].replace(/&amp;/g, "&") : ""; })
+      .catch(() => "")
+      .then(u => { clearTimeout(t); try { sessionStorage.setItem(k, u); } catch (e) {} return u; });
+    return ttCache[id].then(u => withTT(u, full));
+  }
+  function withTT(base, full) {
+    const u = new URL(base || TT_BASE + "0");
+    if (!base) return null;
+    new URLSearchParams(ttParams(full).slice(1)).forEach((v, key) => u.searchParams.set(key, v));
+    u.searchParams.delete("muted");
+    return u.toString();
+  }
+  function ttFallback(p, f, id) {
+    clearTimeout(p.ttTimer);
+    p.ttTimer = setTimeout(() => {
+      if (p.ready || p.iframe !== f) return;
+      p.legacy = true;
+      f.src = "https://www.tiktok.com/embed/v2/" + id + "?autoplay=1&muted=1";
+      const ph = p.el.querySelector(".ph"); if (ph) ph.style.display = "none";
+      const b = p.el.querySelector(".snd"); if (b) b.style.display = "none";
+    }, 7000);
+  }
+
   function load(p) {
     if (p.loaded || p.kind === "none") return;
     p.loaded = true;
@@ -93,7 +129,9 @@
       f.loading = "lazy";
       f.allow = "autoplay; fullscreen; encrypted-media; picture-in-picture; clipboard-write";
       f.setAttribute("allowfullscreen", "");
-      if (p.kind === "tt") f.src = TT_BASE + id + ttParams(p.full);
+      if (p.kind === "tt") {
+        ttSrc(id, p.full).then(u => { if (p.iframe !== f) return; f.src = u || (TT_BASE + id + ttParams(p.full)); ttFallback(p, f, id); });
+      }
       if (p.kind === "ig") f.src = "https://www.instagram.com/p/" + encodeURIComponent(id) + "/embed/";
       if (p.kind === "yt") f.src = "https://www.youtube.com/embed/" + encodeURIComponent(id) + "?autoplay=1&mute=" + (p.sound ? 0 : 1) + "&loop=1&playlist=" + encodeURIComponent(id) + "&playsinline=1&enablejsapi=1&controls=" + (p.full ? 1 : 0);
       f.addEventListener("load", () => { const ph = el.querySelector(".ph"); if (!ph) return; if (p.kind !== "tt") ph.style.display = "none"; else setTimeout(() => { ph.style.display = "none"; }, 3500); });
@@ -102,6 +140,7 @@
     }
   }
   function ttSend(p, type, value) {
+    if (p.legacy) return;
     if (!p.iframe || !p.iframe.contentWindow) return;
     const msg = { type, "x-tiktok-player": true }; if (value !== undefined) msg.value = value;
     try { p.iframe.contentWindow.postMessage(msg, "*"); } catch (e) {}
@@ -287,13 +326,15 @@
           ${x.s.views ? "" : `<div class="soon">الأرقام تُضاف قريبًا</div>`}
           <span class="cgo">افتح التقرير ←</span></a>`;
       }).join("") : `<div class="empty">ما فيه نتائج لـ «${E(q)}»</div>`;
+      revealNew(list, ".ccard");
     };
     document.getElementById("q").addEventListener("input", e => { q = e.target.value; draw(); });
     document.querySelectorAll("#tyf button").forEach(b => b.addEventListener("click", () => {
       document.querySelectorAll("#tyf button").forEach(x => x.classList.remove("on")); b.classList.add("on"); ty = b.dataset.t; draw();
     }));
-    draw();
     reveal(app);
+    draw();
+    motion(app);
     document.title = agency.name + " — بورتفوليو الحملات";
   }
 
@@ -334,6 +375,29 @@
     root.querySelectorAll(".rv").forEach(el => rvIO.observe(el));
   }
   const revealHooks = {};
+  function revealNew(root, sel) {
+    root.querySelectorAll(sel).forEach((el, i) => {
+      el.classList.add("rv", "pop"); el.style.transitionDelay = (i % 4) * 70 + "ms";
+      if (rvIO) rvIO.observe(el); else el.classList.add("in");
+    });
+  }
+  /* motion: hero spotlight follows the pointer, the gold card tilts, top scroll progress */
+  function motion(root) {
+    const fine = matchMedia("(hover:hover) and (pointer:fine)").matches && !matchMedia("(prefers-reduced-motion:reduce)").matches;
+    root.querySelectorAll(".rhero").forEach(h => {
+      if (!fine) return;
+      h.addEventListener("pointermove", e => { const r = h.getBoundingClientRect(); h.style.setProperty("--mx", (e.clientX - r.left) + "px"); h.style.setProperty("--my", (e.clientY - r.top) + "px"); });
+    });
+    root.querySelectorAll(".vcard-wrap").forEach(w => {
+      if (!fine) return;
+      const c = w.querySelector(".vcard");
+      w.addEventListener("pointermove", e => { const r = w.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5; c.style.transform = `perspective(900px) rotateY(${x * 14}deg) rotateX(${-y * 14}deg)`; });
+      w.addEventListener("pointerleave", () => { c.style.transform = ""; });
+    });
+  }
+  let prog = document.getElementById("prog");
+  if (!prog) { prog = document.createElement("div"); prog.id = "prog"; document.body.appendChild(prog); }
+  addEventListener("scroll", () => { const h = document.documentElement.scrollHeight - innerHeight; prog.style.transform = `scaleX(${h > 0 ? scrollY / h : 0})`; }, { passive: true });
   const tipEl = () => { let t = document.getElementById("rtip"); if (!t) { t = document.createElement("div"); t.id = "rtip"; t.className = "tip"; document.body.appendChild(t); } return t; };
   function showTip(e, html) { const t = tipEl(); t.innerHTML = html; t.style.opacity = 1; moveTip(e); }
   function moveTip(e) { const t = tipEl(), w = t.offsetWidth, h = t.offsetHeight; let x = e.clientX + 16, y = e.clientY + 14; if (x + w > innerWidth - 8) x = e.clientX - w - 16; if (y + h > innerHeight - 8) y = e.clientY - h - 14; t.style.left = x + "px"; t.style.top = y + "px"; }
@@ -586,6 +650,7 @@
       const r = list();
       if (!r.length) { out.innerHTML = '<div class="empty">ما فيه تغطيات مضافة لهذه الحملة لسه.</div>'; return; }
       out.innerHTML = view === "cards" ? `<div class="rgrid4">${r.map(card).join("")}</div>` : table(r);
+      if (view === "cards") revealNew(out, ".card");
       out.querySelectorAll("[data-open]").forEach(b => b.addEventListener("click", e => { e.preventDefault(); openModal(r, +b.dataset.open); }));
       if (view === "cards") {
         out.querySelectorAll(".card").forEach((el, i) => { const ex = el.querySelector(".exp"); if (ex) ex.addEventListener("click", e => { e.stopPropagation(); openModal(r, i); }); });
@@ -595,8 +660,9 @@
     document.querySelectorAll("#view button").forEach(b => b.addEventListener("click", () => { document.querySelectorAll("#view button").forEach(x => x.classList.remove("on")); b.classList.add("on"); view = b.dataset.v; draw(); }));
     document.getElementById("sort").addEventListener("change", e => { sort = e.target.value; draw(); });
     const pfs = document.getElementById("pf"); if (pfs) pfs.addEventListener("change", e => { pf = e.target.value; draw(); });
-    draw();
     reveal(app);
+    draw();
+    motion(app);
   }
 
   const erClass = er => er === null ? "" : er >= 3 ? "hi" : er < 1 ? "lo" : "";
@@ -700,6 +766,7 @@
     document.querySelectorAll(".top nav a[data-r]").forEach(a => a.classList.toggle("on", (a.dataset.r === "home" && !h.startsWith("c-")) ));
     document.body.classList.remove("report", "homepg");
     if (h.startsWith("c-")) campaign(h.slice(2)); else home();
+    app.classList.remove("pgin"); void app.offsetWidth; app.classList.add("pgin");
     if (h === "campaigns") { const el = document.getElementById("campaigns"); if (el) el.scrollIntoView(); } else scrollTo(0, 0);
   }
   addEventListener("hashchange", route);

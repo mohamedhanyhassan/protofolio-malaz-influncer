@@ -557,3 +557,71 @@ footer .logo img{width:auto}
   .rkpis{gap:10px}
   .rk{min-height:120px;padding:18px}
 }
+
+/* =====================================================================
+   v4 — Motion
+   ===================================================================== */
+/* page transition between routes */
+#app.pgin{animation:pgin .55s cubic-bezier(.2,.8,.2,1)}
+@keyframes pgin{from{opacity:0;transform:translateY(14px)}}
+/* gold scroll progress */
+#prog{position:fixed;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--gold));transform-origin:right;transform:scaleX(0);z-index:60;pointer-events:none}
+/* cards pop in with a slight scale */
+.rv.pop{transform:translateY(40px) scale(.96)}
+.rv.pop.in{transform:none}
+/* hero: pointer spotlight + slow drifting glow */
+.rhero::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(420px circle at var(--mx,70%) var(--my,30%),rgba(255,176,4,.13),transparent 60%);transition:background .2s}
+.rhero::before{animation:glow 14s ease-in-out infinite alternate}
+@keyframes glow{to{transform:translate3d(-40px,24px,0) scale(1.08)}}
+.rhero .wrap{position:relative;z-index:1}
+/* title: gold highlight gets an underline that draws in */
+.rtitle em{position:relative;display:inline-block}
+.rtitle em::after{content:"";position:absolute;right:0;bottom:.02em;height:.06em;width:0;background:var(--gold);border-radius:4px;transition:width 1.1s .6s cubic-bezier(.2,.8,.2,1);opacity:.7}
+.rtitle.in em::after{width:100%}
+/* logos breathe in */
+.rlogos.in .mlg{animation:logoin 1s cubic-bezier(.2,.8,.2,1)}
+.hlogo.in{animation:logoin 1.1s cubic-bezier(.2,.8,.2,1)}
+@keyframes logoin{from{opacity:0;transform:scale(.85) translateY(10px);filter:blur(6px)}}
+/* gold card: tilt + light sweep */
+.vcard{transition:transform .25s ease-out;transform-style:preserve-3d;overflow:hidden}
+.vcard::after{content:"";position:absolute;top:-50%;bottom:-50%;width:40%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-18deg);animation:sweep 5.5s ease-in-out infinite;pointer-events:none}
+@keyframes sweep{0%,55%{left:-60%}100%{left:130%}}
+.vcard .h{z-index:2}
+/* section headings: underline grows when revealed */
+.rh2::after{width:0;transition:width 1s .3s cubic-bezier(.2,.8,.2,1)}
+.rh2.in::after{width:70px}
+.rlabel.rv{transform:translateX(-24px)}
+.rlabel.rv.in{transform:none}
+/* KPI cards: lift + gold edge on hover */
+.rk{position:relative;overflow:hidden}
+.rk::before{content:"";position:absolute;inset:auto 0 0 0;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .45s}
+.rk:hover::before{transform:scaleX(1)}
+.rk.gold::before,.rk.dark::before{background:#629e63}
+/* buttons: shine on hover */
+.btn{position:relative;overflow:hidden}
+.btn.gold::after{content:"";position:absolute;top:0;bottom:0;width:40%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-18deg);transition:left .6s}
+.btn.gold:hover::after{left:130%}
+/* campaign cards (home): logo spins in, arrow slides */
+.ccard .clogo{transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.ccard:hover .clogo{transform:rotate(-6deg) scale(1.08)}
+.ccard .cgo{transition:transform .3s,color .3s}
+.ccard:hover .cgo{transform:translateX(-6px)}
+.feat .flogo{transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.feat:hover .flogo{transform:rotate(-5deg) scale(1.06)}
+.feat .fstats div{transition:transform .35s}
+.feat:hover .fstats div{transform:translateY(-3px)}
+/* coverage cards: media zooms slightly on hover, stats tiles rise */
+.card .media iframe,.card .media video{transition:transform .6s}
+.card .st div{transition:transform .3s,background .3s}
+.card:hover .st div{transform:translateY(-2px);background:#f3ecdc}
+.media .no{animation:nopop .6s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes nopop{from{transform:scale(0)}}
+/* insight cards: number badge pulses once revealed */
+.insc.in .n{animation:fadeup .7s .4s both}
+@keyframes fadeup{from{opacity:0;transform:translateY(8px)}}
+/* marquee edges fade */
+.rmarq{-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+/* tier rings + donut draw in (rings already animate) */
+.donutc.in .seg{animation:dnin 1.4s cubic-bezier(.2,.8,.2,1) both}
+@keyframes dnin{from{stroke-dasharray:0 999}}
+@media (prefers-reduced-motion:reduce){.rv,.rv.pop{opacity:1!important;transform:none!important}#prog{display:none}}
