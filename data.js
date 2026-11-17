@@ -1369,8 +1369,8 @@ window.PORTFOLIO = {
       "brand": "HLAY CAFE",
       "title": "إطلاق *حلاي كرانشي* في الرياض",
       "type": "إطلاق منتج",
-      "logo": "",
-      "brandUrl": "",
+      "logo": "logos/hlay.png",
+      "brandUrl": "https://www.instagram.com/hlay_cafe/",
       "city": "الرياض — فرع النهضة",
       "date": "2026-09-27",
       "description": "تقرير حملة المشاهير لحلاي كافيه: 50 صانع محتوى زاروا فرع حي النهضة وقدّموا حلاي كرانشي لجمهورهم خلال 4 أيام ابتداءً من 27 سبتمبر 2026.",
@@ -1776,13 +1776,13 @@ window.PORTFOLIO = {
     {
       "id": "stepia",
       "brand": "Stepia",
-      "title": "حملة Stepia",
+      "title": "حملة *Stepia* للأحذية",
       "type": "حملة مشاهير",
-      "logo": "",
-      "brandUrl": "https://www.instagram.com/stepia.sa/",
+      "logo": "logos/stepia.png",
+      "brandUrl": "https://stepia.co/",
       "city": "",
       "date": "",
-      "description": "",
+      "description": "ستيبيا متجر سعودي أونلاين للأحذية الرياضية للرجال والنساء والأحذية الشرقية. حملة مؤثرين على تيك توك وإنستغرام.",
       "coverages": [
         {
           "url": "https://www.instagram.com/reel/DfNcf8PtTMq/",
@@ -1819,18 +1819,23 @@ window.PORTFOLIO = {
           "comments": 60
         }
       ],
-      "dataDate": "2026-11-17"
+      "dataDate": "2026-11-17",
+      "hashtags": [
+        "Stepia",
+        "ستيبيا",
+        "أحذية"
+      ]
     },
     {
       "id": "pharmafection",
       "brand": "Pharmafection",
-      "title": "حملة Pharmafection",
+      "title": "حملة *Pharmafection* للعناية بالبشرة",
       "type": "حملة مشاهير",
-      "logo": "",
-      "brandUrl": "https://www.instagram.com/pharmafection/",
-      "city": "",
+      "logo": "logos/pharmafection.png",
+      "brandUrl": "https://pharmafection.com/",
+      "city": "جدة",
       "date": "",
-      "description": "",
+      "description": "فارمافكشن متجر سعودي من جدة لمنتجات العناية بالبشرة الكورية: غسول وتونر ومرطبات وواقي شمس. حملة مؤثرين على إنستغرام.",
       "coverages": [
         {
           "url": "https://www.instagram.com/reel/DeWpHY_N_-r/",
@@ -1871,18 +1876,24 @@ window.PORTFOLIO = {
           "comments": 60
         }
       ],
-      "dataDate": "2026-11-17"
+      "dataDate": "2026-11-17",
+      "hashtags": [
+        "Pharmafection",
+        "فارمافكشن",
+        "العناية_بالبشرة",
+        "جدة"
+      ]
     },
     {
       "id": "nutrili",
       "brand": "Nutrili",
-      "title": "حملة Nutrili",
+      "title": "حملة *Nutrili*",
       "type": "حملة مشاهير",
-      "logo": "",
+      "logo": "logos/nutrili.png",
       "brandUrl": "https://www.instagram.com/nutrili.me/",
       "city": "",
       "date": "",
-      "description": "",
+      "description": "حملة مؤثرين لـ Nutrili على تيك توك وإنستغرام.",
       "coverages": [
         {
           "url": "https://www.instagram.com/p/DZUuzhbtKoa/",
@@ -1937,18 +1948,22 @@ window.PORTFOLIO = {
           "saves": 17
         }
       ],
-      "dataDate": "2026-11-17"
+      "dataDate": "2026-11-17",
+      "hashtags": [
+        "Nutrili",
+        "نيوتريلي"
+      ]
     },
     {
       "id": "infinity-kits",
       "brand": "Infinity Kits",
-      "title": "حملة Infinity Kits",
+      "title": "حملة *إنفينتي* Infinity Kits",
       "type": "حملة مشاهير",
-      "logo": "",
-      "brandUrl": "https://www.instagram.com/infinity.kits/",
+      "logo": "logos/infinity.png",
+      "brandUrl": "https://infinity-kits.com/",
       "city": "",
       "date": "",
-      "description": "",
+      "description": "حملة مؤثرين لـ إنفينتي Infinity Kits على تيك توك وإنستغرام.",
       "coverages": [
         {
           "url": "https://www.instagram.com/p/DcbHLc1OOVP/",
@@ -1967,7 +1982,11 @@ window.PORTFOLIO = {
           "saves": 14
         }
       ],
-      "dataDate": "2026-11-17"
+      "dataDate": "2026-11-17",
+      "hashtags": [
+        "InfinityKits",
+        "إنفينتي"
+      ]
     }
   ]
 };

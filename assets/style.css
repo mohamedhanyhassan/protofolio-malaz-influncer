@@ -671,3 +671,7 @@ footer .logo img{width:auto}
 .media.ttfailed .ph .ttfail{display:inline-flex;animation:fadeup .5s both}
 .media.ttfailed .ph .ttload{display:none}
 .media.ttfailed .exp{display:none}
+
+/* gold views card: drop the corner "handles" (looked like a design-tool selection box) and soften the corners */
+.vcard .h{display:none}
+.vcard{border-radius:28px}
