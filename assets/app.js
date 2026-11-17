@@ -1,7 +1,7 @@
 /* Malaz Portfolio — public site (home + campaign pages) */
 (function () {
   const M = window.MZ, E = M.esc;
-  const { data, draft } = M.loadData();
+  const { data, draft } = M.loadData(new URLSearchParams(location.search).has("draft"));
   const agency = Object.assign({ name: "ملاذ", site: "https://malaz-sa.com", slogan: "ملاذك الآمن حين كثرت مشاكل التسويق", influencersPool: "+5000" }, data.agency || {});
   const camps = (data.campaigns || []).filter(c => !c.hidden);
   const app = document.getElementById("app");

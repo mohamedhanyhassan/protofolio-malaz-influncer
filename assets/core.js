@@ -90,10 +90,18 @@
   };
 
   M.DRAFT_KEY = "malaz_portfolio_draft_v1";
-  M.loadData = function () {
-    let d = g.PORTFOLIO || { agency: {}, campaigns: [] }, draft = false;
-    try { const s = localStorage.getItem(M.DRAFT_KEY); if (s) { d = JSON.parse(s); draft = true; } } catch (e) {}
-    return { data: d, draft };
+  /* signature of the published data.js, so the admin can tell when its draft is older than the live site */
+  M.sig = o => { const s = JSON.stringify(o || {}); let h = 0; for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0; return String(h); };
+  M.BASE_KEY = "malaz_portfolio_draft_base_v1";
+  /* the public site shows the published data.js; a local draft is used only by the admin and by preview (?draft=1) */
+  M.loadData = function (useDraft = true) {
+    const live = g.PORTFOLIO || { agency: {}, campaigns: [] };
+    let d = live, draft = false, stale = false;
+    if (useDraft) try {
+      const s = localStorage.getItem(M.DRAFT_KEY);
+      if (s) { d = JSON.parse(s); draft = true; stale = localStorage.getItem(M.BASE_KEY) !== M.sig(live); }
+    } catch (e) {}
+    return { data: d, draft, stale };
   };
 
   g.MZ = M;

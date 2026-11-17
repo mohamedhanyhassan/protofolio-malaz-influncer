@@ -78,7 +78,7 @@ textarea.i{min-height:80px;resize:vertical}
 <div class="abar"><div class="wrap">
   <div class="logo" style="display:flex;align-items:center"><img src="assets/malaz-white.png" alt="ملاذ" style="height:30px"><small>لوحة تحكم البورتفوليو</small></div>
   <span class="save" id="saved"></span>
-  <a class="btn" href="index.html" target="_blank">معاينة الموقع ↗</a>
+  <a class="btn" href="index.html?draft=1" target="_blank">معاينة المسودة ↗</a><a class="btn" href="index.html" target="_blank">الموقع المنشور ↗</a>
   <button class="btn" id="imp">استيراد ملف</button>
   <button class="btn" id="copy">نسخ الكود</button>
   <button class="btn gold" id="exp">تصدير data.js ⬇</button>
@@ -109,7 +109,7 @@ textarea.i{min-height:80px;resize:vertical}
 <script>
 (function(){
 const M = MZ, E = M.esc;
-let { data } = M.loadData();
+let { data, draft: hadDraft, stale } = M.loadData();
 data = JSON.parse(JSON.stringify(data));
 data.agency = data.agency || {}; data.campaigns = data.campaigns || [];
 data.campaigns.forEach(c => delete c.totals);
@@ -121,7 +121,7 @@ let tmr;
 function save(){
   clearTimeout(tmr);
   tmr = setTimeout(()=>{
-    try{ localStorage.setItem(M.DRAFT_KEY, JSON.stringify(data)); $("#saved").textContent = "✓ اتحفظ كمسودة " + new Date().toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit"}); }
+    try{ localStorage.setItem(M.DRAFT_KEY, JSON.stringify(data)); if(!localStorage.getItem(M.BASE_KEY)) localStorage.setItem(M.BASE_KEY, M.sig(window.PORTFOLIO)); $("#saved").textContent = "✓ اتحفظ كمسودة " + new Date().toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit"}); }
     catch(e){ $("#saved").textContent = "⚠ المساحة امتلأت — صدّر الملف"; }
   }, 300);
 }
@@ -145,7 +145,15 @@ $("#impf").onchange = e => {
     }catch(_){ alert("الملف مش بصيغة data.js صحيحة"); }
   });
 };
-$("#reset").onclick = () => { if(confirm("هتمسح كل التعديلات اللي مش متصدّرة. متأكد؟")){ try{localStorage.removeItem(M.DRAFT_KEY)}catch(e){} location.reload(); } };
+$("#reset").onclick = () => { if(confirm("هتمسح كل التعديلات اللي مش متصدّرة. متأكد؟")){ try{localStorage.removeItem(M.DRAFT_KEY); localStorage.removeItem(M.BASE_KEY);}catch(e){} location.reload(); } };
+/* the published site changed after this draft was started: offer to switch to the newer version */
+if(hadDraft && stale){
+  const b = document.createElement("div");
+  b.style.cssText = "background:#fff4e5;border-bottom:1px solid #f5c87a;color:#7a4d00;padding:10px 18px;font-size:14px;display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap";
+  b.innerHTML = '⚠ فيه نسخة أحدث منشورة على الموقع من المسودة اللي في متصفحك. <button class="btn gold" id="useLive" style="padding:6px 14px;font-size:13px">افتح النسخة المنشورة</button><span style="opacity:.8">(أو كمّل على مسودتك وصدّرها)</span>';
+  document.querySelector(".abar").after(b);
+  b.querySelector("#useLive").onclick = () => { try{localStorage.removeItem(M.DRAFT_KEY); localStorage.removeItem(M.BASE_KEY);}catch(e){} location.reload(); };
+}
 
 /* ---------- helpers ---------- */
 const slug = s => (String(s||"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"") || "c") ;
