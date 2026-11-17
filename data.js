@@ -9,6 +9,126 @@ window.PORTFOLIO = {
   },
   "campaigns": [
     {
+      "id": "smokey-house",
+      "brand": "Smokey House",
+      "title": "حملة *سموكي هاوس*",
+      "type": "زيارات فروع",
+      "logo": "",
+      "brandUrl": "",
+      "city": "",
+      "date": "2025-07-08",
+      "dataDate": "",
+      "description": "زيارات مؤثرين لسموكي هاوس بـ6 تغطيات على تيك توك وإنستغرام في يوليو 2025.",
+      "hashtags": [
+        "سموكي_هاوس",
+        "SmokeyHouse"
+      ],
+      "coverages": [
+        {
+          "url": "https://www.instagram.com/reel/DLwg8cEMYfk/",
+          "creator": "ahmadhmadeh03",
+          "platforms": [
+            "Instagram"
+          ],
+          "formats": [
+            "Reel"
+          ],
+          "kind": "Visit",
+          "followers": null,
+          "views": 12100,
+          "likes": 429,
+          "comments": 16,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@riyadh.guides/video/7524839350450785543",
+          "creator": "riyadh.guides",
+          "platforms": [
+            "TikTok"
+          ],
+          "formats": [
+            "Reel"
+          ],
+          "kind": "Visit",
+          "followers": null,
+          "views": 13446,
+          "likes": 1933,
+          "comments": 292,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@mlal138/video/7524680785190800658",
+          "creator": "mlal138",
+          "platforms": [
+            "TikTok"
+          ],
+          "formats": [
+            "Reel"
+          ],
+          "kind": "Visit",
+          "followers": null,
+          "views": 12816,
+          "likes": 600,
+          "comments": 139,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@noly_a__/video/7527411353309564168",
+          "creator": "noly_a__",
+          "platforms": [
+            "TikTok"
+          ],
+          "formats": [
+            "Reel"
+          ],
+          "kind": "Visit",
+          "followers": null,
+          "views": 95017,
+          "likes": 1441,
+          "comments": 73,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@nnyyf_1/video/7530188723808488711",
+          "creator": "nnyyf_1",
+          "platforms": [
+            "TikTok"
+          ],
+          "formats": [
+            "Reel"
+          ],
+          "kind": "Visit",
+          "followers": null,
+          "views": 52139,
+          "likes": 124,
+          "comments": 39,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@heoks2/video/7532870610154786055",
+          "creator": "heoks2",
+          "platforms": [
+            "TikTok"
+          ],
+          "formats": [
+            "Reel"
+          ],
+          "kind": "Visit",
+          "followers": null,
+          "views": 22092,
+          "likes": 221,
+          "comments": 34,
+          "saves": null,
+          "note": ""
+        }
+      ]
+    },
+    {
       "id": "basic-cafe",
       "brand": "BASIC",
       "title": "حملة *بيزك كافيه* في جدة",
