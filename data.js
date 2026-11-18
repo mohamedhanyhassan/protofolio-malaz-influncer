@@ -10,17 +10,20 @@ window.PORTFOLIO = {
   "campaigns": [
     {
       "id": "udf",
-      "brand": "UDF",
-      "title": "حملة *UDF*",
+      "brand": "المتحدة للديكور والأثاث",
+      "title": "حملة *المتحدة* للديكور والأثاث",
       "type": "حملة مشاهير",
-      "logo": "",
-      "brandUrl": "",
+      "logo": "logos/udf.png",
+      "brandUrl": "https://www.tiktok.com/@udf_sa",
       "city": "",
       "date": "2026-03-29",
       "dataDate": "2026-11-18",
-      "description": "حملة مؤثرين لـ UDF بـ17 تغطية على تيك توك وإنستغرام من مارس إلى مايو 2026.",
+      "description": "المتحدة للديكور والأثاث (United Decoration & Furniture): «Your dreams, our details». حملة مؤثرين بـ17 تغطية على تيك توك وإنستغرام من مارس إلى مايو 2026.",
       "hashtags": [
-        "UDF"
+        "المتحدة_للديكور_والأثاث",
+        "UDF",
+        "ديكور",
+        "أثاث"
       ],
       "coverages": [
         {
