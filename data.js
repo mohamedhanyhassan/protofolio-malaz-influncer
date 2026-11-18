@@ -9,6 +9,97 @@ window.PORTFOLIO = {
   },
   "campaigns": [
     {
+      "id": "wajbat-alkoba",
+      "brand": "وجبة الكبة",
+      "title": "حملة مطاعم *وجبة الكبة* في جدة",
+      "type": "حملة مشاهير",
+      "logo": "logos/kobba.png",
+      "brandUrl": "https://www.instagram.com/wajbat.alkoba/",
+      "city": "جدة — الرويس",
+      "date": "2025-04-24",
+      "dataDate": "",
+      "description": "مطاعم وجبة الكبة، الأصل في الأكلات الشامية الأصيلة في جدة منذ 1962: الكبة والمحاشي والمسخن والفتات وغيرها. حملة مؤثرين على تيك توك وإنستغرام في أبريل ومايو 2025.",
+      "hashtags": [
+        "وجبة_الكبة",
+        "منذ_1962",
+        "أكلات_شامية",
+        "جدة",
+        "الرويس"
+      ],
+      "coverages": [
+        {
+          "url": "https://www.tiktok.com/@jawlat_jeddah1/video/7496831389069757703",
+          "creator": "jawlat_jeddah1",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "location": "جدة",
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/DI888F5tHV7/",
+          "creator": "",
+          "platforms": [
+            "Instagram"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "location": "جدة",
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@manal_3355/video/7498788225012518151",
+          "creator": "manal_3355",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "location": "جدة",
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@manal_3355/video/7498804017687022866",
+          "creator": "manal_3355",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "location": "جدة",
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@hand199_/video/7498337195225320711",
+          "creator": "hand199_",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "location": "جدة",
+          "note": ""
+        }
+      ]
+    },
+    {
       "id": "udf",
       "brand": "المتحدة للديكور والأثاث",
       "title": "حملة *المتحدة* للديكور والأثاث",
