@@ -677,3 +677,69 @@ footer .logo img{width:auto}
 .vcard{border-radius:28px}
 .rkpis.n4{grid-template-columns:1.6fr 1fr 1fr 1fr}
 @media(max-width:980px){.rkpis.n4{grid-template-columns:1fr 1fr}}
+
+/* =====================================================================
+   v6 — Calm & premium: less repetition, more air, stronger type
+   ===================================================================== */
+:root{--fd:"Thmanyah","Alexandria",sans-serif}
+body{letter-spacing:0}
+/* decorations that added noise */
+.vcard-wrap .dia,.vcard-wrap .dotrow{display:none}
+.rhero .rmeta>span:not(:first-child),.rhero .rmeta .dots{display:none}
+.confetti i{opacity:.6}
+.rhero{padding-bottom:90px}
+.rpills{margin-top:22px}
+.rpill{background:transparent;border-color:#2e2e2e;color:#cfc9be;font-weight:500}
+.rpill.gold{color:#0b0b0b}
+/* sections: more air, no divider lines */
+.rsec{border-top:0;margin-top:40px;padding-top:80px}
+.rh2{font-size:clamp(30px,3.8vw,52px);letter-spacing:-.3px}
+.rlabel{color:#8b8478;letter-spacing:3px}
+.rsub{font-size:16px}
+/* KPI row: lighter cards */
+.rk{border:0;box-shadow:0 1px 0 rgba(0,0,0,.04),0 12px 30px rgba(0,0,0,.05)}
+/* home campaign cards: clean, one line of numbers */
+.ccard{padding:26px;gap:10px;border:0;box-shadow:0 1px 0 rgba(0,0,0,.04),0 14px 34px rgba(0,0,0,.06)}
+.ccard::after{display:none}
+.ccard:hover{border:0;box-shadow:0 26px 60px rgba(0,0,0,.12)}
+.ctop{margin-bottom:12px;align-items:center}
+.carr{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#f3eee2;color:#0b0b0b;font-size:18px;transition:.35s}
+.ccard:hover .carr{background:var(--gold);transform:rotate(-45deg)}
+.ccard h3{font-size:22px}
+.cst{gap:0;margin-top:14px;border-top:1px solid #efe9dc;padding-top:14px}
+.cst div{background:none;border-radius:0;padding:0 14px;min-width:0;border-inline-start:1px solid #efe9dc}
+.cst div:first-child{padding-inline-start:0;border:0}
+.cst div.v{background:none;color:inherit}
+.cst div.v b{color:#0b0b0b}
+.cst b{font-size:22px;text-align:right}
+.cst div.v b{color:var(--gold-d)}
+.cst span,.cst div.v span{color:#8b8478;font-size:12px}
+/* coverage cards: compact */
+.rgrid4{gap:18px}
+body.report .card{border:0;border-radius:22px;box-shadow:0 1px 0 rgba(0,0,0,.04),0 14px 34px rgba(0,0,0,.07)}
+.card:hover{box-shadow:0 26px 60px rgba(0,0,0,.13)}
+.media{max-height:440px}
+.media .ph{gap:12px}
+.media .ph b.ltr{font-size:15px}
+.cb{padding:16px 16px 18px;gap:12px}
+.ch a{font-size:15px}
+.st3{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #efe9dc;padding-top:12px}
+.st3 div{text-align:center;border-inline-start:1px solid #efe9dc}
+.st3 div:first-child{border:0}
+.st3 b{display:block;font-family:"Alexandria";font-weight:800;font-size:18px;line-height:1.2}
+.st3 span{font-size:11.5px;color:#8b8478}
+.st3 .e.hi b{color:var(--green-d)}
+.st3 .e.lo b{color:#8b8478}
+.cb .note{font-size:12.5px;color:#8b8478;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.more{margin-top:26px}
+@media(max-width:700px){
+  .st3 b{font-size:15px}
+  .ccard{padding:20px}
+  .cst b{font-size:19px}
+  .rsec{padding-top:56px;margin-top:20px}
+}
+.rtitle{font-size:clamp(36px,4.4vw,62px)}
+.rkpis.k4{grid-template-columns:repeat(4,1fr)}
+.rkpis.k4.n3{grid-template-columns:repeat(3,1fr)}
+.vcard .cap{font-size:14px}
+@media(max-width:980px){.rkpis.k4{grid-template-columns:1fr 1fr}.rkpis.k4.n3{grid-template-columns:repeat(3,1fr)}}

@@ -77,6 +77,12 @@ The sections are built from the data, and each one is hidden when its data isn't
 ## Motion (`v4 — Motion` in `style.css`, `motion()` / `revealNew()` in `app.js`)
 Route fade-in, gold scroll-progress bar, scroll reveals with stagger for campaign cards and coverage cards, pointer spotlight on the dark heroes, tilt + light sweep on the gold card, underline draw-in on gold title words and section headings, hover motion on cards and gold buttons. `prefers-reduced-motion` turns it off.
 
+## v6 calm layout (Nov 18, user: "the design is full for nothing, I want clients to be wowed")
+- Home: no KPI row under the hero (it repeated the hero numbers); campaign cards show logo, arrow, title, meta and one line of numbers (views · coverages · ER), no platform/type chips.
+- Campaign page: hero pills = creators, city, start date only; marquee = hashtags/brand/city (no stats); no black views KPI card (the gold card holds views + coverage count + average); KPI row = likes, saves, comments, ER.
+- Coverage cards: @creator + followers, one row of views · likes · ER, note clamped to 2 lines; comments/saves live in the table view and modal. Only the best 8 show first, then «عرض كل التغطيات (N)».
+- Thmanyah: free for websites but only downloadable after giving an email on thmanyah.com, and the license forbids redistributing the files. Waiting for the user to send the font package; then convert to woff2 into `fonts/` and add @font-face for each weight (body text must not use the bold file).
+
 ## Admin (`admin.html`)
 - **Draft storage:** edits autosave to localStorage under `malaz_portfolio_draft_v1`. The public `index.html` always shows the published `data.js`; the draft is shown only in preview (`index.html?draft=1`, the admin's «معاينة المسودة» button) with a yellow banner. The admin stores the signature of the published data when a draft starts (`malaz_portfolio_draft_base_v1`, `MZ.sig`); if the published data.js changes later, the admin shows a warning with «افتح النسخة المنشورة». "Export data.js" downloads the file.
 - **Normal workflow now:** the user sends changes in chat, Claude edits `data.js`/assets in the repo and pushes to `main`; Vercel redeploys in about a minute and everyone with the link sees it.

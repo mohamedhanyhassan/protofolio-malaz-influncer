@@ -58,8 +58,8 @@
       <div class="ph"><div class="av">${E(initial(c.creator))}</div><b class="ltr">${c.creator ? "@" + E(c.creator) : ""}</b>
         <small class="phmsg">${s.kind === "none" ? (ext ? (c.link.platform === "Snapchat" ? "سناب شات ما بيسمحش بعرض الفيديو هنا" : c.link.kind === "story" ? "الستوري بتتعرض على إنستغرام" : c.link.platform === "Link" ? "اضغط لمشاهدة الفيديو" : "التغطية بتتعرض على المنصة") : "رابط الفيديو يُضاف قريبًا") : "جارِ تحميل الفيديو…"}</small>
         ${s.kind === "none" && ext ? `<a class="btn gold phbtn" href="${E(ext)}" target="_blank" rel="noopener">${IC.out} ${openLabel(c).replace(" ←", "")}</a>` : ""}
-        ${s.kind === "tt" ? `<span class="ttload"><i></i><i></i><i></i></span>${c.views ? `<span class="ttv"><b class="num">${M.compact(c.views)}</b> مشاهدة</span>` : ""}<a class="btn gold phbtn ttfail" href="${E(ext)}" target="_blank" rel="noopener">${IC.play} شاهد الفيديو على تيك توك</a>` : ""}
-        ${s.kind === "none" && src ? "" : `<div class="chips" style="justify-content:center">${pfBadges(c.platforms)}</div>`}</div>
+        ${s.kind === "tt" ? `<span class="ttload"><i></i><i></i><i></i></span><a class="btn gold phbtn ttfail" href="${E(ext)}" target="_blank" rel="noopener">${IC.play} شاهد الفيديو على تيك توك</a>` : ""}
+        </div>
       ${full ? "" : '<div class="ov"></div>'}
       ${no ? `<span class="no">#${no}</span>` : ""}
       ${src && !full ? `<span class="src">${src}</span>` : ""}
@@ -211,7 +211,7 @@
     const cities = new Set(); camps.forEach(c => String(c.city || "").split(/[·،,—-]/).map(s => s.trim()).filter(Boolean).forEach(s => { if (/^(الرياض|جدة|جازان|خميس مشيط|الدمام|مكة|المدينة|الخبر|أبها|الطائف)$/.test(s)) cities.add(s); }));
     const types = [...new Set(camps.map(c => c.type).filter(Boolean))];
     const featured = all.filter(x => x.s.views).sort((a, b) => b.s.views - a.s.views)[0];
-    const conf = Array.from({ length: 26 }, (_, i) => `<i style="left:${(i * 37) % 100}%;top:${-5 - (i * 13) % 30}px;background:${["#ffb004", "#629e63", "#f6f4ef", "#ffb004"][i % 4]};animation-delay:${-(i * .83).toFixed(2)}s;animation-duration:${7 + (i % 5)}s;width:${6 + (i % 3) * 3}px;height:${6 + (i % 3) * 3}px"></i>`).join("");
+    const conf = Array.from({ length: 12 }, (_, i) => `<i style="left:${(i * 37) % 100}%;top:${-5 - (i * 13) % 30}px;background:${["#ffb004", "#629e63", "#f6f4ef", "#ffb004"][i % 4]};animation-delay:${-(i * .83).toFixed(2)}s;animation-duration:${7 + (i % 5)}s;width:${6 + (i % 3) * 3}px;height:${6 + (i % 3) * 3}px"></i>`).join("");
     const mq = [];
     camps.forEach(c => { if (c.brand) mq.push(c.brand); });
     if (tViews) mq.push("مشاهدة " + M.compact(tViews));
@@ -250,13 +250,6 @@
     <div class="rmarq"><div class="tr">${mqHTML}${mqHTML}</div></div>
 
     <div class="wrap">
-      <div class="rkpis hk">
-        <div class="rk dark rv"><div class="v" data-count="${tViews}">0</div><div class="l">مشاهدة حققتها تغطيات المؤثرين في حملاتنا</div></div>
-        <div class="rk rv d1"><div class="v" data-count="${camps.length}">0</div><div class="l">حملة موثّقة</div></div>
-        <div class="rk rv d2"><div class="v" data-count="${tCovs}">0</div><div class="l">تغطية بالفيديو</div></div>
-        <div class="rk rv d3"><div class="v" data-count="${tLikes}">0</div><div class="l">إعجاب</div></div>
-        <div class="rk gold rv d4"><div class="v">${E(agency.influencersPool || "+5000")}</div><div class="l">مشهور ومؤثر داخل المملكة نختار منهم</div></div>
-      </div>
 
       ${featured ? `<section class="rsec">
         <span class="rlabel rv">01 / FEATURED CAMPAIGN</span>
@@ -320,18 +313,15 @@
         const hit = qq && x.covs.find(v => (v.creator || "").toLowerCase().includes(qq));
         const vids = x.covs.filter(v => sourceOf(v).kind !== "none").length;
         return `<a class="ccard" href="#c-${E(x.c.id)}">
-          <div class="ctop"><div class="clogo">${mark(x.c)}</div><span class="chips">${pfBadges(x.s.platforms)}</span></div>
-          <span class="ctype">${E(x.c.type || "حملة")}</span>
+          <div class="ctop"><div class="clogo">${mark(x.c)}</div><span class="carr">↖</span></div>
           <h3>${hl(x.c.title || x.c.brand)}</h3>
           <div class="cmeta">${E(x.c.brand || "")}${x.c.city ? " · " + E(x.c.city) : ""}${hit ? ` · <span class="ltr hit">@${E(hit.creator)}</span>` : ""}</div>
           <div class="cst">
             ${x.s.views ? `<div class="v"><b class="num">${M.compact(x.s.views)}</b><span>مشاهدة</span></div>` : ""}
-            <div><b class="num">${x.covs.length}</b><span>${vids === x.covs.length ? "فيديو" : "تغطية"}</span></div>
-            ${vids && vids < x.covs.length ? `<div><b class="num">${vids}</b><span>فيديو</span></div>` : ""}
+            <div><b class="num">${x.covs.length}</b><span>تغطية</span></div>
             ${x.s.er !== null ? `<div><b class="num">${M.pct(x.s.er, 1)}</b><span>تفاعل</span></div>` : ""}
           </div>
-          ${x.s.views ? "" : `<div class="soon">الأرقام تُضاف قريبًا</div>`}
-          <span class="cgo">افتح التقرير ←</span></a>`;
+          ${x.s.views ? "" : `<div class="soon">الأرقام تُضاف قريبًا</div>`}</a>`;
       }).join("") : `<div class="empty">ما فيه نتائج لـ «${E(q)}»</div>`;
       revealNew(list, ".ccard");
     };
@@ -452,10 +442,6 @@
     const mq = [];
     (c.hashtags || []).forEach(h => mq.push("#" + String(h).replace(/^#/, "")));
     if (c.brand) mq.push(c.brand);
-    if (s.views) mq.push("مشاهدة " + M.compact(s.views));
-    if (s.creators) mq.push(anon ? "تغطية " + covs.length : "صانع محتوى " + s.creators);
-    if (s.followers) mq.push("متابع " + M.compact(s.followers));
-    if (s.likes) mq.push("إعجاب " + M.compact(s.likes));
     if (c.city) mq.push(c.city);
     while (mq.length && mq.length < 8) mq.push(...mq.slice(0, 8 - mq.length));
     const mqHTML = mq.map(x => `<span>${E(x)}</span>`).join("");
@@ -475,7 +461,7 @@
     const insights = (c.insights && c.insights.filter(x => x && (x.title || x.body)).length) ? c.insights.filter(x => x && (x.title || x.body)) : autoInsights(covs, s, tierStats);
     let secN = 1; const sn = () => String(++secN).padStart(2, "0");
 
-    const conf = Array.from({ length: 22 }, (_, i) => `<i style="left:${(i * 37) % 100}%;top:${-5 - (i * 13) % 30}px;background:${["#ffb004", "#629e63", "#f6f4ef", "#ffb004"][i % 4]};animation-delay:${-(i * .83).toFixed(2)}s;animation-duration:${7 + (i % 5)}s;width:${6 + (i % 3) * 3}px;height:${6 + (i % 3) * 3}px"></i>`).join("");
+    const conf = Array.from({ length: 12 }, (_, i) => `<i style="left:${(i * 37) % 100}%;top:${-5 - (i * 13) % 30}px;background:${["#ffb004", "#629e63", "#f6f4ef", "#ffb004"][i % 4]};animation-delay:${-(i * .83).toFixed(2)}s;animation-duration:${7 + (i % 5)}s;width:${6 + (i % 3) * 3}px;height:${6 + (i % 3) * 3}px"></i>`).join("");
 
     app.innerHTML = `
     <section class="rhero"><div class="confetti">${conf}</div><div class="wrap">
@@ -488,11 +474,8 @@
           ${c.description ? `<p class="rdesc rv d3">${E(c.description)}</p>` : ""}
           <div class="rpills rv d4">
             <span class="rpill gold">${who}</span>
-            ${s.followers ? `<span class="rpill"><span class="num">${M.compact(s.followers)}</span> متابع</span>` : ""}
-            ${plat ? `<span class="rpill ltr">${E(plat)}</span>` : ""}
             ${c.city ? `<span class="rpill">${E(c.city)}</span>` : ""}
             ${startDate ? `<span class="rpill">${E(startDate)}</span>` : ""}
-            ${dataDate ? `<span class="rpill">أرقام ${E(dataDate)}</span>` : ""}
           </div>
           <div class="racts rv d4">
             ${brandUrl ? `<a class="btn gold" href="${E(brandUrl)}" target="_blank" rel="noopener">${IC.out} زيارة ${E(c.brand || "البراند")}</a>` : ""}
@@ -504,7 +487,7 @@
             ${brandMark(c, "blg")}
             ${s.views ? `<small>TOTAL VIEWS</small>
             <div class="big" data-count="${s.views}">0</div>
-            <div class="cap">مشاهدة خلال الحملة</div>` : `<small>COVERAGES</small>
+            <div class="cap">مشاهدة من <span class="num">${M.fmt(withViews)}</span> تغطية${avg ? ` · متوسط <span class="num">${M.compact(avg)}</span> للتغطية` : ""}</div>` : `<small>COVERAGES</small>
             <div class="big" data-count="${covs.length}">0</div>
             <div class="cap">تغطية خلال الحملة</div>`}
           </div><span class="dotrow">• • • • • • • •</span></div>
@@ -513,8 +496,7 @@
     <div class="rmarq"><div class="tr">${mqHTML}${mqHTML}</div></div>
 
     <div class="wrap">
-      ${s.views || s.likes !== null || s.comments !== null ? `<div class="rkpis ${s.saves === null ? "n4" : ""}">
-        <div class="rk dark rv"><div class="v" ${s.views ? `data-count="${s.views}"` : ""}>${s.views ? 0 : "—"}</div><div class="l">${s.views ? `مشاهدة من ${M.fmt(withViews)} تغطية${avg ? `، بمتوسط ${M.compact(avg)} للتغطية` : ""}${s.followers ? ` · ${M.compact(s.followers)} متابع مجتمعين` : ""}` : "المشاهدات تُضاف قريبًا"}</div></div>
+      ${s.views || s.likes !== null || s.comments !== null ? `<div class="rkpis k4 ${s.saves === null ? "n3" : ""}">
         <div class="rk rv d1"><div class="v" ${s.likes !== null ? `data-count="${s.likes}"` : ""}>${s.likes !== null ? 0 : "—"}</div><div class="l">إعجاب</div></div>
         ${s.saves !== null ? `<div class="rk rv d2"><div class="v" data-count="${s.saves}">0</div><div class="l">حفظ ومشاركة</div></div>` : ""}
         <div class="rk rv d3"><div class="v" ${s.comments !== null ? `data-count="${s.comments}"` : ""}>${s.comments !== null ? 0 : "—"}</div><div class="l">تعليق</div></div>
@@ -649,14 +631,16 @@
     /* default order: TikTok (and other autoplay players) first, then Instagram, then links with no player; highest views first inside each group, ER breaks ties */
     const RANK = { tt: 0, yt: 0, mp4: 0, ig: 1, none: 2 };
     const bestFirst = (a, b) => (RANK[sourceOf(a).kind] - RANK[sourceOf(b).kind]) || ((b.views ?? -1) - (a.views ?? -1)) || ((b.er ?? -1) - (a.er ?? -1));
-    let view = "cards", sort = "", pf = "";
+    let view = "cards", sort = "", pf = "", allCov = false;
     const out = document.getElementById("out");
     const list = () => { let r = covs.filter(v => !pf || v.platforms.includes(pf)); r = [...r].sort(bestFirst); if (sort) r = [...r].sort((a, b) => (b[sort] ?? -1) - (a[sort] ?? -1)); return r; };
     const draw = () => {
       destroyPlayers();
       const r = list();
       if (!r.length) { out.innerHTML = '<div class="empty">ما فيه تغطيات مضافة لهذه الحملة لسه.</div>'; return; }
-      out.innerHTML = view === "cards" ? `<div class="rgrid4">${r.map(card).join("")}</div>` : table(r);
+      const lim = view === "cards" && !allCov ? 8 : r.length;
+      out.innerHTML = view === "cards" ? `<div class="rgrid4">${r.slice(0, lim).map(card).join("")}</div>${r.length > lim ? `<div class="more"><button class="btn dark" id="covAll">عرض كل التغطيات (${r.length})</button></div>` : ""}` : table(r);
+      const ca = document.getElementById("covAll"); if (ca) ca.onclick = () => { allCov = true; draw(); };
       if (view === "cards") revealNew(out, ".card");
       out.querySelectorAll("[data-open]").forEach(b => b.addEventListener("click", e => { e.preventDefault(); openModal(r, +b.dataset.open); }));
       if (view === "cards") {
@@ -683,22 +667,18 @@
   }
   function card(v, i) {
     const cu = creatorLink(v), url = M.safeUrl(v.url);
-    return `<article class="card fade">
+    const noNums = [v.views, v.likes, v.comments, v.saves].every(x => x === null);
+    return `<article class="card">
       ${mediaHTML(v, v._no, false)}
       <div class="cb">
-        <div class="ch">${v.creator ? `<a ${cu ? `href="${E(cu)}" target="_blank" rel="noopener"` : ""}>${E(v.creator)}</a>` : `<b style="color:var(--muted)">تغطية <span class="num">#${v._no}</span></b>`}
+        <div class="ch">${v.creator ? `<a ${cu ? `href="${E(cu)}" target="_blank" rel="noopener"` : ""}>@${E(v.creator)}</a>` : `<b style="color:var(--muted)">تغطية <span class="num">#${v._no}</span></b>`}
           ${v.followers !== null ? `<span class="fpill"><span class="num">${M.compact(v.followers)}</span> متابع</span>` : ""}</div>
-        ${[v.views, v.likes, v.comments, v.saves].every(x => x === null) ? `<div class="soon">أرقام التغطية تُضاف قريبًا</div>` : `<div class="st">
-          <div><b>${M.fmt(v.views)}</b><span>مشاهدة</span></div>
-          <div><b>${M.fmt(v.likes)}</b><span>إعجاب</span></div>
-          <div><b>${M.fmt(v.comments)}</b><span>تعليق</span></div>
-          <div><b>${M.fmt(v.saves)}</b><span>حفظ ومشاركة</span></div>
+        ${noNums ? `<div class="soon">أرقام التغطية تُضاف قريبًا</div>` : `<div class="st3">
+          <div><b class="num">${v.views !== null ? M.compact(v.views) : "—"}</b><span>مشاهدة</span></div>
+          <div><b class="num">${v.likes !== null ? M.compact(v.likes) : "—"}</b><span>إعجاب</span></div>
+          <div class="e ${erClass(v.er)}"><b class="num">${v.er !== null ? M.pct(v.er, 1) : "—"}</b><span>تفاعل</span></div>
         </div>`}
-        ${v.followers !== null ? `<div class="rl"><span>الوصول <span class="num">${v.reach !== null ? Math.round(v.reach) + "%" : "—"}</span> من المتابعين</span><b class="num">${M.fmt(v.followers)} متابع</b></div>` : ""}
-        ${v.er !== null ? `<span class="erp ${erClass(v.er)}">نسبة التفاعل <span class="num">${M.pct(v.er)}</span></span>` : ""}
-        ${(v.formats && v.formats.length) || v.location || v.kind ? `<div class="chips">${v.kind ? `<span class="badge line">${E(ar(v.kind))}</span>` : ""}${(v.formats || []).map(f => `<span class="badge line">${E(ar(f))}</span>`).join("")}${v.location ? `<span class="badge">${E(ar(v.location))}</span>` : ""}</div>` : ""}
-        ${v.note ? `<p class="note">${E(v.note)}</p>` : ""}
-        ${url ? `<a class="olink" href="${E(url)}" target="_blank" rel="noopener">${openLabel(v)}</a>` : ""}
+        ${v.note && !/^\(مخفي/.test(v.note) ? `<p class="note">${E(v.note)}</p>` : ""}
       </div></article>`;
   }
   function table(r) {
