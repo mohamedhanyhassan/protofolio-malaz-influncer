@@ -221,35 +221,56 @@
     const mqHTML = mq.map(x => `<span>${E(x)}</span>`).join("");
     const mark = c => { const s = M.safeUrl(c.logo); return s ? `<img src="${E(s)}" alt="${E(c.brand)}">` : `<span>${E(initial(c.brand))}</span>`; };
 
+    /* ---- v7 hero: fanned 3D cards built from real campaign data ---- */
+    const ranked = all.filter(x => x.s.views).sort((a, b) => b.s.views - a.s.views);
+    const allCovs = all.flatMap(x => x.covs.map(v => ({ v, c: x.c })));
+    const topCov = allCovs.filter(o => o.v.views).sort((a, b) => b.v.views - a.v.views)[0];
+    const erAll = (() => { const r = allCovs.map(o => o.v).filter(v => v.views); const vw = r.reduce((a, v) => a + v.views, 0); const it = r.reduce((a, v) => a + (v.likes || 0) + (v.comments || 0) + (v.saves || 0), 0); return vw ? it / vw * 100 : null; })();
+    const campCard = x => x ? `<div class="fc fcamp"><div class="fl">${mark(x.c)}</div><small>${E(x.c.brand || "")}</small><b class="num">${M.compact(x.s.views)}</b><span>مشاهدة</span><em>${x.covs.length} تغطية</em></div>` : "";
+    const bars = ranked.slice(0, 7).map(x => x.s.views);
+    const bmax = Math.max(...bars, 1);
+    const chartCard = `<div class="fc fchart"><small>المشاهدات حسب الحملة</small><svg viewBox="0 0 140 70" preserveAspectRatio="none">${bars.map((b, i) => `<rect x="${i * 20 + 2}" y="${70 - b / bmax * 64}" width="13" height="${b / bmax * 64}" rx="3"/>`).join("")}</svg><b class="num">${M.compact(tViews)}</b><span>إجمالي</span></div>`;
+    const creatorCard = topCov ? `<div class="fc fcre"><div class="av">${E(initial(topCov.v.creator))}</div><small class="ltr">@${E(topCov.v.creator || "")}</small><b class="num">${M.compact(topCov.v.views)}</b><span>مشاهدة · ${E(topCov.c.brand || "")}</span></div>` : "";
+    const fanCards = [
+      `<div class="fc fpool"><b class="num">${E(agency.influencersPool || "+5000")}</b><span>مشهور ومؤثر داخل المملكة</span></div>`,
+      campCard(ranked[2]),
+      creatorCard,
+      `<div class="fc fmid"><i></i><p>كل تغطية <b>موثّقة</b> بفيديوها وأرقامها، وكل حملة بتقرير.</p></div>`,
+      chartCard,
+      campCard(ranked[0]),
+      erAll !== null ? `<div class="fc fer"><small>متوسط التفاعل</small><b class="num">${M.pct(erAll, 1)}</b><span>(إعجاب + تعليق + حفظ) ÷ مشاهدة</span></div>` : campCard(ranked[1])
+    ].map((h, i) => h.replace('class="fc ', `style="--i:${i - 3}" class="fc `)).join("");
+    const logoStrip = camps.filter(c => c.logo).map(c => `<a class="lg" href="#c-${E(c.id)}" title="${E(c.brand)}">${mark(c)}</a>`).join("");
+    const avTop = ranked.slice(0, 4).map(x => `<span class="ava">${mark(x.c)}</span>`).join("");
     app.innerHTML = `
-    <section class="rhero hhero"><div class="confetti">${conf}</div><div class="wrap">
-      <div class="rmeta"><span>${E((agency.nameEn || "MALAZ").toUpperCase())} / CAMPAIGN PORTFOLIO</span><span class="dots">• • •</span></div>
-      <div class="rgrid">
-        <div>
-          <span class="heyebrow rv"><i></i>بورتفوليو حملات المشاهير والمؤثرين</span>
-          <h1 class="rtitle rv d1">حملات مؤثرين<br><em>بأرقام حقيقية</em></h1>
-          <p class="rdesc rv d2">بورتفوليو ${E(agency.name)} لحملات المشاهير والمؤثرين في السعودية: كل تغطية بفيديوها، وكل حملة بأرقامها ونتائجها، في مكان واحد.</p>
-          <div class="racts rv d3">
-            <a class="btn gold" href="#campaigns">تصفّح الحملات ↓</a>
-            ${agency.site ? `<a class="btn" href="${E(M.safeUrl(agency.site))}" target="_blank" rel="noopener">${IC.out} تواصل معنا</a>` : ""}
-          </div>
+    <section class="h7"><div class="wrap">
+      <div class="h7card">
+        <div class="h7glow"></div>
+        <span class="heyebrow rv"><i></i>بورتفوليو حملات المشاهير والمؤثرين</span>
+        <h1 class="h7title rv d1">حملات مؤثرين<br><em>بأرقام حقيقية</em></h1>
+        <p class="h7lead rv d2">نختار المشهور المناسب، ونوثّق كل تغطية بفيديوها وأرقامها. ${E(String(camps.length))} حملة و${M.compact(tViews)} مشاهدة لحد النهارده.</p>
+        <div class="h7acts rv d3">
+          <a class="pbtn gold" href="#campaigns"><span>تصفّح الحملات</span><i>↙</i></a>
+          ${agency.site ? `<a class="pbtn ghost" href="${E(M.safeUrl(agency.site))}" target="_blank" rel="noopener"><span>تواصل معنا</span></a>` : ""}
         </div>
-        <div class="hpanel rv d2">
-          <small>TOTAL VIEWS</small>
-          <div class="big" data-count="${tViews}">0</div>
-          <div class="cap">مشاهدة حققتها تغطيات المؤثرين في حملاتنا</div>
-          <div class="hstats">
-            <div><b class="num" data-count="${camps.length}">0</b><span>حملة</span></div>
-            <div><b class="num" data-count="${tCovs}">0</b><span>تغطية</span></div>
-            <div><b class="num" data-count="${tCreators}">0</b><span>مؤثر</span></div>
-          </div>
-          <div class="hbrands"><span>براندات اشتغلنا معاها</span><div class="hlogos"><div class="ht">${camps.map(c => `<span class="hl" title="${E(c.brand)}">${mark(c)}</span>`).join("")}${camps.map(c => `<span class="hl" title="${E(c.brand)}">${mark(c)}</span>`).join("")}</div></div></div>
-        </div>
+        <div class="fan rv d3" id="fan"><div class="fanin">${fanCards}</div></div>
+        <div class="h7trust rv d4"><b class="num">${M.compact(tViews)}</b> مشاهدة · <b class="num">${tCovs}</b> تغطية · <b class="num">${camps.length}</b> براند وثقوا فينا</div>
       </div>
     </div></section>
-    <div class="rmarq"><div class="tr">${mqHTML}${mqHTML}</div></div>
-
+    <div class="lstrip"><div class="lt">${logoStrip}${logoStrip}</div></div>
     <div class="wrap">
+      <section class="about7">
+        <span class="rlabel rv">• عن ${E(agency.name)}</span>
+        <h2 class="a7 rv d1">شريك تسويق المؤثرين <span class="ic g">◎</span> اللي بيحوّل<br>المشاهدات <span class="ic k">↗</span> <em>لنتايج تتقاس</em></h2>
+      </section>
+      <div class="bento">
+        <div class="bx b-views rv"><small>TOTAL VIEWS</small><b class="num" data-count="${tViews}">0</b><p>مشاهدة حققتها تغطيات المؤثرين في حملاتنا</p></div>
+        <div class="bx b-camps rv d1"><small>حملة موثّقة</small><b class="num" data-count="${camps.length}">0</b><div class="avs">${avTop}</div><p>من مطاعم وكافيهات لعيادات ومتاجر</p></div>
+        <div class="bx b-covs rv d2"><small>تغطية بالفيديو</small><b class="num" data-count="${tCovs}">0</b></div>
+        <div class="bx b-er rv d3"><small>متوسط نسبة التفاعل</small><b class="num">${erAll !== null ? M.pct(erAll, 1) : "—"}</b></div>
+        ${featured && (featured.c.insights || [])[0] ? `<a class="bx b-quote rv d2" href="#c-${E(featured.c.id)}"><span class="q">“</span><p>${E(featured.c.insights[0].title)}</p><div class="qw"><span class="ava">${mark(featured.c)}</span><span>من تقرير حملة ${E(featured.c.brand || "")}</span></div></a>` : ""}
+        <div class="bx b-pool rv d3"><small>قاعدة المؤثرين</small><b class="num">${E(agency.influencersPool || "+5000")}</b><p>مشهور ومؤثر داخل المملكة نختار منهم المناسب لكل حملة</p></div>
+      </div>
 
       ${featured ? `<section class="rsec">
         <span class="rlabel rv">01 / FEATURED CAMPAIGN</span>
@@ -384,6 +405,13 @@
     root.querySelectorAll(".rhero").forEach(h => {
       if (!fine) return;
       h.addEventListener("pointermove", e => { const r = h.getBoundingClientRect(); h.style.setProperty("--mx", (e.clientX - r.left) + "px"); h.style.setProperty("--my", (e.clientY - r.top) + "px"); });
+    });
+    root.querySelectorAll(".fan").forEach(f => {
+      if (!fine) return;
+      const inn = f.querySelector(".fanin");
+      const card = f.closest(".h7card") || f;
+      card.addEventListener("pointermove", e => { const r = card.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5; inn.style.transform = `rotateY(${x * 10}deg) rotateX(${-y * 6}deg)`; });
+      card.addEventListener("pointerleave", () => { inn.style.transform = ""; });
     });
     root.querySelectorAll(".vcard-wrap").forEach(w => {
       if (!fine) return;
@@ -758,6 +786,13 @@
   }
   addEventListener("hashchange", route);
 
+  /* theme toggle */
+  const thm = document.getElementById("thm");
+  if (thm) thm.addEventListener("click", () => {
+    const t = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", t);
+    try { localStorage.setItem("mz_theme", t); } catch (e) {}
+  });
   /* chrome */
   document.querySelectorAll("[data-agency-name]").forEach(el => el.textContent = agency.name);
   document.querySelectorAll("[data-agency-slogan]").forEach(el => el.textContent = agency.slogan);

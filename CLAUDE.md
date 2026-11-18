@@ -52,6 +52,12 @@ window.PORTFOLIO = {
 ## Home page (`home()` in `app.js`, styles in the `v3 — Home` section of `style.css`)
 Same visual language as the campaign report (`body.report homepg`): dark hero with the gold Malaz logo and a gold TOTAL VIEWS card (views, campaigns, coverages, creators), gold marquee of brand names, KPI row, a featured campaign (highest views), a card grid of all campaigns sorted by views (search + type chips; campaigns with no numbers show «الأرقام تُضاف قريبًا»), WHY MALAZ cards, and a dark CTA band.
 
+### v7 home (Nov 18, inspired by a template the user liked; adapted, not copied)
+Rounded hero card (`.h7card`, centered headline, pill buttons `.pbtn`), a 3D fan of 7 cards built from real data (`.fan .fc`, `--i` = -3..3, pointer parallax in `motion()`), a brand-logo strip (`.lstrip`), a centered «عن ملاذ» headline with inline icon dots (`.a7`), and a bento grid (`.bento`, grid-areas views/camps/covs/er/pool/quote; the quote is the featured campaign's first insight). Then featured campaign, all campaigns, why Malaz, CTA.
+
+### Light / dark theme
+`html[data-theme]` set before paint by an inline script in `index.html` (saved `localStorage.mz_theme`, else the device setting). Header button `#thm` toggles and saves. Tokens `--pg --sf --sf2 --ln --tx --tx2 --mu`; all dark overrides are in the `v7 — Theme toggle + dark mode` block of `style.css`. Campaign heroes stay dark in both themes. The admin page is not themed.
+
 ## Campaign page sections (`campaign()` in `app.js`)
 The sections are built from the data, and each one is hidden when its data isn't there.
 1. **Hero:** black background with falling diamond confetti; Malaz gold logo × brand logo; title; pills; a floating gold TOTAL VIEWS card with a count-up.
