@@ -17,7 +17,7 @@ window.PORTFOLIO = {
       "brandUrl": "",
       "city": "",
       "date": "2026-03-29",
-      "dataDate": "2026-05-10",
+      "dataDate": "2026-11-18",
       "description": "حملة مؤثرين لـ UDF بـ17 تغطية على تيك توك وإنستغرام من مارس إلى مايو 2026.",
       "hashtags": [
         "UDF"
@@ -29,11 +29,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": 66400,
-          "likes": 342,
+          "followers": 266500,
+          "views": 66500,
+          "likes": 341,
           "comments": 109,
-          "saves": 67,
+          "saves": 65,
           "note": ""
         },
         {
@@ -42,11 +42,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": 30800,
-          "likes": 821,
+          "followers": 128800,
+          "views": 31500,
+          "likes": 825,
           "comments": 7,
-          "saves": 119,
+          "saves": 131,
           "note": ""
         },
         {
@@ -55,8 +55,8 @@ window.PORTFOLIO = {
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": 294,
+          "followers": 69256,
+          "views": 316,
           "likes": 1,
           "comments": 0,
           "saves": 0,
@@ -68,9 +68,9 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
+          "followers": 78000,
           "views": 12900,
-          "likes": 423,
+          "likes": 424,
           "comments": 10,
           "saves": 243,
           "note": ""
@@ -81,11 +81,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": 13300,
-          "likes": 428,
+          "followers": 216000,
+          "views": 14900,
+          "likes": 432,
           "comments": 20,
-          "saves": 243,
+          "saves": 254,
           "note": ""
         },
         {
@@ -94,11 +94,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": 37800,
-          "likes": 72,
+          "followers": 79500,
+          "views": 39400,
+          "likes": 87,
           "comments": 22,
-          "saves": 55,
+          "saves": 72,
           "note": ""
         },
         {
@@ -107,23 +107,23 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": 18000,
-          "likes": 1562,
-          "comments": 75,
-          "saves": 261,
+          "followers": 101200,
+          "views": 18200,
+          "likes": 1563,
+          "comments": 74,
+          "saves": 262,
           "note": ""
         },
         {
           "url": "https://www.tiktok.com/@vzo5o/video/7626800432148466952",
-          "creator": "vzo5o",
+          "creator": "tr_f84",
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": 12400,
+          "followers": 122300,
+          "views": 12500,
           "likes": 556,
-          "comments": 89,
+          "comments": 94,
           "saves": 339,
           "note": ""
         },
@@ -133,10 +133,10 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": 81900,
-          "likes": 6335,
-          "comments": 55,
+          "followers": 168500,
+          "views": 82000,
+          "likes": 6336,
+          "comments": 57,
           "saves": 205,
           "note": ""
         },
@@ -146,7 +146,7 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
+          "followers": 102400,
           "views": 50500,
           "likes": 49,
           "comments": 0,
@@ -159,11 +159,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": 116000,
-          "likes": 277,
+          "followers": 324400,
+          "views": 118000,
+          "likes": 289,
           "comments": 47,
-          "saves": 931,
+          "saves": 963,
           "note": ""
         },
         {
@@ -173,8 +173,8 @@ window.PORTFOLIO = {
             "Instagram"
           ],
           "followers": null,
-          "views": 44,
-          "likes": 3,
+          "views": 77,
+          "likes": 5,
           "comments": 2,
           "saves": 0,
           "note": ""
@@ -185,9 +185,9 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
+          "followers": 297000,
           "views": 60000,
-          "likes": 47,
+          "likes": 48,
           "comments": 26,
           "saves": 43,
           "note": ""
@@ -198,22 +198,22 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": 144000,
-          "likes": 4695,
-          "comments": 82,
-          "saves": 157,
+          "followers": 272000,
+          "views": 144300,
+          "likes": 4698,
+          "comments": 83,
+          "saves": 158,
           "note": ""
         },
         {
           "url": "https://www.tiktok.com/@pwjzoo/video/7638396819881446663",
-          "creator": "pwjzoo",
+          "creator": "_nedh1",
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": 205,
-          "likes": 8,
+          "followers": 193100,
+          "views": 246,
+          "likes": 10,
           "comments": 0,
           "saves": 1,
           "note": ""
@@ -224,11 +224,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": 43900,
-          "likes": 84,
-          "comments": 2,
-          "saves": 7,
+          "followers": 264400,
+          "views": 44200,
+          "likes": 87,
+          "comments": 3,
+          "saves": 10,
           "note": ""
         },
         {
@@ -237,11 +237,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": 74500,
-          "likes": 366,
+          "followers": 226900,
+          "views": 74700,
+          "likes": 368,
           "comments": 31,
-          "saves": 15,
+          "saves": 16,
           "note": ""
         }
       ]
