@@ -17,7 +17,7 @@ window.PORTFOLIO = {
       "brandUrl": "https://www.instagram.com/wajbat.alkoba/",
       "city": "جدة — الرويس",
       "date": "2025-04-24",
-      "dataDate": "",
+      "dataDate": "2026-11-18",
       "description": "مطاعم وجبة الكبة، الأصل في الأكلات الشامية الأصيلة في جدة منذ 1962: الكبة والمحاشي والمسخن والفتات وغيرها. حملة مؤثرين على تيك توك وإنستغرام في أبريل ومايو 2025.",
       "hashtags": [
         "وجبة_الكبة",
@@ -39,18 +39,19 @@ window.PORTFOLIO = {
           "comments": null,
           "saves": null,
           "location": "جدة",
-          "note": ""
+          "note": "(مخفي: اللينك ما رجعش أرقام — غالبًا محذوف أو خاص)",
+          "hidden": true
         },
         {
           "url": "https://www.instagram.com/p/DI888F5tHV7/",
-          "creator": "",
+          "creator": "95.37",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 186760,
+          "views": 3060,
+          "likes": 32,
+          "comments": 2,
           "saves": null,
           "location": "جدة",
           "note": ""
@@ -61,11 +62,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 36700,
+          "views": 1496,
+          "likes": 71,
+          "comments": 35,
+          "saves": 39,
           "location": "جدة",
           "note": ""
         },
@@ -75,11 +76,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 36700,
+          "views": 37300,
+          "likes": 58,
+          "comments": 1,
+          "saves": 23,
           "location": "جدة",
           "note": ""
         },
@@ -95,7 +96,8 @@ window.PORTFOLIO = {
           "comments": null,
           "saves": null,
           "location": "جدة",
-          "note": ""
+          "note": "(مخفي: اللينك ما رجعش أرقام — غالبًا محذوف أو خاص)",
+          "hidden": true
         }
       ]
     },
