@@ -17,7 +17,7 @@ window.PORTFOLIO = {
       "brandUrl": "",
       "city": "",
       "date": "2025-07-11",
-      "dataDate": "",
+      "dataDate": "2026-11-17",
       "description": "حملة مؤثرين لمحمصة دولفين بـ10 فيديوهات على تيك توك في يوليو 2025.",
       "hashtags": [
         "محمصة_دولفين",
@@ -30,11 +30,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 37800,
+          "views": 66900,
+          "likes": 155,
+          "comments": 62,
+          "saves": 367,
           "note": ""
         },
         {
@@ -43,11 +43,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 60200,
+          "views": 6943,
+          "likes": 39,
+          "comments": 16,
+          "saves": 62,
           "note": ""
         },
         {
@@ -61,7 +61,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": ""
+          "note": "(مخفي: اللينك ما رجعش أرقام — غالبًا محذوف أو خاص)",
+          "hidden": true
         },
         {
           "url": "https://www.tiktok.com/@a_qo30/video/7525865037240601863",
@@ -74,19 +75,20 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": ""
+          "note": "(مخفي: اللينك ما رجعش أرقام — غالبًا محذوف أو خاص)",
+          "hidden": true
         },
         {
           "url": "https://www.tiktok.com/@elegant.jf/video/7525922061760449810",
-          "creator": "elegant.jf",
+          "creator": "riyadhvibes01",
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 51500,
+          "views": 29900,
+          "likes": 148,
+          "comments": 3,
+          "saves": 315,
           "note": ""
         },
         {
@@ -95,11 +97,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 60200,
+          "views": 29600,
+          "likes": 1323,
+          "comments": 7,
+          "saves": 14,
           "note": ""
         },
         {
@@ -108,11 +110,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 115700,
+          "views": 14100,
+          "likes": 203,
+          "comments": 70,
+          "saves": 272,
           "note": ""
         },
         {
@@ -121,11 +123,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 47900,
+          "views": 17900,
+          "likes": 751,
+          "comments": 116,
+          "saves": 145,
           "note": ""
         },
         {
@@ -134,11 +136,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 10800,
+          "views": 41400,
+          "likes": 476,
+          "comments": 65,
+          "saves": 541,
           "note": ""
         },
         {
@@ -147,11 +149,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 45800,
+          "views": 3617,
+          "likes": 64,
+          "comments": 0,
+          "saves": 31,
           "note": ""
         }
       ]
