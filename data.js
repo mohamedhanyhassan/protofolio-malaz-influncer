@@ -9,6 +9,244 @@ window.PORTFOLIO = {
   },
   "campaigns": [
     {
+      "id": "udf",
+      "brand": "UDF",
+      "title": "حملة *UDF*",
+      "type": "حملة مشاهير",
+      "logo": "",
+      "brandUrl": "",
+      "city": "",
+      "date": "2026-03-29",
+      "dataDate": "2026-05-10",
+      "description": "حملة مؤثرين لـ UDF بـ17 تغطية على تيك توك وإنستغرام من مارس إلى مايو 2026.",
+      "hashtags": [
+        "UDF"
+      ],
+      "coverages": [
+        {
+          "url": "https://www.tiktok.com/@pen_philosphy/video/7623077050877775122",
+          "creator": "pen_philosphy",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": 66400,
+          "likes": 342,
+          "comments": 109,
+          "saves": 67,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@rody.212/video/7624102146295811349",
+          "creator": "rody.212",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": 30800,
+          "likes": 821,
+          "comments": 7,
+          "saves": 119,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/DWoDyXniCYP/",
+          "creator": "rody.212",
+          "platforms": [
+            "Instagram"
+          ],
+          "followers": null,
+          "views": 294,
+          "likes": 1,
+          "comments": 0,
+          "saves": 0,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@abor8989/video/7625266118680120597",
+          "creator": "abor8989",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": 12900,
+          "likes": 423,
+          "comments": 10,
+          "saves": 243,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@793y/video/7624946724150316309",
+          "creator": "793y",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": 13300,
+          "likes": 428,
+          "comments": 20,
+          "saves": 243,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@sunrise112211/video/7625306001637412114",
+          "creator": "sunrise112211",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": 37800,
+          "likes": 72,
+          "comments": 22,
+          "saves": 55,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@anfal3400/video/7625584787121655058",
+          "creator": "anfal3400",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": 18000,
+          "likes": 1562,
+          "comments": 75,
+          "saves": 261,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@vzo5o/video/7626800432148466952",
+          "creator": "vzo5o",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": 12400,
+          "likes": 556,
+          "comments": 89,
+          "saves": 339,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@s7nuil/video/7627927462671944978",
+          "creator": "s7nuil",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": 81900,
+          "likes": 6335,
+          "comments": 55,
+          "saves": 205,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@mhnds22/video/7628488023864315154",
+          "creator": "mhnds22",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": 50500,
+          "likes": 49,
+          "comments": 0,
+          "saves": 343,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@hsa777n/video/7636391046460689684",
+          "creator": "hsa777n",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": 116000,
+          "likes": 277,
+          "comments": 47,
+          "saves": 931,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/reel/DX9lbuWsaUG/",
+          "creator": "hsa777n",
+          "platforms": [
+            "Instagram"
+          ],
+          "followers": null,
+          "views": 44,
+          "likes": 3,
+          "comments": 2,
+          "saves": 0,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@k_r735/video/7637140908449811720",
+          "creator": "k_r735",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": 60000,
+          "likes": 47,
+          "comments": 26,
+          "saves": 43,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@meemee00072/video/7637526410520726804",
+          "creator": "meemee00072",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": 144000,
+          "likes": 4695,
+          "comments": 82,
+          "saves": 157,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@pwjzoo/video/7638396819881446663",
+          "creator": "pwjzoo",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": 205,
+          "likes": 8,
+          "comments": 0,
+          "saves": 1,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@h.600i/video/7638653063108070657",
+          "creator": "h.600i",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": 43900,
+          "likes": 84,
+          "comments": 2,
+          "saves": 7,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@pn_14r/video/7638986085363797279",
+          "creator": "pn_14r",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": 74500,
+          "likes": 366,
+          "comments": 31,
+          "saves": 15,
+          "note": ""
+        }
+      ]
+    },
+    {
       "id": "dolphin-roastery",
       "brand": "دلفن",
       "title": "حملة *دلفن* للمكسرات والقهوة",
