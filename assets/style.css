@@ -955,3 +955,58 @@ html[data-theme="dark"] .mside .note,html[data-theme="dark"] .note{color:var(--m
 html[data-theme="dark"] .homepg .insc:nth-child(3n){background:var(--sf)}
 html[data-theme="dark"] .empty{color:var(--mu)}
 @media(max-width:700px){.fan .fc{--sp:118px}.fanin{transform:scale(.68)!important}}
+
+/* =====================================================================
+   v8 — Glass: full-width hero, glassy cards, logos in color
+   ===================================================================== */
+html,body{overflow-x:clip}
+/* soft colored backdrop behind the glass (fixed, so cards always have something to blur) */
+body.report::before{content:"";position:fixed;inset:-10%;z-index:-1;pointer-events:none;
+  background:radial-gradient(40% 35% at 85% 15%,rgba(255,176,4,.20),transparent 70%),
+             radial-gradient(35% 30% at 10% 55%,rgba(98,158,99,.18),transparent 70%),
+             radial-gradient(40% 35% at 70% 90%,rgba(255,176,4,.14),transparent 70%),var(--pg);
+  animation:bgdrift 24s ease-in-out infinite alternate}
+@keyframes bgdrift{to{transform:translate3d(-3%,2%,0) scale(1.05)}}
+html[data-theme="dark"] body.report::before{background:radial-gradient(40% 35% at 85% 15%,rgba(255,176,4,.16),transparent 70%),radial-gradient(35% 30% at 10% 55%,rgba(98,158,99,.16),transparent 70%),radial-gradient(40% 35% at 70% 90%,rgba(255,176,4,.10),transparent 70%),#0b0b0b}
+body.report,body.homepg{background:transparent!important}
+
+/* full-width hero */
+.h7{padding:0}
+.h7card{border-radius:0 0 44px 44px;min-height:calc(100vh - 68px);padding:80px 24px 40px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:none}
+.h7card>*{max-width:1240px;width:100%}
+.h7card .heyebrow{width:auto}
+.h7lead{max-width:640px}
+.fan{width:100%;max-width:1300px}
+.h7card .h7acts{width:auto}
+
+/* glass tokens */
+:root{--gl:rgba(255,255,255,.55);--gl2:rgba(255,255,255,.38);--glb:rgba(255,255,255,.75);--gls:0 10px 40px rgba(60,40,0,.08),inset 0 1px 0 rgba(255,255,255,.8)}
+html[data-theme="dark"]{--gl:rgba(255,255,255,.055);--gl2:rgba(255,255,255,.035);--glb:rgba(255,255,255,.12);--gls:0 10px 40px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.08)}
+.fc:not(.fmid):not(.fpool),.bx:not(.b-views):not(.b-covs):not(.b-pool),.ccard,.rk:not(.gold),.chart,.tcard:not(.best),body.report .card,.insc:nth-child(3n),
+.search,.tabs,.seg,.tiers-f button,select.sel,.feat .fstats div,.carr,.twrap{
+  background:var(--gl)!important;backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);
+  border:1px solid var(--glb)!important;box-shadow:var(--gls)!important}
+.ccard:hover,body.report .card:hover,.bx:hover,.rk:hover{box-shadow:0 24px 60px rgba(60,40,0,.16),inset 0 1px 0 rgba(255,255,255,.8)!important}
+html[data-theme="dark"] .ccard:hover,html[data-theme="dark"] body.report .card:hover,html[data-theme="dark"] .bx:hover{box-shadow:0 24px 60px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.12)!important}
+/* colored glass */
+.b-views,.fpool,.rk.gold,.insc:nth-child(3n+2){background:linear-gradient(140deg,rgba(255,196,60,.92),rgba(255,176,4,.85))!important;backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.5)!important;box-shadow:0 18px 50px rgba(255,176,4,.28),inset 0 1px 0 rgba(255,255,255,.6)!important}
+.b-covs,.b-pool,.fmid,.insc:nth-child(3n+1),.tcard.best{background:linear-gradient(150deg,rgba(28,28,28,.9),rgba(11,11,11,.86))!important;backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.08)!important;box-shadow:0 18px 50px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.08)!important}
+html[data-theme="dark"] .fmid{background:linear-gradient(140deg,rgba(255,196,60,.92),rgba(255,176,4,.85))!important}
+html[data-theme="dark"] .b-pool{background:linear-gradient(150deg,rgba(98,158,99,.85),rgba(70,120,72,.8))!important}
+.bx,.fc,.ccard,body.report .card,.rk{border-radius:26px}
+/* the glass shine */
+.bx::after,.ccard::before,.fc::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,.35),transparent 35%)}
+html[data-theme="dark"] .bx::after,html[data-theme="dark"] .ccard::before,html[data-theme="dark"] .fc::after{background:linear-gradient(135deg,rgba(255,255,255,.07),transparent 35%)}
+.bx,.ccard{position:relative}
+/* inner tiles inside glass cards */
+.st3,.st3 div,.cst,.cst div{border-color:rgba(0,0,0,.07)}
+html[data-theme="dark"] .st3,html[data-theme="dark"] .st3 div,html[data-theme="dark"] .cst,html[data-theme="dark"] .cst div{border-color:rgba(255,255,255,.08)}
+.bar .tr2{background:repeating-linear-gradient(90deg,transparent 0 calc(25% - 1px),rgba(0,0,0,.06) calc(25% - 1px) 25%)}
+
+/* logos: full color, always */
+.lstrip .lg{filter:none!important;opacity:1!important;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.08),inset 0 0 0 1px rgba(0,0,0,.05)}
+html[data-theme="dark"] .lstrip .lg{opacity:1!important}
+.lstrip{padding:34px 0 14px}
+@media(min-width:1100px){.fan .fc{--sp:clamp(168px,13.5vw,240px);width:clamp(178px,13vw,220px);height:clamp(206px,15vw,250px)}.fan{height:clamp(300px,24vw,380px)}}
+.fc:not(.fmid):not(.fpool){background:rgba(255,255,255,.82)!important}
+html[data-theme="dark"] .fc:not(.fmid):not(.fpool){background:rgba(28,28,28,.82)!important}

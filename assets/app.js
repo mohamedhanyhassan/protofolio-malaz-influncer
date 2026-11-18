@@ -243,7 +243,7 @@
     const logoStrip = camps.filter(c => c.logo).map(c => `<a class="lg" href="#c-${E(c.id)}" title="${E(c.brand)}">${mark(c)}</a>`).join("");
     const avTop = ranked.slice(0, 4).map(x => `<span class="ava">${mark(x.c)}</span>`).join("");
     app.innerHTML = `
-    <section class="h7"><div class="wrap">
+    <section class="h7"><div>
       <div class="h7card">
         <div class="h7glow"></div>
         <span class="heyebrow rv"><i></i>بورتفوليو حملات المشاهير والمؤثرين</span>

@@ -55,6 +55,9 @@ Same visual language as the campaign report (`body.report homepg`): dark hero wi
 ### v7 home (Nov 18, inspired by a template the user liked; adapted, not copied)
 Rounded hero card (`.h7card`, centered headline, pill buttons `.pbtn`), a 3D fan of 7 cards built from real data (`.fan .fc`, `--i` = -3..3, pointer parallax in `motion()`), a brand-logo strip (`.lstrip`), a centered «عن ملاذ» headline with inline icon dots (`.a7`), and a bento grid (`.bento`, grid-areas views/camps/covs/er/pool/quote; the quote is the featured campaign's first insight). Then featured campaign, all campaigns, why Malaz, CTA.
 
+### v8 glass (Nov 18)
+Hero `.h7card` is full width (no `.wrap`), min-height ~100vh, rounded only at the bottom. Glass cards: `--gl/--glb/--gls` tokens + `backdrop-filter`, over a fixed drifting gold/green backdrop (`body.report::before`). Gold and black cards are tinted glass gradients. Brand logos in `.lstrip` are always in full color (user asked).
+
 ### Light / dark theme
 `html[data-theme]` set before paint by an inline script in `index.html` (saved `localStorage.mz_theme`, else the device setting). Header button `#thm` toggles and saves. Tokens `--pg --sf --sf2 --ln --tx --tx2 --mu`; all dark overrides are in the `v7 — Theme toggle + dark mode` block of `style.css`. Campaign heroes stay dark in both themes. The admin page is not themed.
 
