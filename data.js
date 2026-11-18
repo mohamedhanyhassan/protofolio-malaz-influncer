@@ -9,6 +9,154 @@ window.PORTFOLIO = {
   },
   "campaigns": [
     {
+      "id": "dolphin-roastery",
+      "brand": "Dolphin Roastery",
+      "title": "حملة *محمصة دولفين*",
+      "type": "حملة مشاهير",
+      "logo": "",
+      "brandUrl": "",
+      "city": "",
+      "date": "2025-07-11",
+      "dataDate": "",
+      "description": "حملة مؤثرين لمحمصة دولفين بـ10 فيديوهات على تيك توك في يوليو 2025.",
+      "hashtags": [
+        "محمصة_دولفين",
+        "دولفين"
+      ],
+      "coverages": [
+        {
+          "url": "https://www.tiktok.com/@ws_62/video/7525855505118448914",
+          "creator": "ws_62",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@ksaopa20/video/7526248294771657991",
+          "creator": "ksaopa20",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@ak_65789/video/7525881919347625232",
+          "creator": "ak_65789",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@a_qo30/video/7525865037240601863",
+          "creator": "a_qo30",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@elegant.jf/video/7525922061760449810",
+          "creator": "elegant.jf",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@nf_5n/video/7525879485841886472",
+          "creator": "nf_5n",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@dwain71/video/7526176399384726792",
+          "creator": "dwain71",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@inoufalii/video/7527003804366015762",
+          "creator": "inoufalii",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@m_000as/video/7526828039351618823",
+          "creator": "m_000as",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@nnn1rr/video/7528295459929033992",
+          "creator": "nnn1rr",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        }
+      ]
+    },
+    {
       "id": "zira-clinics",
       "brand": "Zira Medical Clinics",
       "title": "حملة *عيادات زيرا* الطبية",
