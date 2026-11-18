@@ -262,18 +262,22 @@ window.PORTFOLIO = {
     },
     {
       "id": "menz",
-      "brand": "Menz",
-      "title": "حملة مطعم *منز*",
+      "brand": "منز",
+      "title": "حملة مطعم *منز* اللبناني",
       "type": "حملة مشاهير",
-      "logo": "",
-      "brandUrl": "",
-      "city": "",
+      "logo": "logos/manz.png",
+      "brandUrl": "https://www.instagram.com/manz_ksa/",
+      "city": "الرياض — السليمانية",
       "date": "2026-01-19",
       "dataDate": "2026-11-17",
-      "description": "حملة مؤثرين لمطعم منز: 60 تغطية بين زيارات للمطعم وطلبات توصيل، على تيك توك وإنستغرام من يناير إلى يوليو 2026.",
+      "description": "منز مطعم لبناني على السريع في حي السليمانية بالرياض، مفتوح كل يوم من 12 الظهر لـ 2 بالليل. حملة مؤثرين بين زيارات للمطعم وطلبات توصيل، على تيك توك وإنستغرام من يناير إلى يوليو 2026.",
       "hashtags": [
         "منز",
-        "Menz"
+        "Manz",
+        "لبناني_على_السريع",
+        "مطعم_لبناني",
+        "السليمانية",
+        "الرياض"
       ],
       "coverages": [
         {
@@ -288,7 +292,8 @@ window.PORTFOLIO = {
           "likes": 47,
           "comments": 3,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@793y/video/7597183862489320712",
@@ -302,7 +307,8 @@ window.PORTFOLIO = {
           "likes": 591,
           "comments": 42,
           "saves": 304,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://u.pcloud.link/publink/show?code=kZ93YK5ZF7y83PWzqY5fdMM6JRw8UFK0Tgvy",
@@ -314,7 +320,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@dwain71/video/7597132129566297362",
@@ -328,7 +335,8 @@ window.PORTFOLIO = {
           "likes": 124,
           "comments": 56,
           "saves": 60,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.instagram.com/p/DTuje6xCAqV/",
@@ -342,7 +350,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": 9,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@nzo1i/video/7597499489271680263",
@@ -356,7 +365,8 @@ window.PORTFOLIO = {
           "likes": 663,
           "comments": 2,
           "saves": 199,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@ts3il/video/7597443834439552276",
@@ -371,7 +381,8 @@ window.PORTFOLIO = {
           "comments": null,
           "saves": null,
           "note": "(مخفي: اللينك ما رجعش أرقام — غالبًا محذوف أو خاص)",
-          "hidden": true
+          "hidden": true,
+          "location": "الرياض"
         },
         {
           "url": "https://u.pcloud.link/publink/show?code=kZd3YK5Z3FzkChDIFWF0Sknvv1thaSPkis57",
@@ -383,7 +394,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@znov4/video/7597536418055081223",
@@ -397,7 +409,8 @@ window.PORTFOLIO = {
           "likes": 12,
           "comments": 0,
           "saves": 2,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@soso4ad/video/7597552216743922958",
@@ -411,7 +424,8 @@ window.PORTFOLIO = {
           "likes": 26,
           "comments": 11,
           "saves": 4,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@bto.eb/video/7599280361415265543",
@@ -425,7 +439,8 @@ window.PORTFOLIO = {
           "likes": 27,
           "comments": 11,
           "saves": 11,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@twinstaynay/video/7597884496301542663",
@@ -439,7 +454,8 @@ window.PORTFOLIO = {
           "likes": 31,
           "comments": 7,
           "saves": 17,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@saraofficial.25/video/7597933484497259794",
@@ -453,7 +469,8 @@ window.PORTFOLIO = {
           "likes": 19,
           "comments": 1,
           "saves": 9,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@experiencewithus1/video/7598247891764874516",
@@ -468,7 +485,8 @@ window.PORTFOLIO = {
           "comments": null,
           "saves": null,
           "note": "(مخفي: اللينك ما رجعش أرقام — غالبًا محذوف أو خاص)",
-          "hidden": true
+          "hidden": true,
+          "location": "الرياض"
         },
         {
           "url": "https://www.instagram.com/p/DT08_-RiDlk/",
@@ -482,7 +500,8 @@ window.PORTFOLIO = {
           "likes": 37,
           "comments": 11,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.instagram.com/p/DT1amnxiIE0/",
@@ -496,7 +515,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": 1,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@soso_11a0/video/7599064010079735057",
@@ -510,7 +530,8 @@ window.PORTFOLIO = {
           "likes": 44,
           "comments": 19,
           "saves": 243,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@hanolove.f8/video/7599725661284093191",
@@ -524,7 +545,8 @@ window.PORTFOLIO = {
           "likes": 7265,
           "comments": 40,
           "saves": 2900,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@amal_1442/video/7604443224152870165",
@@ -539,7 +561,8 @@ window.PORTFOLIO = {
           "comments": null,
           "saves": null,
           "note": "(مخفي: اللينك ما رجعش أرقام — غالبًا محذوف أو خاص)",
-          "hidden": true
+          "hidden": true,
+          "location": "الرياض"
         },
         {
           "url": "https://www.instagram.com/p/DUIoM4ejAv1/",
@@ -554,7 +577,8 @@ window.PORTFOLIO = {
           "comments": null,
           "saves": null,
           "note": "(مخفي: اللينك ما رجعش أرقام — غالبًا محذوف أو خاص)",
-          "hidden": true
+          "hidden": true,
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@sseham0015/video/7600261680655813908",
@@ -568,7 +592,8 @@ window.PORTFOLIO = {
           "likes": 14,
           "comments": 0,
           "saves": 5,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@znhie1/video/7600784374254046471",
@@ -582,7 +607,8 @@ window.PORTFOLIO = {
           "likes": 260,
           "comments": 36,
           "saves": 160,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://u.pcloud.link/publink/show?code=kZo7Il5Zl2QRx5Y6zAfPA3gGdFW5ijpGyQ47",
@@ -594,7 +620,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@d7ba0/video/7602490233627888916",
@@ -608,7 +635,8 @@ window.PORTFOLIO = {
           "likes": 14,
           "comments": 0,
           "saves": 5,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@c_8sl1/video/7602660017086450962",
@@ -622,7 +650,8 @@ window.PORTFOLIO = {
           "likes": 52,
           "comments": 2,
           "saves": 15,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@ghada.gh33/video/7603138144468258066",
@@ -636,7 +665,8 @@ window.PORTFOLIO = {
           "likes": 62,
           "comments": 0,
           "saves": 22,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://u.pcloud.link/publink/show?code=kZfkIl5ZxxTLQcRPI3pONxCTG2TQMY3F7QC7",
@@ -648,7 +678,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@asmakamal55/video/7602653872959524116",
@@ -662,7 +693,8 @@ window.PORTFOLIO = {
           "likes": 268,
           "comments": 10,
           "saves": 35,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@anfal3400/video/7603027989391150344",
@@ -677,7 +709,8 @@ window.PORTFOLIO = {
           "comments": null,
           "saves": null,
           "note": "(مخفي: اللينك ما رجعش أرقام — غالبًا محذوف أو خاص)",
-          "hidden": true
+          "hidden": true,
+          "location": "الرياض"
         },
         {
           "url": "https://www.instagram.com/reel/DUX1DLtiERq/",
@@ -691,7 +724,8 @@ window.PORTFOLIO = {
           "likes": 395,
           "comments": 112,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@maweizaaa/video/7603375924783910164",
@@ -705,7 +739,8 @@ window.PORTFOLIO = {
           "likes": 956,
           "comments": 21,
           "saves": 126,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.instagram.com/stories/highlights/17873442798514691/",
@@ -719,7 +754,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@eman_363/video/7604871046046485768",
@@ -733,7 +769,8 @@ window.PORTFOLIO = {
           "likes": 242,
           "comments": 12,
           "saves": 178,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@bilx76/video/7605538086986059016",
@@ -747,7 +784,8 @@ window.PORTFOLIO = {
           "likes": 319,
           "comments": 79,
           "saves": 72,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://u.pcloud.link/publink/show?code=kZcIrd5ZgQPYoxmrsK7GjtYuSIWzeFBXs6Rk",
@@ -759,7 +797,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://u.pcloud.link/publink/show?code=kZ6u7c5Z7cp334qgnij9zEpvb1jti0frOa3k",
@@ -771,7 +810,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@karimgalhoom/video/7611275213132582164",
@@ -785,7 +825,8 @@ window.PORTFOLIO = {
           "likes": 18,
           "comments": 0,
           "saves": 2,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.instagram.com/p/DVtg1GICEI6/",
@@ -799,7 +840,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": 2,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@24daily.sa/photo/7615672226251164946",
@@ -813,7 +855,8 @@ window.PORTFOLIO = {
           "likes": 6,
           "comments": 1,
           "saves": 1,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.instagram.com/p/DYfUJ9TMexD/",
@@ -827,7 +870,8 @@ window.PORTFOLIO = {
           "likes": 64,
           "comments": 25,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://u.pcloud.link/publink/show?code=kZg87c5Z7eJo8d52jOFkGLV1QXuUjQMTTTzk",
@@ -839,7 +883,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.instagram.com/p/DYkp3Vao0ng/",
@@ -853,7 +898,8 @@ window.PORTFOLIO = {
           "likes": 8,
           "comments": 4,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.instagram.com/p/DYyMtyNCMlf/",
@@ -867,7 +913,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": 0,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.instagram.com/p/DYw69YrMzPJ/",
@@ -881,7 +928,8 @@ window.PORTFOLIO = {
           "likes": 443,
           "comments": 63,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.instagram.com/p/DYwo2PaAmNm/",
@@ -895,7 +943,8 @@ window.PORTFOLIO = {
           "likes": 49,
           "comments": 1,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@food_1890/video/7643789645003721991",
@@ -909,7 +958,8 @@ window.PORTFOLIO = {
           "likes": 169,
           "comments": 1,
           "saves": 16,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://u.pcloud.link/publink/show?code=kZpb7c5ZBBfefIE3RQzwyYtzTqqeP46N06g7",
@@ -921,7 +971,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.instagram.com/p/DYuoAGCC0RT/",
@@ -935,7 +986,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": 37,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://u.pcloud.link/publink/show?code=kZRb7c5ZUdSYGhmJEE8O9aBD8a4siVeTi6BV",
@@ -947,7 +999,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.instagram.com/p/DZIlThcM4E2/",
@@ -961,7 +1014,8 @@ window.PORTFOLIO = {
           "likes": 55,
           "comments": 1,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@nouf.alnemer/video/7647179939493547285",
@@ -975,7 +1029,8 @@ window.PORTFOLIO = {
           "likes": 36,
           "comments": 4,
           "saves": 27,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@about.thenew/video/7660522963325799687",
@@ -990,7 +1045,8 @@ window.PORTFOLIO = {
           "comments": null,
           "saves": null,
           "note": "(مخفي: اللينك ما رجعش أرقام — غالبًا محذوف أو خاص)",
-          "hidden": true
+          "hidden": true,
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@mahay088/video/7660225648123841812",
@@ -1004,7 +1060,8 @@ window.PORTFOLIO = {
           "likes": 6,
           "comments": 0,
           "saves": 4,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@asmaelshiekh5/video/7660494718929095957",
@@ -1018,7 +1075,8 @@ window.PORTFOLIO = {
           "likes": 59,
           "comments": 4,
           "saves": 82,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.instagram.com/reel/Das79boAmGr/",
@@ -1033,7 +1091,8 @@ window.PORTFOLIO = {
           "comments": null,
           "saves": null,
           "note": "(مخفي: اللينك ما رجعش أرقام — غالبًا محذوف أو خاص)",
-          "hidden": true
+          "hidden": true,
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@trendfoodh/video/7661746999988915474",
@@ -1047,7 +1106,8 @@ window.PORTFOLIO = {
           "likes": 14,
           "comments": 0,
           "saves": 32,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.instagram.com/p/Das6lQyILt6/",
@@ -1061,7 +1121,8 @@ window.PORTFOLIO = {
           "likes": 0,
           "comments": 0,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.tiktok.com/@nawal_abdullah40/video/7661692451341520146",
@@ -1075,7 +1136,8 @@ window.PORTFOLIO = {
           "likes": 5,
           "comments": 0,
           "saves": 0,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://u.pcloud.link/publink/show?code=kZTj7c5ZKGU0B8vM7oQsazLlHv24s7P1ejeX",
@@ -1087,7 +1149,8 @@ window.PORTFOLIO = {
           "likes": null,
           "comments": null,
           "saves": null,
-          "note": ""
+          "note": "",
+          "location": "الرياض"
         },
         {
           "url": "https://www.instagram.com/p/Da_Yd-0Iomv/",
@@ -1102,7 +1165,8 @@ window.PORTFOLIO = {
           "comments": null,
           "saves": null,
           "note": "(مخفي: اللينك ما رجعش أرقام — غالبًا محذوف أو خاص)",
-          "hidden": true
+          "hidden": true,
+          "location": "الرياض"
         }
       ],
       "insights": [
