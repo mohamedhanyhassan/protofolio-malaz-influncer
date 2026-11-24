@@ -3523,9 +3523,9 @@ window.PORTFOLIO = {
       "type": "حملة مشاهير",
       "logo": "logos/nutrili.png",
       "brandUrl": "https://www.instagram.com/nutrili.me/",
-      "city": "",
+      "city": "لبنان · الخليج",
       "date": "",
-      "description": "نيوتريلي براند بمكونات طبيعية فاخرة، أسسه ويقوده علماء، بتغليف معاد تدويره وشحن لكل العالم. حملة مؤثرين على تيك توك وإنستغرام.",
+      "description": "نيوتريلي براند لبناني موجود في الخليج كله، بمكونات طبيعية فاخرة، أسسه ويقوده علماء، بتغليف معاد تدويره وشحن لكل العالم. حملة مؤثرين على تيك توك وإنستغرام.",
       "coverages": [
         {
           "url": "https://www.instagram.com/p/DZUuzhbtKoa/",
@@ -4072,12 +4072,79 @@ window.PORTFOLIO = {
           "comments": 6,
           "saves": null,
           "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@yasobasoo/video/7638296993793625364",
+          "creator": "yasobasoo",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@zouhourmounajjed/video/7460144130342063378",
+          "creator": "zouhourmounajjed",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@rosealbander/video/7470555829121469703",
+          "creator": "rosealbander",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@yasobasoo/video/7639283094771567892",
+          "creator": "yasobasoo",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@coachwesam/video/7471009851942915336",
+          "creator": "coachwesam",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
         }
       ],
       "dataDate": "2026-11-24",
       "hashtags": [
         "نيوتريلي",
         "Nutrili",
+        "براند_لبناني",
+        "الخليج",
         "مكونات_طبيعية"
       ]
     },
