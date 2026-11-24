@@ -3602,7 +3602,7 @@ window.PORTFOLIO = {
           "url": "https://www.instagram.com/p/DcbHLc1OOVP/",
           "creator": "maram_alnahla",
           "followers": 145850,
-          "views": 17527,
+          "views": 17533,
           "comments": 65
         },
         {
@@ -3610,7 +3610,7 @@ window.PORTFOLIO = {
           "creator": "blog.jojoo",
           "followers": 29200,
           "views": 514,
-          "likes": 47,
+          "likes": 48,
           "comments": 14,
           "saves": 14
         },
@@ -3620,11 +3620,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 132800,
+          "views": 190900,
+          "likes": 6783,
+          "comments": 72,
+          "saves": 1595,
           "note": ""
         },
         {
@@ -3633,11 +3633,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 25200,
+          "views": 46700,
+          "likes": 1479,
+          "comments": 25,
+          "saves": 814,
           "note": ""
         },
         {
@@ -3646,15 +3646,15 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 6159,
+          "views": 2829,
+          "likes": 126,
+          "comments": 4,
+          "saves": 21,
           "note": ""
         }
       ],
-      "dataDate": "2026-11-17",
+      "dataDate": "2026-11-24",
       "hashtags": [
         "إنفينتي",
         "InfinityKits",
