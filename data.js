@@ -4079,11 +4079,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 17400,
+          "views": 14900,
+          "likes": 320,
+          "comments": 7,
+          "saves": 70,
           "note": ""
         },
         {
@@ -4092,11 +4092,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 281300,
+          "views": 15900,
+          "likes": 334,
+          "comments": 17,
+          "saves": 109,
           "note": ""
         },
         {
@@ -4105,11 +4105,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 479100,
+          "views": 75400,
+          "likes": 1627,
+          "comments": 35,
+          "saves": 1192,
           "note": ""
         },
         {
@@ -4118,11 +4118,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 17400,
+          "views": 19900,
+          "likes": 1041,
+          "comments": 22,
+          "saves": 238,
           "note": ""
         },
         {
@@ -4131,11 +4131,11 @@ window.PORTFOLIO = {
           "platforms": [
             "TikTok"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
-          "saves": null,
+          "followers": 369000,
+          "views": 690900,
+          "likes": 24500,
+          "comments": 540,
+          "saves": 20309,
           "note": ""
         }
       ],
