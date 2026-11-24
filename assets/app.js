@@ -786,6 +786,26 @@
   }
   addEventListener("hashchange", route);
 
+  /* live data: if data.js changes while the page is open, reload it so numbers are never stale */
+  (function liveData() {
+    if (draft) return;
+    let base = null;
+    const sig = t => { let h = 0; for (let i = 0; i < t.length; i++) h = (h * 31 + t.charCodeAt(i)) | 0; return h; };
+    const check = () => fetch("data.js?t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.text() : null).then(t => {
+      if (!t) return;
+      const h = sig(t);
+      if (base === null) { base = h; return; }
+      if (h !== base) {
+        if (modal.classList.contains("open")) return;
+        toast("تم تحديث الأرقام…");
+        setTimeout(() => location.reload(), 900);
+      }
+    }).catch(() => {});
+    check();
+    setInterval(check, 60000);
+    document.addEventListener("visibilitychange", () => { if (!document.hidden) check(); });
+  })();
+
   /* theme toggle */
   const thm = document.getElementById("thm");
   if (thm) thm.addEventListener("click", () => {
