@@ -3890,6 +3890,188 @@ window.PORTFOLIO = {
           "comments": 20,
           "saves": null,
           "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/DZLBsCGuS1F/",
+          "creator": "",
+          "platforms": [
+            "Instagram"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/DZGDlAYxnkT/",
+          "creator": "",
+          "platforms": [
+            "Instagram"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/DX7DT1xOiog/",
+          "creator": "",
+          "platforms": [
+            "Instagram"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/DW6rcnZCKJ8/",
+          "creator": "",
+          "platforms": [
+            "Instagram"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/DWYpGVtCM5o/",
+          "creator": "",
+          "platforms": [
+            "Instagram"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/DVeacFpjVgb/",
+          "creator": "",
+          "platforms": [
+            "Instagram"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/DUBTmgDjaTJ/",
+          "creator": "",
+          "platforms": [
+            "Instagram"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/DdllDQKOBXE/",
+          "creator": "",
+          "platforms": [
+            "Instagram"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/DdWI5T3s9AS/",
+          "creator": "",
+          "platforms": [
+            "Instagram"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/Df5BTPBuxSy/",
+          "creator": "",
+          "platforms": [
+            "Instagram"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/Df4NAa2MhdF/",
+          "creator": "",
+          "platforms": [
+            "Instagram"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/DffCvS0t7sm/",
+          "creator": "",
+          "platforms": [
+            "Instagram"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/DfhVZutIPET/",
+          "creator": "",
+          "platforms": [
+            "Instagram"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.instagram.com/p/DfMoXTIIKmj/",
+          "creator": "",
+          "platforms": [
+            "Instagram"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
         }
       ],
       "dataDate": "2026-11-24",
