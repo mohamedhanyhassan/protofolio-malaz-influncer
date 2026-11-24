@@ -3530,24 +3530,24 @@ window.PORTFOLIO = {
         {
           "url": "https://www.instagram.com/p/DZUuzhbtKoa/",
           "creator": "heidi_ahmed2",
-          "followers": 87127,
-          "views": 37799,
-          "likes": 380,
+          "followers": 86914,
+          "views": 37811,
+          "likes": 377,
           "comments": 29
         },
         {
           "url": "https://www.instagram.com/p/DZSmSaoI_9F/",
           "creator": "dhahran.sa",
           "followers": 43684,
-          "views": 38384,
-          "likes": 402,
+          "views": 38398,
+          "likes": 401,
           "comments": 3
         },
         {
           "url": "https://www.tiktok.com/@shahadbokhari/video/7691781182438133010",
           "creator": "shahadbokhari",
-          "followers": 4046,
-          "views": 968,
+          "followers": 4033,
+          "views": 970,
           "likes": 39,
           "comments": 2,
           "saves": 14
@@ -3556,7 +3556,7 @@ window.PORTFOLIO = {
           "url": "https://www.tiktok.com/@ro5.28/video/7691326627589950728",
           "creator": "ro5.28",
           "followers": 10500,
-          "views": 1067,
+          "views": 1085,
           "likes": 43,
           "comments": 2,
           "saves": 16
@@ -3564,335 +3564,335 @@ window.PORTFOLIO = {
         {
           "url": "https://www.tiktok.com/@theraahma/video/7691330469157211413",
           "creator": "theraahma",
-          "followers": 3064,
-          "views": 710,
-          "likes": 49,
+          "followers": 3073,
+          "views": 760,
+          "likes": 51,
           "comments": 8,
-          "saves": 11
+          "saves": 12
         },
         {
           "url": "https://www.tiktok.com/@le1mz/video/7688743990883011861",
           "creator": "le1mz",
-          "followers": 6427,
-          "views": 1657,
-          "likes": 64,
+          "followers": 6530,
+          "views": 1745,
+          "likes": 65,
           "comments": 2,
-          "saves": 17
+          "saves": 18
         },
         {
           "url": "https://www.instagram.com/p/Df_ociAx2U0/",
-          "creator": "",
+          "creator": "ms.albo",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 920,
+          "views": 233,
+          "likes": 8,
+          "comments": 1,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/Df95c4uNQVT/",
-          "creator": "",
+          "creator": "by__baneen",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 2566,
+          "views": 2731,
+          "likes": 20,
+          "comments": 2,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/Df9upw6R8Ln/",
-          "creator": "",
+          "creator": "atinuda.haus",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
+          "followers": 10794,
+          "views": 1166,
           "likes": null,
-          "comments": null,
+          "comments": 8,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/Df6NjE4MC_0/",
-          "creator": "",
+          "creator": "lifewithdesreen",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
+          "followers": 78559,
+          "views": 8311,
           "likes": null,
-          "comments": null,
+          "comments": 83,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/Df1zijLOPyy/",
-          "creator": "",
+          "creator": "emyelessowyy",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 2579,
+          "views": 357,
+          "likes": 16,
+          "comments": 9,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/DfjpBspIk_6/",
-          "creator": "",
+          "creator": "meemz.3li",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 16266,
+          "views": 2098,
+          "likes": 125,
+          "comments": 20,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/DfZV8SRsQ1s/",
-          "creator": "",
+          "creator": "dr_wesam_",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 196493,
+          "views": 66833,
+          "likes": 660,
+          "comments": 64,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/DfZ0XocoUtz/",
-          "creator": "",
+          "creator": "zozokahramana",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 1440842,
+          "views": 112430,
+          "likes": 4915,
+          "comments": 122,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/DfXJ1GIIwwL/",
-          "creator": "",
+          "creator": "maryanmerabi",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
+          "followers": 17826,
+          "views": 10803,
           "likes": null,
-          "comments": null,
+          "comments": 8,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/DfSFAs8ui9K/",
-          "creator": "",
+          "creator": "rimar.moe",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
+          "followers": 25487,
+          "views": 2820,
           "likes": null,
-          "comments": null,
+          "comments": 77,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/DfFI62SNOrm/",
-          "creator": "",
+          "creator": "awsafalfares",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 101925,
+          "views": 940,
+          "likes": 15,
+          "comments": 7,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/De1xVkTIRV_/",
-          "creator": "",
+          "creator": "seen_style83",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 56779,
+          "views": 2274,
+          "likes": 33,
+          "comments": 10,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/DeSDMYtPpGj/",
-          "creator": "",
+          "creator": "dr_rashazain",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 16858,
+          "views": 2191,
+          "likes": 18,
+          "comments": 0,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/DdmUX-Tt-JL/",
-          "creator": "",
+          "creator": "heidi_ahmed2",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 86914,
+          "views": 50448,
+          "likes": 14,
+          "comments": 7,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/Dd4XwjBst_k/",
-          "creator": "",
+          "creator": "khaledkhalifaofficial",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 17160,
+          "views": 3196,
+          "likes": 229,
+          "comments": 524,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/DdjFyeWNugj/",
-          "creator": "",
+          "creator": "awsafalfares",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 101925,
+          "views": 40618,
+          "likes": 791,
+          "comments": 0,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/DdjxIbmIX29/",
-          "creator": "",
+          "creator": "itsyomeef",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 5799,
+          "views": 3272,
+          "likes": 37,
+          "comments": 7,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/DcQvZZsMEtO/",
-          "creator": "",
+          "creator": "ghazal.navlo",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 45057,
+          "views": 82491,
+          "likes": 313,
+          "comments": 31,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/DbV75HWo2eZ/",
-          "creator": "",
+          "creator": "nadine20.lifestyle",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 95638,
+          "views": 5262,
+          "likes": 265,
+          "comments": 851,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/DbLyd9vsO_n/",
-          "creator": "",
+          "creator": "makeoversbyayeshaa",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 31883,
+          "views": 6474,
+          "likes": 231,
+          "comments": 60,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/DachUEJNsCC/",
-          "creator": "",
+          "creator": "spoonofsun",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
-          "views": null,
-          "likes": null,
-          "comments": null,
+          "followers": 7423,
+          "views": 1764,
+          "likes": 67,
+          "comments": 34,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/DaNfYeusEjz/",
-          "creator": "",
+          "creator": "el.nwair",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
+          "followers": 17332,
           "views": null,
           "likes": null,
-          "comments": null,
+          "comments": 4,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/DZkCqKPj83r/",
-          "creator": "",
+          "creator": "joeybadr_",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
+          "followers": 84740,
           "views": null,
           "likes": null,
-          "comments": null,
+          "comments": 27,
           "saves": null,
           "note": ""
         },
         {
           "url": "https://www.instagram.com/p/DZfgSxPsGIt/",
-          "creator": "",
+          "creator": "saraab.mk",
           "platforms": [
             "Instagram"
           ],
-          "followers": null,
+          "followers": 53207,
           "views": null,
-          "likes": null,
-          "comments": null,
+          "likes": 623,
+          "comments": 20,
           "saves": null,
           "note": ""
         }
       ],
-      "dataDate": "2026-11-17",
+      "dataDate": "2026-11-24",
       "hashtags": [
         "نيوتريلي",
         "Nutrili",
