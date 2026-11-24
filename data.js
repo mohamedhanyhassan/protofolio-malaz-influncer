@@ -3613,6 +3613,45 @@ window.PORTFOLIO = {
           "likes": 47,
           "comments": 14,
           "saves": 14
+        },
+        {
+          "url": "https://www.tiktok.com/@shouq22___/video/7673919050858122503",
+          "creator": "shouq22___",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@sil.505/video/7658695576602578196",
+          "creator": "sil.505",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
+        },
+        {
+          "url": "https://www.tiktok.com/@blounnii/video/7682123005509553416",
+          "creator": "blounnii",
+          "platforms": [
+            "TikTok"
+          ],
+          "followers": null,
+          "views": null,
+          "likes": null,
+          "comments": null,
+          "saves": null,
+          "note": ""
         }
       ],
       "dataDate": "2026-11-17",
